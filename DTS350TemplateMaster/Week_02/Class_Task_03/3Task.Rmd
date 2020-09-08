@@ -1,0 +1,142 @@
+---
+title: "3Task"
+author: "TomHollinberger"
+date: "9/2/2020"
+output: 
+  html_document: 
+    keep_md: yes
+    toc: TRUE
+    
+---
+```{r}
+
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# ***Section 1:  DPLYR Practice***
+```{r}
+library(tidyverse)
+library(dplyr)
+iris
+```
+
+
+
+###  1. Arrange the iris data by Sepal.Length and display the first six rows.
+
+```{r}
+iris
+sorted <- arrange(iris, Sepal.Length)
+head(sorted)
+```
+
+###  2. Select the Species and Petal.Width columns and put them into a new data set called testdat.
+
+```{r}
+testdat <- select(iris,Species,Petal.Width)
+testdat
+```
+
+###  3. Create a new table that has the mean for each variable by Species.
+info on tables from https://www.cyclismo.org/tutorial/R/types.html
+use the pipe from 5.6.1
+This is like example in 5.6.1, 
+but this gets error message, just like what is in the textbook 5.6.1
+
+```{r}
+byspecies <- (iris) %>%
+  group_by(Species) %>%
+  summarise(
+    meanSL = mean(Sepal.Length, na.rm = TRUE),
+    meanSW = mean(Sepal.Width, na.rm = TRUE),
+    meanPL = mean(Petal.Length, na.rm = TRUE),
+    meanPW = mean(Petal.Width, na.rm = TRUE)
+  )
+```
+  
+This works but doesn't create table
+```{r}
+iris %>% 
+  group_by(Species) %>% 
+  summarise(meanSL = mean(Sepal.Length, na.rm = TRUE),
+            meanSW = mean(Sepal.Width, na.rm = TRUE),
+            meanPL = mean(Petal.Length, na.rm = TRUE),
+            meanPW = mean(Petal.Width, na.rm = TRUE))
+```
+
+###  4. Read about the ?summarize_all() function and get a new table with the means and standard deviations for each species.
+?summarize_all()
+```{r}
+iris %>% 
+  group_by(Species) %>% 
+  summarise(meanSL = mean(Sepal.Length, na.rm = TRUE),
+            meanSW = mean(Sepal.Width, na.rm = TRUE),
+            meanPL = mean(Petal.Length, na.rm = TRUE),
+            meanPW = mean(Petal.Width, na.rm = TRUE),
+            stdevSL = sd(Sepal.Length, na.rm = TRUE),
+            stdevSW = sd(Sepal.Width, na.rm = TRUE),
+            stdevPL = sd(Petal.Length, na.rm = TRUE),
+            stdevPW = sd(Petal.Width, na.rm = TRUE))
+```
+
+
+
+If you want to apply multiple transformations, pass a list of
+functions. When there are multiple functions, they create new
+variables instead of modifying the variables in place:
+This works in Rscript, but doesn't create a table, and has clunky variable names.
+But gets an error when knitting from RMD. So I disabled it single quotes.
+
+```{r}
+'by_species %>%
+  summarise_all(list(mean,sd))'
+```
+
+
+
+
+
+
+# ***Section 2  :  Novel Questions about data***
+* What are the predictors of academic success a WJC?
+* What define academic success?  GPA, Course level of difficulty, Major level of difficulty, Graduation YEs or No?
+* What data is available?
+* What vintage is the predictor data (high school info, college freshman indicators)
+* What vintage is the result data (graduation within the last # years)
+* Is high school data in a consistent format across different high schools?
+* Talked at length with Dr Baker and Ms Gladbach about this.  
+* They have lot of the same questions.  And would use the answers to target marketing to prospective students whose profile indicates would be successful at WJC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+## Case Study 2 Plots
+
+# create dfa = gapminder without Kuwait
+# data=gapminder  remove kuwait  select
+# https://statisticsglobe.com/weighted-mean-in-r-example
+
+
+?gapminder
+dfa <- filter(gapminder, )
+
+
+# Plot 1
+#[ ] Use library(tidyverse) to load ggplot2 and dplyr and the theme_bw() to duplicate the first plot.
+#[ ] Use scale_y_continuous(trans = “sqrt”) to get the correct scale on the y-axis.
+#[ ] Use ggsave() and save each plot as a .png with a width of 15 inches
+
+
+
+
+
+# Plot 2
+#[ ] Build weighted average data set using weighted.mean() and GDP with summarise() and group_by() that will be the black continent average line on the second plot.
+#[ ] Use theme_bw() to duplicate the second plot. You will need to use the new data to make the black lines and dots showing the continent average.
+#[ ] Use ggsave() and save each plot as a .png with a width of 15 inches.
+
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(    point
+    mapping = aes(<MAPPINGS>), x = life expectancy  y= gdp per capita color=continent, size = population
+    stat = <STAT>, 
+    position = <POSITION>
+  ) +
+  <COORDINATE_FUNCTION> +
+  <scale adjustment>  "see intructions "continuous trans=sqrt 
+  <FACET_FUNCTION>   #12 col, 1 row  split by year
+theme = bw
+
+  
+Plot 2
+
+Data  create wtd-avg GDP for continent
+
+ggplot(data = <DATA>) + 
+<GEOM_FUNCTION>(    point and line (wtdavg)
+                    mapping = aes(<MAPPINGS>), x = life expectancy  y= gdp   color=continent, size = population
+                    stat = <STAT>, 
+                    position = <POSITION>
+) +
+<COORDINATE_FUNCTION> +
+<FACET_FUNCTION>   #12 col, 1 row  split by year
+  theme bw
