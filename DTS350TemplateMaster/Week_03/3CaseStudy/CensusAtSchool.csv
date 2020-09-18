@@ -1,0 +1,1001 @@
+Country,Region,Gender,Ageyears,Handed,Height,Foot_Length,Arm_Span,Languages_spoken,Travel_to_School,Travel_time_to_School,Reaction_time,Score_in_memory_game,Favourite_physical_activity,Importance_reducing_pollution,Importance_recycling_rubbish,Importance_conserving_water,Importance_saving_enery,Importance_owning_computer,Importance_Internet_access
+CA,Ontario,F,7,B,123,22,123,9,Rail,60,1.406,35,Walking/Hiking,32,37,80,59,123,535
+CA,Ontario,F,13,L,157,25,157,1,Walk,5,0.659,45,Skateboarding/Rollerblading,144,144,107,80,834,765
+CA,Newfoundland and Labrador,F,13,L,154,23,156,4,Car,4,1.265,46,Bowling,332,481,797,102,1000,1000
+CA,Ontario,F,18,R,164,27,164,1,Car,10,0.673,60,Other activities/sports,123,160,193,166,1000,1000
+CA,Quebec,F,13,R,161,27,158,3,Walk,25,0.25,29,Swimming,674,572,11,176,1000,1000
+CA,Quebec,F,13,R,162,25,162,2,Car,20,0.406,44,Basketball,856,765,86,176,21,455
+CA,Ontario,F,18,R,169,24,169,1,Bus,42,0.312,40,Other activities/sports,476,481,230,235,888,888
+CA,Ontario,F,13,L,158,25,170,1,Car,5,0.437,41,Dancing,829,182,128,257,1000,1000
+CA,Ontario,F,17,R,165,24,164,1,Bus,20,0.47,34,Dancing,32,118,588,278,829,872
+CA,Quebec,F,15,R,168,25,162,3,Walk,8,0.241,28,Dancing,668,471,615,310,1000,1000
+CA,Alberta,F,14,R,152,22,151,2,Car,20,0.38,46,Gymnastics,332,342,364,316,353,412
+CA,Newfoundland and Labrador,F,14,R,151,30,146,2,Bus,10,0.83,55,Dancing,348,209,642,353,1000,1000
+CA,Ontario,F,17,R,160,20,130,1,Bus,55,0.45,42,Hockey (Ice),43,59,262,374,1000,1000
+CA,Nova Scotia,F,16,R,165,23,165,1,Bus,45,0.744,34,Swimming,182,176,893,374,1000,1000
+CA,Ontario,F,12,R,150,23,150,1,Walk,10,1.453,55,Running/Jogging,401,348,599,396,32,166
+CA,Quebec,F,17,R,158,22,159,1,Car,5,0.282,49,Basketball,283,497,369,396,652,690
+CA,Ontario,F,16,R,163,24,169,1,Car,5,0.46,50,Athletics,257,267,310,401,1000,1000
+CA,Quebec,F,13,R,166,25,172,2,Car,19,0.411,38,Dancing,487,487,348,406,1000,1000
+CA,Ontario,F,14,R,170,22,159,2,Bus,35,0.425,56,Football/Soccer,578,433,658,417,1000,1000
+CA,Ontario,F,14,R,163,25,167,2,Walk,15,0.484,36,Other activities/sports,813,840,845,417,701,1000
+CA,Ontario,F,13,R,152,21,139,1,Board,30,0.547,40,Other activities/sports,749,364,856,428,1000,1000
+CA,British Columbia,F,13,R,158,24,157,2,Bus,15,0.297,50,Baseball/Softball,535,1000,856,428,1000,1000
+CA,Ontario,F,14,B,159,26,137,2,Car,5,0.347,46,Athletics,439,444,449,433,572,583
+CA,British Columbia,F,10,L,148,22,145,1,Car,5,0.581,56,Other activities/sports,487,342,615,439,32,107
+CA,Ontario,F,14,R,161,22,151,1,Car,2,0.391,51,Dancing,422,444,444,449,460,465
+CA,Alberta,F,12,R,145,22,131,1,Walk,1,0.523,38,Cycling,979,957,64,455,5,11
+CA,Ontario,F,17,R,165,24,133,1,Walk,30,0.407,38,Walking/Hiking,326,503,594,460,791,1000
+CA,Ontario,F,11,R,144,22,141,2,Walk,5,0.344,37,Dancing,1000,1000,1000,460,465,471
+CA,Saskatchewan,F,11,B,153,23,126,2,Walk,10,0.609,35,Hockey (Ice),471,545,396,460,342,433
+CA,Ontario,F,17,R,154,24,163,1,Bus,20,0.359,45,Baseball/Softball,481,476,465,465,690,578
+CA,Ontario,F,14,L,165,30,148,1,Walk,3,1.152,39,Dancing,813,722,471,471,1000,1000
+CA,Quebec,F,15,R,159,24,152,2,Bus,15,0.739,30,Swimming,455,455,455,476,1000,1000
+CA,Quebec,F,12,R,154,24,148,2,Bus,45,1.234,34,Dancing,749,390,476,476,487,492
+CA,Ontario,F,14,R,160,21,160,1,Car,2,0.311,40,Other activities/sports,471,449,481,481,513,572
+CA,Alberta,F,10,R,129,20,125,2,Walk,9,0.421,47,Swimming,476,481,487,481,497,503
+CA,Quebec,F,16,R,159,22,157,1,Bus,20,0.344,50,Other activities/sports,481,342,481,487,850,1000
+CA,Ontario,F,17,R,183,26,173,1,Walk,20,0.341,24,None,636,219,711,519,588,668
+CA,Ontario,F,19,R,163,22,161,2,Walk,20,0.642,30,None,802,658,513,524,390,717
+CA,Quebec,F,12,R,162,24,165,2,Car,30,0.799,27,Swimming,1000,503,396,524,1000,1000
+CA,Quebec,F,6,R,158,23,155,2,Car,5,0.391,36,Dancing,775,706,524,529,187,53
+CA,Ontario,F,14,B,163,25,161,2,Walk,7,0.25,25,Football/Soccer,690,422,209,529,936,957
+CA,Ontario,F,13,R,166,23,160,1,Walk,1,0.36,40,Dancing,428,422,487,535,1000,1000
+CA,Ontario,F,13,R,159,22,174,2,Walk,20,0.332,49,Swimming,722,401,187,540,1000,1000
+CA,Ontario,F,13,R,164,24,164,1,Walk,5,0.375,37,Swimming,545,540,444,556,342,342
+CA,Ontario,F,11,R,152,26,151,2,Bus,30,0.391,47,Gymnastics,1000,1000,1000,572,225,273
+CA,Ontario,F,17,R,171,25,171,1,Bus,30,0.313,28,Swimming,775,663,626,594,620,642
+CA,Alberta,F,15,R,164,22,161,1,Bus,5,0.3,41,Basketball,925,866,952,615,471,925
+CA,Ontario,F,15,R,140,27,140,1,Car,5,0.463,42,Basketball,348,535,439,620,813,1000
+CA,Alberta,F,12,R,160,25,156,1,Car,4,0.501,40,Walking/Hiking,610,64,626,620,631,636
+CA,Ontario,F,18,R,161,24,167,2,Car,10,0.412,61,Dancing,1000,316,1000,626,1000,1000
+CA,Ontario,F,13,R,159,25,160,2,Car,15,0.45,49,Basketball,695,524,813,626,775,1000
+CA,Ontario,F,14,B,156,22,153,4,Walk,10,0.733,45,Basketball,1000,770,487,626,1000,1000
+CA,Ontario,F,13,R,155,23,150,1,Cycle,7,0.375,43,Other activities/sports,358,230,225,636,872,1000
+CA,British Columbia,F,14,R,165,33,165,2,Walk,20,0.36,32,Swimming,449,727,770,636,984,995
+CA,Ontario,F,14,R,153,23,153,4,Bus,45,0.39,38,Basketball,492,364,567,636,1000,1000
+CA,Ontario,F,14,R,163,30,162,2,Walk,8,0.33,33,None,503,674,567,636,1000,1000
+CA,Ontario,F,14,R,153,20,154,1,Bus,20,0.343,46,Football/Soccer,471,417,529,684,1000,1000
+CA,Ontario,F,17,R,160,29,150,1,Other,5,0.469,37,Baseball/Softball,465,481,679,695,492,492
+CA,Nova Scotia,F,14,B,155,21,155,1,Bus,60,0.516,31,Other activities/sports,1000,1000,610,722,283,390
+CA,British Columbia,F,12,R,149,24,150,1,Bus,30,0.529,30,Baseball/Softball,578,508,684,743,888,1000
+CA,Alberta,F,15,R,161,22,156,2,Walk,30,0.611,40,Dancing,631,540,636,743,941,1000
+CA,New Brunswick,F,17,R,167,22,156,1,Bus,20,0.407,41,Football/Soccer,717,781,754,759,781,786
+CA,British Columbia,F,15,B,168,30,166,1,Bus,20,0.501,37,Tennis,476,513,364,770,257,257
+CA,Alberta,F,12,R,145,23,151,2,Car,8,0.343,31,Football/Soccer,1000,690,1000,775,289,342
+CA,Ontario,F,13,B,170,24,170,1,Walk,1,0.572,43,Dancing,380,717,759,775,807,893
+CA,Ontario,F,13,R,148,20,156,2,Cycle,18,0.39,34,Gymnastics,893,914,829,786,535,465
+CA,Ontario,F,13,L,156,24,164,2,Car,20,0.531,43,Hockey (Ice),583,690,1000,797,433,733
+CA,Quebec,F,13,R,159,23,159,3,Bus,30,0.313,43,Basketball,930,679,455,807,909,444
+CA,Ontario,F,13,R,178,24,186,1,Bus,45,0.328,44,Skateboarding/Rollerblading,850,818,845,807,845,840
+CA,Ontario,F,13,R,163,25,166,1,Bus,10,0.531,45,Swimming,663,1000,1000,807,1000,1000
+CA,British Columbia,F,12,B,173,24,165,1,Car,10,0.047,43,Swimming,583,824,497,818,1000,1000
+CA,Ontario,F,12,R,166,21,166,2,Bus,5,0.426,43,Swimming,1000,1000,481,829,840,850
+CA,Ontario,F,17,L,176,24,168,1,Bus,45,0.558,57,Rugby League,508,326,497,829,968,904
+CA,Ontario,F,14,R,161,27,161,3,Rail,30,0.64,37,Bowling,417,412,299,840,1000,1000
+CA,Saskatchewan,F,15,R,161,22,153,2,Car,5,0.431,39,Athletics,1000,1000,840,845,508,508
+CA,Alberta,F,15,R,155,23,160,1,Car,5,0.494,40,Dancing,717,540,471,850,396,310
+CA,Ontario,F,8,R,161,22,165,1,Bus,16,0.743,30,Cycling,134,840,759,861,332,289
+CA,Ontario,F,13,R,138,23,175,2,Bus,70,0.39,33,Bowling,866,856,850,861,866,834
+CA,Ontario,F,10,R,132,18,136,2,Car,3,0.608,42,Swimming,952,594,433,866,765,455
+CA,Ontario,F,14,R,158,25,161,1,Car,5,0.835,54,Hockey (Ice),1000,984,968,866,941,914
+CA,Alberta,F,14,R,156,20,160,2,Bus,10,0.375,42,Football/Soccer,1000,1000,1000,877,765,802
+CA,Ontario,F,13,R,165,25,165,2,Walk,1,0.484,39,Football/Soccer,893,898,904,882,979,979
+CA,Newfoundland and Labrador,F,14,R,135,23,155,5,Bus,20,0.485,36,Dancing,193,877,513,882,684,690
+CA,Alberta,F,12,R,155,21,150,2,Bus,20,0.985,52,Other activities/sports,492,305,733,888,904,508
+CA,Ontario,F,11,R,156,23,155,1,Bus,30,0.424,38,Swimming,856,856,861,888,471,401
+CA,Ontario,F,11,R,135,21,170,2,Car,20,0.601,47,Dancing,1000,1000,791,893,679,733
+CA,Ontario,F,16,R,166,28,161,2,Car,5,0.297,42,Athletics,882,882,882,898,1000,1000
+CA,Quebec,F,13,R,170,24,166,2,Bus,20,0.297,47,Dancing,1000,1000,1000,904,1000,1000
+CA,Ontario,F,13,R,164,26,150,2,Walk,15,0.799,34,Swimming,497,305,749,909,1000,1000
+CA,Ontario,F,14,R,158,25,167,1,Walk,10,0.4,44,Walking/Hiking,1000,925,422,909,690,824
+CA,Quebec,F,13,R,137,20,135,1,Bus,13,0.313,27,Gymnastics,1000,1000,925,930,834,43
+CA,Ontario,F,14,R,137,22,152,1,Walk,25,0.328,32,Dancing,979,984,984,968,845,914
+CA,Alberta,F,11,R,150,24,147,2,Bus,10,0.906,46,Walking/Hiking,930,936,695,968,53,53
+CA,Ontario,F,13,R,154,23,154,2,Car,5,0.631,49,Football/Soccer,1000,1000,957,968,428,433
+CA,Ontario,F,13,L,166,23,168,2,Car,5,0.41,35,Hockey (Ice),979,984,979,995,449,503
+CA,Saskatchewan,F,14,R,173,27,172,1,Car,15,0.391,39,Bowling,791,348,1000,1000,43,171
+CA,Ontario,F,18,R,163,23,166,2,Bus,45,0.422,42,Football/Soccer,904,914,690,1000,535,540
+CA,Ontario,F,17,R,182,25,173,2,Walk,35,0.471,30,Basketball,1000,1000,1000,1000,1000,1000
+CA,Ontario,F,16,L,174,28,174,1,Walk,15,0.28,44,Dancing,1000,1000,1000,1000,1000,1000
+CA,Ontario,F,14,R,174,22,174,1,Walk,5,0.406,27,Dancing,1000,1000,1000,1000,241,524
+CA,Ontario,F,13,R,145,22,147,2,Rail,19,0.281,26,Skateboarding/Rollerblading,1000,1000,1000,1000,59,43
+CA,Ontario,F,13,L,149,20,149,1,Car,10,0.328,71,Dancing,695,711,567,1000,1000,920
+CA,Quebec,F,11,R,144,22,139,1,Walk,2,0.351,71,Martial Arts,1000,1000,1000,1000,487,492
+CA,Alberta,F,11,R,135,23,143,1,Car,15,0.453,63,Football/Soccer,465,578,487,1000,310,524
+CA,Ontario,F,17,R,157,23,154,2,Walk,5,0.436,36,Swimming,1000,594,1000,1000,1000,888
+CA,Alberta,F,9,R,134,23,132,2,Car,5,1.472,99,Swimming,1000,524,1000,1000,289,257
+CA,Ontario,F,16,R,172,27,169,1,Car,5,0.459,43,Athletics,396,422,1000,1000,572,1000
+CA,Ontario,F,8,R,131,21,125,2,Car,4,0.406,29,Other activities/sports,1000,1000,1000,1000,1000,807
+CA,Ontario,F,12,R,151,25,148,1,Car,10,0.792,54,Swimming,1000,626,759,1000,278,283
+CA,Alberta,F,10,R,130,19,130,2,Car,2,0.398,32,Dancing,1000,1000,1000,1000,166,64
+CA,Ontario,F,13,R,155,23,155,2,Bus,25,0.297,51,Tennis,1000,1000,1000,1000,187,508
+CA,Ontario,F,13,R,158,24,155,2,Walk,18,0.312,27,Other activities/sports,1000,1000,1000,1000,1000,1000
+CA,British Columbia,F,14,L,157,24,130,1,Car,7,0.329,40,Football/Soccer,717,241,1000,1000,545,540
+CA,Saskatchewan,F,10,R,143,20,147,1,Cycle,5,0.438,41,Dancing,1000,1000,1000,1000,1000,1000
+CA,Ontario,F,10,R,100,19,121,2,Car,10,0.04,35,Dancing,1000,1000,1000,1000,91,70
+CA,Ontario,F,11,R,156,25,160,2,Car,5,0.661,98,Swimming,1000,1000,1000,1000,246,246
+CA,Alberta,F,9,R,123,20,123,1,Bus,15,0.672,73,Bowling,572,1000,973,1000,620,449
+CA,Ontario,F,17,R,172,26,171,2,Bus,45,0.491,29,Swimming,1000,1000,503,1000,759,765
+CA,Ontario,F,18,R,169,25,151,4,Car,10,0.422,44,Other activities/sports,497,492,1000,1000,1000,1000
+CA,Ontario,F,14,R,160,23,158,3,Walk,15,0.351,50,Basketball,963,701,1000,1000,968,1000
+CA,Ontario,F,12,R,153,24,156,2,Walk,8,0.914,33,Football/Soccer,1000,1000,1000,1000,53,48
+CA,Ontario,F,17,R,169,24,165,3,Walk,36,0.631,51,Cycling,1000,1000,1000,1000,246,460
+CA,Ontario,F,15,R,155,28,153,3,Walk,15,1.03,51,Football/Soccer,1000,1000,1000,1000,1000,1000
+CA,Ontario,F,5,R,162,23,158,1,Bus,25,0.391,52,Running/Jogging,1000,1000,893,1000,765,551
+CA,Ontario,M,14,R,164,25,154,1,Car,7,0.399,53,Athletics,251,321,21,11,1000,1000
+CA,Ontario,M,14,B,170,26,180,3,Rail,25,0.14,26,Swimming,5,5,5,11,1000,1000
+CA,Ontario,M,16,B,101,21,101,9,Boat,60,0.578,24,Table Tennis,11,32,11,16,32,43
+CA,Alberta,M,11,R,131,22,133,2,Bus,15,0.587,31,Football/Soccer,503,856,1000,16,1000,1000
+CA,British Columbia,M,11,R,152,30,147,2,Walk,4,0.782,59,Other activities/sports,43,59,5,21,1000,1000
+CA,Ontario,M,11,R,168,27,150,4,Walk,10,0.44,57,Martial Arts,21,16,123,48,160,27
+CA,Ontario,M,12,L,163,27,167,3,Walk,3,0.297,41,Baseball/Softball,861,294,27,53,791,861
+CA,Ontario,M,18,L,189,29,171,1,Bus,15,0.267,33,Hockey (Ice),48,32,374,59,706,791
+CA,Nova Scotia,M,14,R,163,27,156,1,Bus,30,0.391,35,Hockey (Ice),53,32,53,70,481,1000
+CA,Saskatchewan,M,11,R,143,22,143,2,Cycle,5,0.862,67,Football/Soccer,1000,979,412,75,118,37
+CA,British Columbia,M,12,R,158,21,155,2,Rail,2,0.682,103,Hockey (Ice),481,75,1000,107,1000,1000
+CA,Alberta,M,9,R,128,22,128,2,Bus,10,0.611,48,Football/Soccer,150,1000,1000,134,1000,1000
+CA,British Columbia,M,12,B,155,24,149,1,Car,2,0.572,81,Football/Soccer,487,658,43,134,332,80
+CA,Ontario,M,13,R,162,26,171,4,Bus,5,0.364,50,Athletics,134,43,503,144,1000,1000
+CA,Ontario,M,11,R,147,23,145,2,Car,15,0.6,46,Football/Soccer,155,257,1000,144,1000,1000
+CA,Quebec,M,14,R,161,21,190,2,Bus,75,0.311,35,None,289,283,289,193,1000,1000
+CA,Ontario,M,15,R,168,27,165,1,Walk,3,0.453,39,Hockey (Ice),909,513,112,198,1000,1000
+CA,Ontario,M,14,R,176,29,172,1,Walk,2,0.328,45,Hockey (Ice),209,209,203,198,219,209
+CA,Ontario,M,14,L,152,20,150,3,Bus,15,0.33,51,Football/Soccer,48,27,487,214,1000,1000
+CA,Ontario,M,14,L,173,27,172,4,Car,15,0.339,38,Other activities/sports,102,27,96,225,695,658
+CA,British Columbia,M,14,B,170,28,179,3,Cycle,20,0.375,45,Basketball,107,107,102,230,1000,1000
+CA,Ontario,M,17,R,174,29,175,2,Bus,20,0.265,54,Hockey (Ice),561,396,599,246,813,845
+CA,Ontario,M,12,R,152,26,150,2,Bus,28,0.34,33,Hockey (Ice),198,182,572,251,1000,1000
+CA,Manitoba,M,15,R,178,28,184,1,Walk,15,0.359,28,Cycling,257,615,524,283,1000,1000
+CA,Ontario,M,13,R,154,23,149,1,Cycle,15,0.331,37,Cycling,310,11,11,310,1000,1000
+CA,British Columbia,M,14,L,165,25,158,2,Car,10,0.712,70,Football/Soccer,455,556,187,337,1000,1000
+CA,Quebec,M,18,R,172,26,175,1,Bus,15,0.515,31,None,599,583,578,342,1000,1000
+CA,Alberta,M,10,R,136,22,132,1,Walk,5,0.501,69,Football/Soccer,497,802,626,348,439,385
+CA,Ontario,M,13,R,167,25,164,2,Walk,14,0.391,55,Tennis,802,807,1000,353,11,16
+CA,Ontario,M,15,L,179,27,170,1,Cycle,15,0.36,28,Football/Soccer,722,604,155,353,866,866
+CA,British Columbia,M,11,R,141,23,145,1,Car,2,0.44,34,Hockey (Ice),390,1000,321,390,561,674
+CA,Ontario,M,16,R,184,25,150,1,Walk,7,0.311,33,Hockey (Ice),112,16,53,422,904,957
+CA,Ontario,M,17,R,185,30,181,1,Bus,20,0.585,40,Hockey (Ice),476,471,449,439,1000,1000
+CA,Newfoundland and Labrador,M,13,B,150,29,146,1,Bus,15,0.839,74,Cycling,626,620,332,449,203,246
+CA,Ontario,M,13,R,171,27,172,2,Walk,25,0.31,47,Football/Soccer,524,460,578,455,1000,1000
+CA,Ontario,M,11,R,145,23,145,3,Car,5,0.407,135,Hockey (Ice),594,417,524,471,529,326
+CA,Manitoba,M,13,R,155,26,159,2,Walk,4,0.391,46,Basketball,209,444,476,471,326,503
+CA,Ontario,M,17,R,183,27,183,2,Bus,55,0.328,22,Golf,465,465,471,471,1000,1000
+CA,Ontario,M,17,R,176,27,177,1,Cycle,15,0.468,32,Tennis,524,283,390,476,759,797
+CA,Ontario,M,15,R,173,26,179,3,Car,9,0.281,35,Hockey (Field),1000,380,781,476,481,219
+CA,Ontario,M,13,R,143,24,141,1,Walk,20,0.031,37,Tennis,182,374,594,481,861,920
+CA,Alberta,M,10,B,141,25,146,1,Car,5,0.31,60,Table Tennis,973,957,930,487,770,770
+CA,New Brunswick,M,15,R,180,27,186,1,Car,20,0.49,35,Hockey (Ice),487,487,481,487,481,481
+CA,Quebec,M,15,R,177,29,184,2,Bus,60,0.271,48,Football/Soccer,465,476,1000,492,658,749
+CA,Ontario,M,18,R,170,26,173,2,Car,10,0.259,28,Hockey (Ice),503,503,503,508,1000,1000
+CA,Nova Scotia,M,15,R,193,30,189,1,Bus,20,0.597,59,Basketball,1000,840,824,519,824,824
+CA,Ontario,M,14,R,165,27,165,1,Cycle,2,0.281,37,Other activities/sports,759,326,118,540,1000,1000
+CA,Ontario,M,13,L,151,25,167,1,Car,6,0.351,35,Hockey (Ice),738,529,749,540,866,861
+CA,Alberta,M,14,R,179,30,177,1,Bus,20,0.437,31,Swimming,786,791,471,540,21,27
+CA,Ontario,M,12,R,150,23,152,2,Bus,25,0.312,40,Baseball/Softball,631,460,519,540,717,727
+CA,Ontario,M,14,R,169,28,160,2,Car,15,0.42,63,Hockey (Ice),711,615,711,551,824,759
+CA,Manitoba,M,10,R,142,23,142,1,Cycle,35,0.313,53,Hockey (Ice),316,16,422,556,1000,1000
+CA,Ontario,M,12,R,150,22,149,2,Bus,10,0.54,48,Other activities/sports,588,460,647,556,209,428
+CA,Ontario,M,13,R,168,23,169,2,Car,9,0.312,81,Hockey (Ice),524,540,529,561,684,690
+CA,Ontario,M,14,R,185,26,180,3,Walk,5,0.817,39,Football/Soccer,754,524,668,561,775,781
+CA,British Columbia,M,15,R,177,27,174,2,Walk,20,0.577,42,Football/Soccer,631,1000,497,578,770,1000
+CA,Ontario,M,14,R,171,27,176,2,Car,15,0.25,37,Basketball,508,508,556,583,824,845
+CA,Ontario,M,13,R,160,25,159,1,Bus,15,0.906,43,Skateboarding/Rollerblading,615,722,476,588,460,369
+CA,British Columbia,M,13,R,175,27,176,2,Car,3,0.328,66,Basketball,519,487,556,588,1000,1000
+CA,Alberta,M,12,R,173,26,173,2,Bus,45,0.3,44,Cycling,433,583,727,599,43,96
+CA,Alberta,M,16,R,176,26,177,1,Bus,33,0.314,40,Tennis,690,759,369,610,1000,1000
+CA,Manitoba,M,15,L,179,28,178,2,Walk,10,0.53,26,Hockey (Ice),1000,674,160,620,1000,1000
+CA,Ontario,M,14,L,175,28,168,2,Walk,1,0.522,66,Hockey (Field),449,631,588,636,973,1000
+CA,Nova Scotia,M,11,R,140,24,141,1,Walk,5,0.266,51,Other activities/sports,695,561,717,647,1000,1000
+CA,British Columbia,M,12,R,179,27,170,2,Car,7,0.822,69,Swimming,952,535,1000,647,610,604
+CA,Ontario,M,13,R,160,25,164,2,Bus,10,0.515,31,Hockey (Ice),481,674,834,663,850,856
+CA,Alberta,M,10,R,139,22,132,4,Walk,8,1.045,65,Basketball,75,465,733,674,171,850
+CA,Alberta,M,11,R,146,27,147,9,Walk,3,0.303,27,Hockey (Field),16,743,1000,679,1000,1000
+CA,Quebec,M,15,R,165,23,165,2,Bus,45,0.657,66,Football/Soccer,1000,1000,695,722,1000,1000
+CA,Ontario,M,13,R,168,26,174,1,Car,10,0.328,43,Walking/Hiking,834,503,652,733,856,759
+CA,Ontario,M,19,R,188,24,175,1,Car,12,0.612,42,Skateboarding/Rollerblading,1000,642,471,749,267,262
+CA,Ontario,M,10,R,124,20,125,1,Bus,30,0.391,40,Martial Arts,925,754,759,759,647,529
+CA,Ontario,M,12,R,130,21,140,2,Bus,30,0.797,44,Other activities/sports,417,540,898,759,166,556
+CA,Ontario,M,15,R,184,27,188,1,Car,6,0.469,44,Other activities/sports,663,652,535,770,535,615
+CA,Ontario,M,13,R,169,26,174,1,Bus,5,0.301,37,Basketball,733,738,561,791,444,508
+CA,Ontario,M,11,R,158,28,158,2,Bus,47,0.407,41,Cycling,818,807,802,807,487,471
+CA,Newfoundland and Labrador,M,13,R,157,23,155,2,Bus,30,0.562,46,Basketball,481,348,476,829,519,513
+CA,Ontario,M,11,R,168,27,151,1,Board,10,0.288,40,Skateboarding/Rollerblading,759,733,674,834,513,316
+CA,Alberta,M,12,L,146,20,143,2,Walk,10,0.378,35,Martial Arts,898,888,652,904,487,481
+CA,Ontario,M,13,R,171,25,138,1,Car,3,0.391,43,Hockey (Ice),877,829,695,904,545,567
+CA,Ontario,M,14,R,179,30,169,3,Walk,3,1.442,39,Basketball,476,305,920,914,134,128
+CA,Manitoba,M,12,R,145,21,149,2,Walk,2,0.03,47,Bowling,1000,898,818,925,749,802
+CA,Ontario,M,17,R,179,24,185,2,Car,7,0.36,28,Football/Soccer,829,615,743,925,583,743
+CA,Quebec,M,6,R,147,24,136,4,Car,15,0.391,38,Football/Soccer,968,963,984,952,59,481
+CA,Ontario,M,12,R,146,23,146,2,Walk,7,0.344,43,Martial Arts,829,749,588,963,166,246
+CA,Quebec,M,16,R,187,30,194,2,Bus,10,1.362,40,Basketball,59,342,32,995,695,872
+CA,Ontario,M,11,R,155,26,153,2,Bus,6,0.31,42,Basketball,1000,898,1000,1000,492,128
+CA,Ontario,M,11,R,201,25,164,2,Walk,7,0.401,42,Other activities/sports,620,471,1000,1000,1000,1000
+CA,Ontario,M,12,R,145,24,150,2,Walk,15,0.469,37,Football/Soccer,1000,1000,1000,1000,508,460
+CA,Ontario,M,14,R,178,27,181,1,Bus,40,0.344,42,Gymnastics,1000,1000,1000,1000,1000,1000
+CA,Prince Edward Island,M,8,L,150,21,125,1,Walk,5,0.44,68,Hockey (Ice),1000,1000,1000,1000,59,112
+CA,Ontario,M,13,R,175,29,168,2,Car,7,0.431,80,Other activities/sports,834,727,599,1000,449,492
+CA,Ontario,M,13,R,161,24,166,2,Cycle,5,0.329,40,Hockey (Ice),1000,535,540,1000,1000,1000
+CA,Manitoba,M,12,R,111,27,111,1,Walk,15,0.878,39,Basketball,1000,1000,1000,1000,1000,1000
+CA,Ontario,M,12,R,149,25,150,3,Bus,15,0.281,67,Hockey (Ice),433,209,481,1000,1000,1000
+CA,Ontario,M,12,R,157,25,150,1,Bus,20,0.406,40,Athletics,1000,503,37,1000,16,21
+CA,Ontario,M,14,R,169,27,168,2,Car,15,0.453,40,Basketball,1000,1000,1000,1000,476,262
+CA,Alberta,M,11,R,139,20,129,2,Bus,10,0.331,39,Hockey (Ice),123,1000,947,1000,1000,1000
+CA,Ontario,M,12,R,150,24,149,1,Bus,12,0.261,48,Football/Soccer,529,406,535,1000,310,545
+CA,Ontario,M,13,R,143,24,148,1,Car,2,0.345,34,Hockey (Ice),1000,1000,1000,1000,21,16
+CA,New Brunswick,M,14,R,165,23,165,1,Car,3,0.343,48,Rugby League,979,1000,1000,1000,1000,1000
+CA,British Columbia,M,11,R,139,26,117,4,Walk,1,0.569,45,Other activities/sports,1000,1000,1000,1000,417,294
+CA,Newfoundland and Labrador,M,12,B,148,25,118,2,Car,4,0.327,58,Football/Soccer,1000,1000,1000,1000,1000,1000
+CA,Ontario,M,14,R,148,23,130,2,Board,3,0.971,54,Bowling,1000,444,1000,1000,1000,1000
+CA,Ontario,M,12,R,154,24,160,1,Bus,10,0.474,58,Baseball/Softball,1000,1000,513,1000,32,59
+CA,Ontario,M,13,R,165,26,158,5,Cycle,18,0.485,50,Swimming,1000,1000,1000,1000,5,5
+CA,Saskatchewan,M,14,R,175,28,182,1,Walk,2,0.344,55,Hockey (Ice),1000,1000,1000,1000,503,503
+CA,Ontario,M,10,R,158,26,164,2,Walk,10,0.391,40,Football/Soccer,1000,1000,1000,1000,214,203
+CA,Ontario,M,14,R,176,28,173,1,Bus,10,0.156,69,Football/Soccer,1000,508,989,1000,492,706
+CA,British Columbia,M,12,R,147,23,124,7,Walk,10,0.25,51,Football/Soccer,615,610,1000,1000,733,1000
+CA,Quebec,M,14,R,169,25,165,4,Bus,30,0.291,41,Other activities/sports,5,5,5,1000,1000,1000
+CA,Ontario,M,12,R,158,24,157,2,Car,5,0.359,41,Walking/Hiking,936,727,861,1000,770,989
+CA,Ontario,M,13,B,153,26,154,2,Bus,20,0.28,42,Golf,1000,1000,1000,1000,1000,1000
+CA,Manitoba,M,14,L,170,27,170,1,Cycle,5,0.313,33,Swimming,1000,1000,1000,1000,1000,1000
+CA,Ontario,M,11,B,201,18,201,3,Bus,49,0.593,39,Dancing,1000,1000,1000,1000,1000,1000
+CA,Ontario,M,13,R,162,26,164,3,Car,2,0.401,49,Basketball,1000,1000,1000,1000,626,626
+CA,Alberta,M,11,B,159,22,150,2,Walk,20,0.954,49,Tennis,43,32,27,1000,1000,1000
+CA,Ontario,M,12,R,149,22,149,1,Walk,25,0.561,57,Basketball,1000,1000,1000,1000,481,1000
+CA,Quebec,M,15,R,178,29,175,2,Walk,18,0.27,47,Football/Soccer,1000,1000,1000,1000,535,540
+CA,British Columbia,M,14,R,164,24,156,1,Bus,25,0.281,32,Hockey (Ice),1000,1000,1000,1000,1000,1000
+NZ,Auckland,F,9,B,126,15,100,2,Car,5,0,0,Netball,1000,,750,,,
+NZ,Northland,F,9,R,131,21,126,1,Bus,5,0,0,Football/Soccer,1000,,1000,,,
+NZ,Auckland,F,15,R,162,20,158,2,Car,5,0.484,0,Swimming,1000,,750,,,
+NZ,Auckland,F,10,R,145,22,146,1,Walk,15,0.469,0,Netball,500,,750,,,
+NZ,Auckland,F,14,R,142,23,142,1,Walk,25,0.532,0,Football/Soccer,1000,,750,,,
+NZ,Auckland,F,14,R,168,24,164,2,Walk,15,0.344,0,Other activities/sports,750,,0,,,
+NZ,Auckland,F,13,R,157,21,169,1,Walk,15,1.559,0,Basketball,750,,750,,,
+NZ,Waikato,F,16,R,155,22,140,3,Bus,45,0.439,0,Other activities/sports,250,,250,,,
+NZ,Waikato,F,14,R,156,25,158,1,Bus,25,0.328,0,Netball,250,,500,,,
+NZ,Southland,F,12,R,157,28,155,1,Car,15,0,0,Netball,750,,750,,,
+NZ,Auckland,F,13,L,146,22,144,2,Bus,15,0.426,0,Rugby Union,1000,,750,,,
+NZ,Waikato,F,14,R,164,22,80,2,Bus,25,0,0,Netball,500,,1000,,,
+NZ,Canterbury,F,14,R,151,35,151,2,Walk,5,0.454,0,Football/Soccer,250,,750,,,
+NZ,Auckland,F,12,L,134,19,134,1,Walk,5,0.547,0,Netball,500,,500,,,
+NZ,Auckland,F,14,R,165,25,168,1,Walk,15,0.328,0,Tennis,500,,500,,,
+NZ,Manawatu-Wanganui,F,13,L,163,23,154,1,Cycle,15,0.846,0,Netball,0,,0,,,
+NZ,Canterbury,F,13,R,185,26,184,2,Bus,15,0.407,0,Netball,750,,500,,,
+NZ,Northland,F,15,R,174,23,170,2,Car,5,0,0,Netball,750,,750,,,
+NZ,Auckland,F,13,R,162,22,166,2,Walk,45,1.596,0,Football/Soccer,1000,,750,,,
+NZ,Canterbury,F,11,R,154,21,146,1,Car,25,0.39,0,Netball,750,,750,,,
+NZ,Wellington,F,9,R,142,19,124,1,Car,5,0.563,0,Swimming,1000,,750,,,
+NZ,Manawatu-Wanganui,F,13,R,149,22,137,2,Car,5,0,0,Football/Soccer,750,,1000,,,
+NZ,Otago,F,13,R,166,23,152,1,Walk,15,0.422,0,Netball,750,,750,,,
+NZ,Auckland,F,13,R,166,25,168,1,Car,5,0,0,Swimming,750,,500,,,
+NZ,Manawatu-Wanganui,F,12,R,171,32,171,1,Car,5,0.439,0,Basketball,500,,500,,,
+NZ,Auckland,F,13,R,160,23,161,2,Car,5,0.462,0,Basketball,750,,500,,,
+NZ,Waikato,F,13,R,167,24,169,1,Walk,15,0.422,0,Swimming,500,,250,,,
+NZ,West Coast,F,9,R,139,21,139,6,Walk,5,0.549,0,Netball,750,,1000,,,
+NZ,Auckland,F,11,R,149,24,150,3,Car,45,1.92,0,Tennis,1000,,750,,,
+NZ,Auckland,F,10,R,128,18,124,1,Car,5,0.641,0,Gymnastics,500,,500,,,
+NZ,Wellington,F,10,R,146,21,144,1,Walk,5,0.576,0,Netball,1000,,250,,,
+NZ,Auckland,F,15,R,174,25,184,2,Car,15,0,0,Netball,500,,1000,,,
+NZ,Wellington,F,11,R,147,23,144,2,Rail,45,0.423,0,Netball,500,,250,,,
+NZ,Auckland,F,10,R,141,22,146,3,Walk,5,0.483,0,Netball,1000,,750,,,
+NZ,Otago,F,14,R,158,26,158,2,Walk,15,0.428,0,Netball,750,,500,,,
+NZ,Manawatu-Wanganui,F,13,R,171,21,176,1,Car,5,0.535,0,Dancing,1000,,1000,,,
+NZ,Auckland,F,15,R,164,23,164,1,Car,5,0,0,Netball,750,,250,,,
+NZ,Auckland,F,12,L,155,24,160,1,Bus,45,1.117,0,Dancing,750,,500,,,
+NZ,Auckland,F,10,L,134,20,136,3,Car,5,0.452,0,Other activities/sports,500,,1000,,,
+NZ,Auckland,F,13,L,159,22,164,1,Walk,5,1.172,0,Netball,750,,250,,,
+NZ,Canterbury,F,13,R,164,24,164,1,Car,5,0.982,0,Netball,750,,500,,,
+NZ,Auckland,F,13,R,168,21,168,2,Bus,45,0.316,0,Football/Soccer,1000,,1000,,,
+NZ,Bay of Plenty,F,10,R,140,20,100,1,Car,5,0.385,0,Netball,750,,1000,,,
+NZ,Otago,F,9,L,124,21,132,1,Car,25,0.469,0,Netball,1000,,1000,,,
+NZ,Auckland,F,13,R,168,25,176,1,Bus,45,1.656,0,Rugby League,500,,500,,,
+NZ,Auckland,F,14,R,155,19,153,2,Bus,25,0.344,0,Hockey (Field),500,,500,,,
+NZ,Auckland,F,11,L,160,26,163,1,Walk,15,0.531,0,Basketball,750,,500,,,
+NZ,Canterbury,F,14,L,164,21,167,1,Walk,5,0.468,0,Athletics,500,,500,,,
+NZ,Auckland,F,16,B,164,24,165,2,Car,15,0.359,0,Other activities/sports,750,,750,,,
+NZ,Otago,F,11,L,157,23,150,5,Walk,5,0.642,0,Other activities/sports,1000,,500,,,
+NZ,Auckland,F,9,R,135,20,132,1,Walk,5,0,0,Football/Soccer,500,,750,,,
+NZ,Auckland,F,15,R,166,24,166,2,Walk,5,0.438,0,Cycling,750,,750,,,
+NZ,Canterbury,F,13,L,157,23,157,1,Bus,45,0.406,0,Netball,750,,500,,,
+NZ,Auckland,F,15,R,166,22,165,1,Bus,25,0.406,0,Swimming,750,,500,,,
+NZ,Wellington,F,13,R,161,23,156,2,Car,15,0.359,0,Netball,500,,500,,,
+NZ,Auckland,F,14,R,163,22,160,1,Bus,15,0.359,0,Football/Soccer,750,,750,,,
+NZ,Otago,F,14,R,151,21,150,3,Walk,15,0.438,0,Netball,750,,1000,,,
+NZ,Hawkes Bay,F,10,R,151,21,155,1,Bus,15,0.496,0,Netball,1000,,750,,,
+NZ,Otago,F,15,R,153,21,149,1,Car,15,0.47,0,Other activities/sports,500,,1000,,,
+NZ,Canterbury,F,14,R,160,23,162,2,Walk,15,0,0,Football/Soccer,500,,750,,,
+NZ,Auckland,F,11,R,145,23,143,1,Car,5,0,0,Rugby Union,1000,,750,,,
+NZ,Waikato,F,11,R,165,22,155,1,Bus,25,0.49,0,Netball,1000,,500,,,
+NZ,Auckland,F,10,L,144,23,143,2,Car,5,0.582,0,Netball,1000,,750,,,
+NZ,Auckland,F,10,R,132,19,142,1,Car,15,0.384,0,Netball,1000,,1000,,,
+NZ,Otago,F,13,R,152,25,150,1,Bus,15,0.431,0,Other activities/sports,1000,,1000,,,
+NZ,Wellington,F,11,R,153,21,156,1,Car,15,0.4,0,Other activities/sports,1000,,500,,,
+NZ,Southland,F,11,R,130,17,130,1,Bus,15,0,0,Rugby Union,1000,,750,,,
+NZ,Bay of Plenty,F,14,R,153,18,154,1,Car,5,0.39,0,Other activities/sports,750,,750,,,
+NZ,Auckland,F,13,R,161,25,168,5,Car,15,1.407,0,Hockey (Field),1000,,1000,,,
+NZ,Auckland,F,12,B,163,24,167,3,Car,45,0.723,0,Netball,1000,,1000,,,
+NZ,Auckland,F,13,R,170,20,120,3,Walk,15,0,0,Other activities/sports,500,,1000,,,
+NZ,Auckland,F,11,R,147,23,148,2,Car,5,0.423,0,Other activities/sports,1000,,1000,,,
+NZ,Canterbury,M,14,L,160,25,120,1,Walk,25,0.331,0,None,750,,500,,,
+NZ,Otago,M,14,R,169,35,169,1,Car,15,0.421,0,Rugby Union,1000,,1000,,,
+NZ,Wellington,M,10,R,145,21,142,1,Walk,5,0.828,0,Hockey (Field),750,,750,,,
+NZ,Northland,M,11,R,147,24,147,1,Walk,15,1.111,0,Rugby Union,750,,1000,,,
+NZ,Auckland,M,14,R,169,27,165,1,Bus,15,0.49,0,Rugby Union,500,,500,,,
+NZ,Tasman,M,11,R,146,25,149,1,Car,15,0,0,Rugby Union,500,,500,,,
+NZ,Hawkes Bay,M,13,R,122,22,82,1,Car,25,0.541,0,Cycling,750,,750,,,
+NZ,Waikato,M,12,R,180,27,170,1,Bus,45,0.45,0,Football/Soccer,500,,750,,,
+NZ,Auckland,M,13,R,161,25,172,1,Walk,15,0.431,0,Football/Soccer,1000,,1000,,,
+NZ,Canterbury,M,9,R,148,45,151,2,Walk,5,0.625,0,Rugby Union,1000,,1000,,,
+NZ,Nelson,M,12,L,153,24,165,1,Cycle,5,0,0,Other activities/sports,750,,500,,,
+NZ,Auckland,M,14,R,180,25,178,1,Bus,45,0.383,0,Other activities/sports,1000,,500,,,
+NZ,Bay of Plenty,M,9,R,131,19,128,1,Car,5,0.609,0,Rugby Union,1000,,1000,,,
+NZ,Auckland,M,9,R,122,20,126,1,Car,15,0.421,0,Football/Soccer,500,,750,,,
+NZ,Wellington,M,10,R,146,22,140,1,Car,5,0.407,0,Hockey (Field),1000,,1000,,,
+NZ,Auckland,M,11,B,140,40,150,2,Bus,45,1.693,0,Swimming,1000,,1000,,,
+NZ,Wellington,M,13,R,155,25,142,1,Walk,45,0,0,None,250,,250,,,
+NZ,Auckland,M,11,R,140,22,170,1,Car,5,0.415,0,Football/Soccer,750,,750,,,
+NZ,Auckland,M,12,R,160,23,131,1,Bus,25,0.392,0,Football/Soccer,1000,,1000,,,
+NZ,Canterbury,M,9,R,143,20,143,1,Car,5,0.632,0,Basketball,500,,750,,,
+NZ,Waikato,M,10,R,152,30,98,2,Walk,5,0,0,Swimming,1000,,1000,,,
+NZ,Auckland,M,13,R,166,25,163,1,Bus,25,0.343,0,Swimming,750,,250,,,
+NZ,Manawatu-Wanganui,M,13,R,165,21,168,1,Cycle,15,0.313,0,Cricket,500,,0,,,
+NZ,Manawatu-Wanganui,M,13,R,151,24,151,1,Walk,5,0.375,0,Football/Soccer,750,,500,,,
+NZ,Northland,M,9,B,149,21,143,1,Bus,5,0.641,0,Football/Soccer,750,,1000,,,
+NZ,Wellington,M,10,R,153,22,153,2,Walk,5,0.383,0,Other activities/sports,750,,500,,,
+NZ,Auckland,M,11,R,143,21,143,1,Walk,5,0.749,0,Football/Soccer,750,,500,,,
+NZ,Wellington,M,9,R,126,16,126,1,Car,15,0.56,0,Swimming,1000,,250,,,
+NZ,Auckland,M,12,R,163,22,120,2,Walk,5,0.517,0,Other activities/sports,1000,,1000,,,
+NZ,Auckland,M,14,B,166,32,170,1,Walk,5,0.406,0,Tennis,500,,250,,,
+NZ,Auckland,M,13,R,164,26,169,2,Car,5,0.341,0,Rugby Union,500,,500,,,
+NZ,Northland,M,15,L,174,25,182,1,Bus,15,0.497,0,Rugby Union,500,,500,,,
+NZ,Manawatu-Wanganui,M,12,R,156,25,156,1,Walk,15,0.39,0,Rugby Union,250,,0,,,
+NZ,Waikato,M,12,L,150,24,147,1,Walk,5,0.297,0,Football/Soccer,750,,1000,,,
+NZ,Waikato,M,11,L,161,24,161,1,Bus,5,0,0,Hockey (Field),750,,750,,,
+NZ,Waikato,M,13,R,172,17,144,1,Car,5,0.391,0,Rugby Union,500,,500,,,
+NZ,Northland,M,10,R,157,20,149,1,Car,5,0.551,0,Baseball/Softball,1000,,1000,,,
+NZ,Waikato,M,11,R,154,21,154,1,Car,5,0.578,0,Hockey (Field),0,,0,,,
+NZ,Waikato,M,11,R,146,22,170,2,Car,45,0.485,0,Golf,1000,,500,,,
+NZ,Northland,M,14,R,177,25,177,1,Car,45,0.5,0,Football/Soccer,1000,,0,,,
+NZ,Wellington,M,14,R,175,29,176,1,Bus,45,0.542,0,Other activities/sports,250,,250,,,
+NZ,Auckland,M,13,R,174,24,168,2,Walk,15,0,0,Football/Soccer,250,,500,,,
+NZ,Auckland,M,14,R,164,27,172,1,Bus,45,0.313,0,Rugby Union,500,,500,,,
+NZ,Auckland,M,14,R,167,25,170,1,Bus,25,0.343,0,Football/Soccer,750,,750,,,
+NZ,Waikato,M,11,L,143,25,141,1,Cycle,15,0,0,Rugby Union,1000,,1000,,,
+NZ,Auckland,M,14,R,167,24,176,1,Bus,45,0.375,0,Rugby Union,0,,250,,,
+NZ,Auckland,M,14,R,170,25,170,2,Walk,15,0.454,0,Football/Soccer,500,,500,,,
+OZ,New South Wales,F,11,R,147,20,148,3,Walk,15,1.24,44,Swimming,456,1,346,1,397,769
+OZ,Western OZ,F,11,R,145,21,145,2,Car,20,0.29,39,Netball,161,155,202,54,991,1000
+OZ,South OZ,F,16,R,167,22,166,2,Bus,15,0.45,35,Tennis,1000,391,1000,66,1000,959
+OZ,Queensland,F,14,R,162,22,150,1,Other,0,1.2,0,Swimming,314,462,929,125,1000,1000
+OZ,South OZ,F,16,R,168,24,165,3,Car,15,0.5,37,Netball,113,,155,125,167,249
+OZ,South OZ,F,16,R,172,24,170,1,Walk,30,0.37,31,Running/Jogging,799,308,568,143,178,237
+OZ,OZn Capitol Territory,F,16,R,173,23,169,1,Walk,20,0.26,37,Rugby League,96,214,604,172,42,48
+OZ,Victoria,F,11,R,154,24,163,1,Car,4,0.39,43,Basketball,769,533,1000,184,190,167
+OZ,Queensland,F,14,R,165,25,171,1,Car,17,0.31,38,Hockey (Field),196,332,433,184,255,521
+OZ,South OZ,F,12,R,144,25,140,1,Car,8,0.39,41,Netball,527,533,1000,190,970,1000
+OZ,South OZ,F,13,R,162,29,154,2,Bus,45,0.4,25,Basketball,72,72,196,196,155,249
+OZ,Queensland,F,14,R,157,21,157,2,Bus,20,0.28,31,Cricket,255,125,273,202,1,
+OZ,Victoria,F,12,L,160,25,155,1,Walk,20,0.28,25,Netball,1000,1000,681,208,515,509
+OZ,New South Wales,F,13,L,166,24,156,2,Car,15,0.39,31,Dancing,1000,503,509,226,1000,1000
+OZ,Queensland,F,13,L,159,23,154,1,Bus,15,0.4,40,Rugby League,421,586,1000,232,409,805
+OZ,Victoria,F,11,L,154,20,145,1,Walk,5,0.8,45,Swimming,237,237,533,243,1,379
+OZ,New South Wales,F,10,R,141,22,139,1,Walk,15,0.4,47,Tennis,161,232,362,261,,
+OZ,New South Wales,F,11,R,153,24,157,1,Car,8,0.43,37,Tennis,586,226,409,267,675,864
+OZ,New South Wales,F,14,R,165,21,163,2,Car,5,0.49,56,Football/Soccer,557,366,1000,282,234,384
+OZ,Victoria,F,12,R,148,24,150,1,Walk,10,0.72,57,Swimming,675,675,858,308,716,663
+OZ,New South Wales,F,14,R,163,24,163,1,Car,10,0.37,30,Hockey (Field),279,515,799,338,78,90
+OZ,New South Wales,F,15,R,173,25,172,1,Bus,65,0.36,71,Swimming,285,740,474,350,734,427
+OZ,Western OZ,F,15,R,161,24,165,2,Car,5,0.31,31,Netball,852,568,474,356,42,42
+OZ,New South Wales,F,14,R,170,23,170,1,Bus,5,0.5,73,Netball,342,390,462,372,1000,1000
+OZ,Victoria,F,15,R,168,24,166,2,Bus,35,0.4,48,Basketball,773,761,527,378,503,635
+OZ,New South Wales,F,11,R,148,24,148,1,Bus,45,0.37,30,Dancing,342,426,575,396,109,103
+OZ,Western OZ,F,11,R,135,20,134,1,Car,2,0.35,71,Netball,610,521,456,403,539,498
+OZ,New South Wales,F,10,R,142,22,142,1,Bus,10,0.4,41,Dancing,320,716,362,415,403,237
+OZ,Queensland,F,14,R,157,23,150,1,Bus,30,0.4,44,Running/Jogging,113,119,425,427,421,438
+OZ,Queensland,F,14,R,165,25,160,1,Bus,10,0.35,58,Netball,285,196,237,438,520,474
+OZ,New South Wales,F,9,R,148,22,149,1,Bus,15,0.43,43,Netball,1000,1000,1000,438,,
+OZ,Queensland,F,16,R,174,28,170,1,Bus,15,0.29,37,Other activities/sports,639,634,456,450,1000,1000
+OZ,Western OZ,F,14,B,160,24,160,1,Car,2,0.37,31,Athletics,503,379,220,468,876,781
+OZ,Victoria,F,14,R,179,25,176,2,Car,15,0.32,38,Dancing,468,604,752,468,657,681
+OZ,Victoria,F,11,R,147,21,148,1,Car,15,0.46,35,Netball,539,373,746,480,1000,634
+OZ,Queensland,F,13,R,150,25,155,1,Car,5,0.39,31,Netball,397,616,852,486,793,888
+OZ,New South Wales,F,10,L,152,25,152,1,Car,10,0.37,32,Dancing,1000,503,970,486,202,462
+OZ,Victoria,F,13,R,162,20,160,1,Walk,20,0.4,51,Tennis,695,503,599,486,1000,1000
+OZ,New South Wales,F,11,R,160,26,161,1,Walk,10,0.14,29,Dancing,308,592,226,486,1000,1000
+OZ,New South Wales,F,14,R,163,24,168,2,Car,25,0.48,36,Dancing,421,645,935,492,663,681
+OZ,Western OZ,F,6,R,170,25,168,2,Car,5,0.39,56,Basketball,503,498,498,498,580,592
+OZ,Tasmania,F,12,R,167,25,171,1,Car,3,0.35,36,None,415,385,693,503,113,793
+OZ,Queensland,F,14,R,190,35,183,1,Car,7,0.62,38,Basketball,1000,1000,1000,503,486,699
+OZ,Western OZ,F,10,R,152,22,152,1,Walk,7,0.4,32,Netball,533,557,314,503,320,356
+OZ,Victoria,F,13,L,171,24,178,2,Car,4,1.51,81,Swimming,379,716,941,503,1000,1000
+OZ,New South Wales,F,10,R,145,22,145,1,Car,5,0.34,36,Dancing,498,509,515,509,25,31
+OZ,Queensland,F,9,R,130,20,120,1,Car,1,0.5,94,Athletics,539,1000,1000,515,72,60
+OZ,New South Wales,F,11,R,154,24,150,2,Walk,10,0.37,36,Netball,533,545,539,515,1000,1000
+OZ,Western OZ,F,11,R,148,22,150,1,Car,6,0.51,38,Dancing,474,574,515,521,557,551
+OZ,New South Wales,F,16,R,167,26,167,2,Bus,40,0.32,32,Skateboarding/Rollerblading,492,639,775,521,521,628
+OZ,Victoria,F,12,R,150,24,154,3,Walk,3,0.29,34,Other activities/sports,503,503,539,521,273,297
+OZ,Victoria,F,10,B,147,22,145,2,Cycle,2,0,36,Basketball,498,740,917,521,356,568
+OZ,OZn Capitol Territory,F,12,R,152,23,146,1,Car,5,0.34,46,Netball,634,651,965,527,598,598
+OZ,New South Wales,F,15,R,165,23,163,1,Car,15,0.41,27,Basketball,498,704,917,539,167,616
+OZ,Western OZ,F,15,R,165,22,166,1,Bus,10,0.4,40,Netball,338,96,332,539,551,557
+OZ,New South Wales,F,14,L,177,26,165,1,Walk,15,0.34,34,Cycling,1000,799,1000,539,137,42
+OZ,New South Wales,F,16,R,163,32,166,9,Bus,15,0.28,35,Netball,675,781,687,539,634,888
+OZ,Victoria,F,10,R,134,20,132,1,Car,2,0.4,36,Tennis,598,734,1000,539,297,326
+OZ,Tasmania,F,16,L,159,23,152,1,Bus,20,1.86,51,Netball,533,527,616,539,563,545
+OZ,South OZ,F,12,R,155,27,152,1,Car,5,0.39,45,Dancing,502,540,681,541,557,557
+OZ,New South Wales,F,9,R,145,23,143,1,Car,5,0.43,71,Netball,592,693,533,545,,462
+OZ,Queensland,F,13,R,162,25,160,1,Car,15,0.48,68,Athletics,273,214,805,545,639,746
+OZ,New South Wales,F,15,R,171,24,171,1,Car,3,0.4,43,Netball,1000,671,982,551,551,545
+OZ,Tasmania,F,16,R,158,20,150,1,Bus,25,0.4,23,None,634,669,243,551,285,533
+OZ,New South Wales,F,11,R,154,22,152,2,Car,4,0.34,40,Baseball/Softball,1000,1000,1000,557,1,
+OZ,Victoria,F,12,R,148,23,149,1,Walk,7,0.39,39,Netball,414,480,1000,563,210,270
+OZ,New South Wales,F,14,R,160,23,152,1,Bus,20,0.39,37,Other activities/sports,261,326,468,563,291,503
+OZ,New South Wales,F,11,R,145,25,145,1,Walk,15,0.32,34,Tennis,456,462,687,568,285,220
+OZ,South OZ,F,12,B,154,27,148,1,Car,20,0.31,39,Other activities/sports,509,291,994,568,326,592
+OZ,Western OZ,F,12,R,144,24,150,1,Car,2,0.39,49,Netball,533,1000,421,586,1000,462
+OZ,New South Wales,F,14,R,152,23,152,2,Car,15,0.42,54,Dancing,480,155,302,586,373,226
+OZ,New South Wales,F,10,R,138,21,135,1,Car,5,0.65,44,Netball,610,610,834,586,297,308
+OZ,South OZ,F,17,R,175,27,182,1,Car,5,0.37,46,Netball,746,746,852,610,817,811
+OZ,New South Wales,F,17,R,170,10,170,1,Bus,30,0.41,38,Swimming,498,503,492,617,324,515
+OZ,New South Wales,F,13,R,165,24,160,1,Bus,10,0.4,28,Athletics,805,421,433,622,255,107
+OZ,Tasmania,F,12,R,164,28,164,3,Bus,30,0.42,40,Dancing,628,326,267,622,598,769
+OZ,South OZ,F,13,R,161,24,161,1,Walk,8,0.32,37,Walking/Hiking,805,468,911,628,314,125
+OZ,New South Wales,F,15,R,166,23,169,3,Car,5,0.42,31,Walking/Hiking,663,769,486,628,840,1000
+OZ,New South Wales,F,12,R,136,19,140,2,Car,15,0.73,58,Other activities/sports,1000,701,1000,641,,
+OZ,New South Wales,F,11,R,148,21,155,2,Bus,45,0.5,32,Dancing,468,462,651,651,474,474
+OZ,South OZ,F,13,R,151,22,144,1,Bus,40,0.29,35,Tennis,450,509,661,651,261,421
+OZ,New South Wales,F,12,B,160,24,158,1,SkateBoard...,35,0.42,20,Football/Soccer,645,675,675,675,616,616
+OZ,South OZ,F,12,R,152,22,137,1,Car,10,0.35,41,Gymnastics,710,699,716,681,480,622
+OZ,South OZ,F,11,R,138,19,132,1,Car,5,0.31,43,Netball,1000,574,1000,693,232,780
+OZ,Queensland,F,17,R,163,25,163,1,Car,5,0.29,25,Tennis,527,545,657,699,917,923
+OZ,New South Wales,F,14,R,157,21,148,3,Car,5,0.36,29,Netball,764,799,740,704,1000,1000
+OZ,Western OZ,F,11,R,160,25,159,1,Car,5,0.38,35,Netball,693,1000,651,710,1,131
+OZ,Victoria,F,10,B,155,24,154,1,Walk,20,0,42,Athletics,864,1000,1000,710,226,214
+OZ,New South Wales,F,12,R,165,24,155,1,Car,6,0.35,40,Football/Soccer,480,468,687,716,580,699
+OZ,Tasmania,F,13,R,162,24,164,1,Bus,22,0.48,39,Netball,350,574,1000,720,1,
+OZ,New South Wales,F,14,L,164,27,158,3,Bus,30,0.32,38,Other activities/sports,521,1000,557,740,1000,1000
+OZ,Victoria,F,16,R,167,24,173,2,Bus,14,0.37,35,Netball,533,799,970,746,1000,1000
+OZ,New South Wales,F,14,R,165,26,168,1,Bus,15,0.42,39,Netball,1000,894,823,752,545,693
+OZ,Victoria,F,14,B,170,24,163,2,Rail,30,0.42,32,Hockey (Field),840,793,840,764,787,829
+OZ,New South Wales,F,12,R,164,24,164,3,Car,5,0.37,38,Skateboarding/Rollerblading,1000,1000,574,764,433,285
+OZ,New South Wales,F,14,R,160,23,152,1,Bus,25,0.95,39,Athletics,805,840,823,764,634,604
+OZ,Victoria,F,12,R,153,22,135,2,Car,6,0.4,29,Other activities/sports,1000,462,1000,775,326,326
+OZ,New South Wales,F,9,R,126,19,128,1,Car,2,0.5,54,Tennis,935,858,574,775,852,486
+OZ,Queensland,F,16,R,184,28,187,2,Car,12,0.36,57,Netball,864,959,852,787,237,167
+OZ,Queensland,F,12,R,160,23,159,3,Car,15,0.39,39,Other activities/sports,1000,1000,1000,799,1000,1000
+OZ,Victoria,F,13,R,160,20,160,1,Walk,5,0.32,56,Tennis,823,722,669,805,728,793
+OZ,New South Wales,F,11,R,153,23,144,1,Car,10,0.45,34,Tennis,663,746,1000,805,734,858
+OZ,Western OZ,F,9,R,169,25,173,1,Car,4,0.34,28,Netball,622,616,486,811,710,805
+OZ,Victoria,F,11,R,150,25,146,1,Car,3,0.39,66,Swimming,1000,793,1000,823,273,373
+OZ,Tasmania,F,13,R,155,28,150,1,Car,15,0.5,32,Netball,533,527,580,829,539,462
+OZ,New South Wales,F,13,R,157,22,154,2,Car,10,0.44,51,Netball,569,563,1000,850,,
+OZ,Western OZ,F,11,L,152,22,168,1,Walk,5,0.5,53,Dancing,557,155,840,870,,
+OZ,South OZ,F,14,R,168,22,163,1,Car,15,0.45,35,Dancing,1000,1000,728,882,604,840
+OZ,Victoria,F,12,B,164,23,155,1,Bus,60,0.37,34,Bowling,764,775,604,905,237,503
+OZ,Queensland,F,12,R,154,23,146,1,Car,15,0.46,46,Netball,746,480,1000,923,220,474
+OZ,Queensland,F,12,R,152,24,155,1,Car,3,0.43,41,Skateboarding/Rollerblading,799,1000,846,929,781,852
+OZ,Victoria,F,7,R,140,19,142,1,Car,10,0,62,Gymnastics,970,911,970,947,,
+OZ,Victoria,F,16,R,162,22,162,1,Rail,20,0.39,33,Gymnastics,1000,675,1000,965,385,462
+OZ,New South Wales,F,12,R,152,23,150,1,Car,10,0.37,46,Tennis,1000,752,480,988,137,503
+OZ,New South Wales,F,11,R,140,22,130,1,Cycle,15,0.46,39,Cricket,1000,1000,1000,994,282,282
+OZ,South OZ,F,13,R,168,22,167,1,Walk,10,0.37,39,Netball,1000,1000,1000,1000,740,758
+OZ,South OZ,F,13,R,158,24,151,5,Walk,5,0.43,21,Golf,1000,1000,1000,1000,811,1000
+OZ,South OZ,F,11,L,161,27,163,3,Walk,20,0.59,49,Running/Jogging,929,1000,1000,1000,248,101
+OZ,New South Wales,F,13,R,160,29,150,1,Car,8,0.43,37,Other activities/sports,1000,1000,1000,1000,228,312
+OZ,New South Wales,F,11,R,151,20,151,2,Car,2,0.37,41,Tennis,811,1000,1000,1000,190,178
+OZ,Western OZ,F,10,R,160,24,184,1,Car,4,0.43,59,Swimming,1000,1000,1000,1000,503,509
+OZ,New South Wales,F,10,R,144,22,141,1,Car,20,0.6,45,Table Tennis,888,1000,1000,1000,1000,1000
+OZ,South OZ,F,15,L,155,24,156,1,Bus,45,0.34,40,Dancing,988,1000,1000,1000,805,817
+OZ,Victoria,F,7,R,143,23,142,1,Walk,10,0.43,51,Netball,1000,1000,1000,1000,1000,1000
+OZ,New South Wales,F,11,R,145,20,104,2,Car,10,0.48,32,Dancing,456,1000,1000,1000,486,373
+OZ,Western OZ,F,11,B,153,24,150,1,Walk,25,0.48,50,Swimming,403,474,1000,1000,551,563
+OZ,Victoria,F,13,R,154,21,160,1,Walk,10,0.5,125,Hockey (Ice),935,947,976,1000,988,1000
+OZ,Victoria,F,12,R,156,23,155,1,Walk,1,0.4,51,Basketball,462,1000,1000,1000,101,101
+OZ,South OZ,F,13,R,160,25,167,1,Car,14,0.28,31,Hockey (Field),1000,1000,1000,1000,131,143
+OZ,Queensland,F,8,R,150,23,126,2,Car,5,0.38,50,Cricket,1000,1000,1000,1000,279,391
+OZ,South OZ,F,11,R,148,24,158,1,Car,4,0.37,32,Gymnastics,1000,1000,1000,1000,533,533
+OZ,New South Wales,F,14,R,171,24,167,1,Walk,7,0.31,33,Netball,1000,1000,1000,1000,527,752
+OZ,Victoria,F,10,L,135,21,127,1,Car,6,0.39,50,Swimming,1000,1000,1000,1000,498,1000
+OZ,New South Wales,F,12,L,160,23,160,2,Bus,15,0.37,65,Rowing,1000,291,823,1000,1000,1000
+OZ,New South Wales,F,16,R,153,20,160,1,Bus,45,0.43,33,Dancing,1000,1000,1000,1000,635,1000
+OZ,Victoria,F,15,R,154,23,149,1,Car,3,0.36,37,Dancing,1000,1000,1000,1000,1000,1000
+OZ,New South Wales,F,12,R,155,20,145,1,Walk,30,0.62,99,Golf,1000,1000,1000,1000,267,267
+OZ,Victoria,F,12,R,165,24,152,2,Car,15,0.32,34,Football/Soccer,1000,1000,1000,1000,1000,1000
+OZ,New South Wales,F,13,R,160,22,148,1,Cycle,15,0.48,0,Other activities/sports,1000,1000,1000,1000,403,409
+OZ,Queensland,F,10,R,139,20,134,2,Car,4,0.34,32,Gymnastics,1,970,1000,1000,888,799
+OZ,New South Wales,F,11,R,156,24,148,3,Walk,10,0.59,37,Dancing,1000,755,1000,1000,37,264
+OZ,New South Wales,F,11,R,166,24,166,1,Car,15,0.37,31,Football/Soccer,1000,1000,1000,1000,486,492
+OZ,South OZ,F,10,R,128,23,132,2,Bus,50,0.37,52,None,1000,1000,1000,1000,466,480
+OZ,Tasmania,F,9,R,141,21,139,1,Walk,15,0.42,67,Dancing,1000,1000,1000,1000,1000,503
+OZ,Queensland,F,11,L,144,23,138,2,Car,5,0.45,32,Netball,1000,1000,1000,1000,1,167
+OZ,New South Wales,F,16,R,155,23,150,2,Rail,20,0.32,19,Swimming,1000,1000,1000,1000,,
+OZ,Western OZ,F,14,R,164,23,161,1,Bus,80,0.34,48,Other activities/sports,1000,834,1000,1000,994,1000
+OZ,Victoria,F,15,R,164,24,161,1,Walk,15,0.42,57,Walking/Hiking,929,1000,1000,1000,1000,1000
+OZ,New South Wales,F,11,L,154,23,154,1,Bus,20,0.51,68,Netball,249,480,1000,1000,1000,1000
+OZ,New South Wales,F,11,R,156,25,163,3,Walk,2,0.53,30,Netball,1000,1000,1000,1000,639,634
+OZ,Western OZ,F,14,R,172,31,171,2,Car,15,1.34,39,Walking/Hiking,1000,1000,1000,1000,314,438
+OZ,New South Wales,F,9,R,137,24,133,1,Bus,46,0.84,108,Football/Soccer,1000,1000,1000,1000,1000,947
+OZ,New South Wales,F,7,R,154,26,144,3,Walk,2,0.5,41,Netball,291,1000,1000,1000,161,155
+OZ,South OZ,F,13,R,164,25,167,1,Bus,30,0.36,34,Netball,1000,1000,1000,1000,634,628
+OZ,Victoria,F,13,R,162,24,158,2,Car,10,0.32,35,Tennis,1000,1000,1000,1000,1000,1000
+OZ,Tasmania,F,13,R,160,23,162,1,Car,15,0.36,41,Walking/Hiking,1000,1000,1000,1000,1,
+OZ,Victoria,F,12,L,150,25,150,1,Car,10,1.01,34,Netball,521,764,1000,1000,663,1000
+OZ,New South Wales,F,14,R,167,25,162,1,Car,3,1.34,50,Dancing,1000,1000,1000,1000,415,687
+OZ,Victoria,F,11,R,160,25,169,1,Car,5,0.32,32,Baseball/Softball,1000,1000,1000,1000,515,509
+OZ,Victoria,F,10,R,136,16,136,1,Car,5,0.59,78,Dancing,781,858,947,1000,,
+OZ,Queensland,F,10,R,139,26,137,1,Car,15,0.57,34,Football/Soccer,1000,1000,1000,1000,456,450
+OZ,South OZ,F,16,R,170,23,127,1,Car,25,0.31,36,Netball,1000,1000,1000,1000,202,669
+OZ,Victoria,F,11,R,95,19,129,1,Car,10,0.42,43,Swimming,1000,1000,1000,1000,,
+OZ,Queensland,F,13,R,165,24,158,2,Car,5,0.42,46,Dancing,498,,1000,,,
+OZ,Victoria,F,16,R,157,22,157,1,Walk,10,0.34,52,None,184,172,196,,1000,1000
+OZ,New South Wales,M,9,R,136,21,135,3,Bus,7,0.59,55,Rugby League,1000,1000,1000,1,,
+OZ,Queensland,M,14,R,176,25,177,1,Car,4,0.39,49,Rugby League,13,1,533,13,1000,1000
+OZ,Western OZ,M,6,B,140,25,125,1,Car,15,0.38,63,Tennis,1000,338,1000,107,,
+OZ,South OZ,M,13,R,168,25,167,1,Bus,75,0.42,29,Football/Soccer,196,302,687,119,533,527
+OZ,South OZ,M,17,R,175,30,172,2,Walk,1,0.26,30,Tennis,710,379,1000,125,834,764
+OZ,South OZ,M,11,R,146,23,149,1,Bus,45,0.35,29,Football/Soccer,492,498,302,125,823,651
+OZ,New South Wales,M,10,L,149,23,153,1,Walk,2,0,55,Rugby League,54,1000,994,143,1000,7
+OZ,South OZ,M,15,R,157,27,150,1,Walk,25,0.26,49,Rugby League,1000,232,1000,143,409,533
+OZ,Victoria,M,11,R,138,21,167,1,Car,5,0.57,47,Tennis,184,308,308,155,232,237
+OZ,South OZ,M,12,R,152,24,151,1,Car,7,0.4,55,Tennis,255,101,385,155,810,237
+OZ,Western OZ,M,14,R,147,25,152,2,Bus,20,0.23,31,Golf,66,58,48,161,1000,1000
+OZ,Victoria,M,14,B,170,27,167,2,Car,10,0.35,37,None,255,,704,178,539,1000
+OZ,Tasmania,M,14,R,157,23,152,1,Car,10,0.31,34,Rugby League,196,196,196,196,586,894
+OZ,Western OZ,M,10,R,148,24,150,2,Car,2,0.34,37,Football/Soccer,421,42,90,208,409,415
+OZ,Queensland,M,12,R,170,24,150,1,Car,15,0.34,44,Football/Soccer,220,551,249,208,119,119
+OZ,OZn Capitol Territory,M,11,L,140,22,137,1,Car,5,0.53,56,Golf,604,1000,870,214,391,592
+OZ,Victoria,M,8,R,146,11,146,1,Walk,5,0.34,39,Rugby League,994,675,1000,214,202,563
+OZ,New South Wales,M,14,R,177,27,180,1,Bus,50,0.35,41,Martial Arts,214,220,220,226,1000,1000
+OZ,New South Wales,M,15,R,183,15,173,1,Bus,40,0.32,30,Gymnastics,208,273,474,237,1,137
+OZ,South OZ,M,13,R,165,26,159,1,Car,20,0.32,63,Football/Soccer,805,391,616,249,462,775
+OZ,Queensland,M,14,R,189,27,195,1,Cycle,10,0.32,49,Cycling,740,326,882,249,48,143
+OZ,Western OZ,M,9,R,150,35,161,3,Car,10,0.42,52,Athletics,208,190,196,249,409,208
+OZ,New South Wales,M,15,R,166,25,171,2,SkateBoard...,60,0.26,50,Football/Soccer,515,125,344,261,740,775
+OZ,Queensland,M,8,R,144,43,138,1,Car,4,0.39,49,Football/Soccer,616,320,799,273,433,681
+OZ,New South Wales,M,10,R,144,29,128,1,Walk,8,0.32,35,Rugby League,846,1000,492,273,190,143
+OZ,Tasmania,M,14,R,168,26,165,1,Walk,40,0.29,31,Football/Soccer,107,119,167,285,1000,1000
+OZ,South OZ,M,16,R,174,25,175,1,Bus,35,0.42,40,Cricket,196,143,515,285,787,817
+OZ,Tasmania,M,16,R,174,28,175,1,Walk,7,0.29,26,Basketball,616,184,131,285,184,196
+OZ,New South Wales,M,11,L,145,22,140,1,Car,10,0.41,44,Other activities/sports,994,306,521,318,671,677
+OZ,New South Wales,M,10,R,130,20,170,1,Car,8,0.4,57,Cricket,433,610,450,332,,214
+OZ,Victoria,M,13,L,187,28,185,1,Car,2,0.36,37,Football/Soccer,338,320,539,332,574,947
+OZ,New South Wales,M,12,R,160,30,160,2,Bus,15,0.26,37,Rugby Union,563,557,498,344,746,752
+OZ,Western OZ,M,12,R,146,23,147,1,Car,2,0.31,43,Football/Soccer,202,226,492,350,651,775
+OZ,Queensland,M,14,R,159,24,165,2,Walk,20,0.04,37,Football/Soccer,332,433,533,356,385,467
+OZ,Queensland,M,8,R,141,24,111,1,Car,5,0.39,61,Athletics,273,208,480,357,143,433
+OZ,Western OZ,M,12,L,157,27,151,1,Walk,3,0.37,40,Baseball/Softball,438,468,486,362,929,1000
+OZ,Victoria,M,8,R,130,24,131,1,Car,7,0.46,37,Football/Soccer,574,480,817,379,1000,1000
+OZ,New South Wales,M,10,L,160,20,160,1,Car,10,0.47,71,Rugby League,356,379,356,385,1000,521
+OZ,Victoria,M,11,R,147,22,146,1,Car,10,0.31,62,Football/Soccer,1000,988,533,391,622,805
+OZ,Western OZ,M,15,R,164,27,164,1,Bus,40,0.29,27,Hockey (Ice),604,716,492,409,267,758
+OZ,Western OZ,M,14,L,164,25,160,2,Walk,3,0.42,60,Football/Soccer,196,,758,415,521,521
+OZ,South OZ,M,12,R,166,28,152,1,Car,2,0.35,45,Football/Soccer,486,444,486,433,167,172
+OZ,Queensland,M,14,R,148,25,148,2,Bus,20,0.4,57,Basketball,480,740,574,433,733,929
+OZ,New South Wales,M,13,R,166,25,165,2,SkateBoard...,5,0.29,26,Tennis,462,167,728,444,362,362
+OZ,Queensland,M,14,R,180,26,180,1,Car,11,0.34,33,Rugby League,1,356,799,450,515,1000
+OZ,Victoria,M,13,L,174,26,172,1,Bus,45,0.26,33,Basketball,713,647,707,462,581,240
+OZ,Western OZ,M,13,R,184,30,194,1,Walk,4,0.23,34,Football/Soccer,775,539,1000,462,480,1000
+OZ,South OZ,M,16,R,171,25,172,1,Bus,10,0.31,28,Dancing,509,669,580,486,876,805
+OZ,New South Wales,M,12,R,153,25,161,3,Car,15,0.31,40,Football/Soccer,427,208,155,486,1000,1000
+OZ,Victoria,M,14,R,165,27,158,1,Bus,30,0.36,34,Football/Soccer,320,509,740,492,675,681
+OZ,Western OZ,M,13,R,157,23,158,1,Other,20,0.32,48,Other activities/sports,834,598,403,492,202,237
+OZ,Western OZ,M,13,R,163,14,163,3,Bus,70,0,31,Rugby Union,279,492,373,503,125,297
+OZ,Western OZ,M,12,R,147,23,147,1,Car,15,0.45,64,Football/Soccer,509,492,498,503,450,438
+OZ,New South Wales,M,14,R,167,27,175,1,Walk,10,0.33,37,Rugby League,675,1000,693,509,1000,1000
+OZ,Victoria,M,11,R,150,23,144,2,Car,5,0.46,41,Basketball,752,870,1000,521,143,172
+OZ,New South Wales,M,16,R,183,26,183,2,Walk,20,0.4,42,Football/Soccer,462,384,833,521,372,378
+OZ,New South Wales,M,14,L,188,25,186,1,Bus,45,0.29,42,Rugby League,1000,1000,503,521,409,403
+OZ,Victoria,M,12,R,163,27,155,1,Walk,9,0.39,38,Other activities/sports,527,533,533,527,326,326
+OZ,South OZ,M,12,R,160,25,156,4,Car,17,0.38,48,Other activities/sports,509,515,707,539,629,1000
+OZ,Western OZ,M,13,R,166,26,166,1,Bus,35,0.29,37,None,1000,1000,799,551,1000,1000
+OZ,Queensland,M,14,R,180,20,178,1,Bus,30,0.39,107,Tennis,699,96,415,557,214,438
+OZ,New South Wales,M,8,R,162,25,163,1,Car,3,0.43,70,Cricket,598,598,586,586,232,263
+OZ,Victoria,M,11,R,144,20,142,1,Car,4,0.32,39,Hockey (Field),775,669,823,586,373,539
+OZ,Western OZ,M,14,R,161,30,161,1,Car,15,0.37,36,Hockey (Field),167,184,397,598,1000,1000
+OZ,Western OZ,M,11,R,150,25,150,1,Car,4,0.39,44,Swimming,172,456,474,598,444,427
+OZ,Victoria,M,11,R,149,23,141,1,Walk,7,0.54,34,Cricket,545,433,728,634,462,308
+OZ,New South Wales,M,7,R,147,26,152,4,Walk,1,0.34,44,Tennis,285,622,870,639,616,622
+OZ,Tasmania,M,11,B,157,25,158,2,Car,10,0.42,44,Basketball,970,834,746,645,734,704
+OZ,New South Wales,M,12,R,155,26,150,1,Car,8,0.35,45,Rugby League,677,833,827,647,240,438
+OZ,New South Wales,M,14,R,158,23,165,3,Bus,15,0.34,41,Football/Soccer,634,693,769,651,1000,1000
+OZ,Victoria,M,11,R,144,23,144,1,Car,2,0.37,45,Basketball,622,704,693,651,870,870
+OZ,New South Wales,M,11,R,156,23,149,3,Walk,2,0.34,46,Football/Soccer,1000,740,580,657,125,125
+OZ,South OZ,M,14,R,151,18,179,1,Car,18,0.29,43,Table Tennis,568,367,580,657,622,699
+OZ,Tasmania,M,13,R,167,26,172,2,Bus,20,0.29,26,Cycling,994,1000,722,663,551,563
+OZ,Tasmania,M,14,R,156,25,161,1,Bus,65,0.4,35,Bowling,719,611,563,671,31,37
+OZ,New South Wales,M,14,R,169,26,172,2,Bus,45,0.32,100,Other activities/sports,616,421,669,681,557,568
+OZ,Victoria,M,7,R,138,23,135,1,Car,5,0.48,51,Cricket,1000,1000,521,710,492,704
+OZ,Queensland,M,14,R,180,30,182,1,Bus,15,1.42,94,Rugby Union,769,764,840,728,775,752
+OZ,Queensland,M,16,R,165,24,173,1,Rail,60,0.34,37,Tennis,545,557,728,734,,
+OZ,New South Wales,M,10,B,133,22,126,1,Car,4,0.39,95,Tennis,1000,634,846,740,468,628
+OZ,New South Wales,M,12,R,167,26,170,1,Car,4,0.42,39,None,297,764,811,740,1000,1000
+OZ,Tasmania,M,11,B,152,22,100,3,Car,8,0.34,55,Football/Soccer,1000,746,249,752,1,143
+OZ,Queensland,M,12,R,160,24,146,1,Car,2,0.42,36,Football/Soccer,764,503,752,758,243,527
+OZ,South OZ,M,16,R,176,28,181,1,Car,15,0.38,28,Football/Soccer,1000,1000,1000,764,1000,1000
+OZ,Tasmania,M,14,R,155,25,156,1,Bus,30,0.29,68,Other activities/sports,521,515,722,775,1000,539
+OZ,Queensland,M,11,R,142,22,141,1,Car,10,0.37,35,Football/Soccer,1000,775,628,775,480,456
+OZ,New South Wales,M,14,R,179,28,184,1,Bus,15,0.29,47,Swimming,1000,870,1000,781,823,1000
+OZ,South OZ,M,13,R,160,28,160,1,Bus,15,0.42,53,Football/Soccer,734,604,551,787,539,563
+OZ,New South Wales,M,11,R,150,21,147,1,Car,12,0.37,36,Other activities/sports,1000,749,551,791,527,647
+OZ,New South Wales,M,10,R,146,22,137,1,Car,2,0.4,46,Football/Soccer,1000,970,876,799,208,196
+OZ,Tasmania,M,11,R,144,23,139,1,Car,7,0.42,43,Football/Soccer,1000,379,598,811,462,639
+OZ,New South Wales,M,13,R,165,13,172,1,Bus,30,0.36,65,Rugby Union,178,190,539,817,409,409
+OZ,Western OZ,M,12,R,179,25,95,1,Car,15,0.4,36,Rugby League,1000,858,1000,829,403,237
+OZ,South OZ,M,6,R,171,28,172,1,Bus,20,0.41,38,Other activities/sports,650,480,728,834,1000,1000
+OZ,South OZ,M,16,R,188,29,190,1,Cycle,5,0.31,82,Table Tennis,586,716,840,834,261,220
+OZ,Victoria,M,10,R,129,20,130,1,Car,7,0.34,35,Football/Soccer,834,858,1000,840,320,326
+OZ,Western OZ,M,14,R,162,27,170,1,Car,5,0.29,25,Football/Soccer,551,710,515,846,521,338
+OZ,Western OZ,M,14,R,194,24,82,1,Car,10,0,78,Golf,840,557,657,852,320,598
+OZ,New South Wales,M,11,B,139,18,130,1,Walk,3,0.39,85,Running/Jogging,1000,1000,921,905,332,202
+OZ,New South Wales,M,14,R,172,26,175,1,Bus,40,0.23,40,Football/Soccer,1000,767,761,982,605,665
+OZ,New South Wales,M,8,L,134,17,124,1,Car,3,0.45,52,Golf,1000,1000,1000,988,604,568
+OZ,Tasmania,M,13,R,161,25,158,1,Cycle,10,0.36,36,Cycling,1000,1000,1000,1000,635,713
+OZ,Victoria,M,12,R,147,24,145,1,Car,10,0.62,48,Other activities/sports,1000,1000,1000,1000,267,545
+OZ,Victoria,M,10,R,157,23,148,1,Car,2,0.48,66,Tennis,1000,1000,1000,1000,450,787
+OZ,New South Wales,M,13,R,153,24,153,1,Rail,55,0.32,40,Football/Soccer,1000,456,1000,1000,226,178
+OZ,New South Wales,M,11,R,151,20,150,2,Car,5,0,0,Football/Soccer,527,533,527,1000,527,527
+OZ,New South Wales,M,13,R,150,22,110,2,Car,30,0.26,44,Tennis,1000,1000,1000,1000,503,527
+OZ,Victoria,M,12,R,165,35,165,1,Cycle,2,0.46,36,Other activities/sports,1000,1000,1000,1000,,
+OZ,South OZ,M,11,R,150,23,149,1,Car,5,0.5,41,Football/Soccer,799,811,811,1000,1000,1000
+OZ,New South Wales,M,9,R,155,25,161,3,Car,2,0.41,65,Other activities/sports,1000,1000,1000,1000,1000,1000
+OZ,Queensland,M,12,L,163,20,163,2,Bus,60,0.31,42,None,1000,1000,1000,1000,1000,1000
+OZ,New South Wales,M,13,R,165,25,162,1,Car,25,0.4,47,Rugby Union,1000,1000,740,1000,675,1000
+OZ,Queensland,M,11,R,144,22,136,1,Bus,90,0.4,42,Rugby League,1000,1000,1000,1000,716,628
+OZ,Victoria,M,14,R,174,27,183,1,Car,25,0.42,48,Tennis,1000,1000,1000,1000,1000,1000
+OZ,South OZ,M,13,R,170,27,174,2,Car,10,0.33,38,Athletics,1000,1000,1000,1000,1000,586
+OZ,South OZ,M,15,R,189,29,183,1,Bus,45,0.32,33,Other activities/sports,1000,616,1000,1000,480,480
+OZ,South OZ,M,13,R,161,24,164,1,Bus,15,0.3,42,Football/Soccer,1000,1000,1000,1000,1000,988
+OZ,New South Wales,M,11,R,150,24,143,1,Bus,5,0.32,30,Football/Soccer,438,704,1000,1000,249,350
+OZ,Victoria,M,11,R,144,22,140,1,Car,15,0.64,55,Other activities/sports,870,781,1000,1000,557,533
+OZ,Victoria,M,11,R,157,24,151,1,Car,4,0.37,38,Football/Soccer,764,486,728,1000,752,900
+OZ,Victoria,M,12,B,149,24,192,1,Other,1,0.39,0,Other activities/sports,1000,521,1000,1000,,72
+OZ,Victoria,M,13,R,161,23,120,4,Car,5,0.43,43,Netball,1000,669,379,1000,1,
+OZ,South OZ,M,9,B,147,24,145,1,Cycle,5,0.27,46,Football/Soccer,498,492,1000,1000,604,580
+OZ,South OZ,M,16,R,180,25,88,1,Bus,30,0.37,56,Football/Soccer,1000,734,1000,1000,1000,1000
+OZ,New South Wales,M,10,R,142,23,141,1,Car,10,0.54,48,Cricket,1000,797,462,1000,204,557
+OZ,Tasmania,M,11,R,143,23,143,1,Bus,15,0.4,49,Football/Soccer,527,870,1000,1000,255,415
+OZ,Victoria,M,11,R,135,22,138,1,Walk,5,0.31,36,Other activities/sports,1000,1000,1000,1000,1000,1000
+OZ,Northern Territories,M,20,R,149,24,146,1,Car,3,0,50,Football/Soccer,1000,1000,474,1000,198,1000
+OZ,Queensland,M,13,R,147,24,157,1,Car,15,0.6,66,Rugby League,1000,521,1000,1000,1000,1000
+OZ,Victoria,M,14,B,187,28,184,1,Walk,18,0.28,40,Football/Soccer,1000,1000,1000,1000,527,858
+OZ,Queensland,M,12,L,175,30,175,2,Bus,30,0.4,37,Rugby League,1000,1000,1000,1000,1000,1000
+OZ,Western OZ,M,13,R,148,23,156,2,Cycle,5,0.35,31,Skateboarding/Rollerblading,1000,1000,1000,1000,1000,1000
+OZ,New South Wales,M,9,R,129,19,122,1,Walk,10,0.43,41,Football/Soccer,1000,982,1000,1000,1000,1000
+OZ,Western OZ,M,15,R,163,27,163,4,Bus,25,0.34,31,Golf,1000,1000,1000,1000,710,545
+OZ,Tasmania,M,11,R,146,23,150,1,Bus,10,0.36,44,Football/Soccer,456,1000,190,1000,1000,1000
+OZ,South OZ,M,12,R,141,22,145,1,Car,6,0.38,36,Cricket,1000,1000,1000,1000,66,54
+OZ,South OZ,M,13,R,173,26,172,1,Car,5,0.32,70,Football/Soccer,172,131,628,,486,474
+OZ,Victoria,M,11,B,150,25,150,2,Bus,10,0.36,37,Football/Soccer,874,521,216,,73,67
+UK,London,F,14,R,159,20,145,4,Walk,5,0.32,38,Table Tennis,0,0,0,0,1000,1000
+UK,North West,F,13,L,160,21,160,1,Bus,35,0.34,40,Martial Arts,6,6,6,6,6,6
+UK,North West,F,14,R,179,21,160,2,Walk,30,0.37,48,Swimming,83,77,89,73,500,652
+UK,North Wales,F,14,R,161,25,122,2,Walk,15,0.34,45,Swimming,81,115,158,133,953,941
+UK,South,F,13,B,170,26,172,3,Bus,60,0.48,36,Basketball,69,84,296,143,738,752
+UK,South,F,14,L,164,25,167,1,Walk,15,0.34,32,Dancing,192,179,190,179,727,796
+UK,North West,F,13,R,180,34,170,2,Car,15,0.35,34,Golf,0,500,0,194,1000,548
+UK,North West,F,14,R,169,25,169,3,Car,15,0.46,39,Hockey (Field),625,423,380,239,823,859
+UK,West Midlands,F,13,R,166,25,171,2,Car,7,0.35,32,Dancing,302,244,244,246,832,796
+UK,North West,F,13,R,152,23,146,3,Walk,30,0.32,33,Football/Soccer,640,574,783,273,910,852
+UK,South,F,13,L,158,23,157,4,Car,3,0.43,37,Other activities/sports,331,500,500,298,1000,1000
+UK,North West,F,12,R,171,30,164,1,Car,10,0.79,48,Dancing,639,997,500,309,1000,1000
+UK,North West,F,13,R,169,25,172,1,Walk,10,0.54,72,Tennis,635,358,418,315,174,264
+UK,East Midlands,F,12,R,163,25,166,3,Walk,28,0.68,22,Dancing,826,662,300,391,635,921
+UK,West Midlands,F,13,R,160,23,160,2,Walk,5,0.46,32,Football/Soccer,629,662,691,445,743,1000
+UK,East,F,11,R,145,24,150,2,Bus,30,0.84,43,Swimming,513,437,527,478,556,661
+UK,South,F,13,R,170,25,166,2,Walk,3,0.32,31,Dancing,630,631,390,480,807,810
+UK,North West,F,13,R,171,25,168,1,Walk,20,0.73,32,Dancing,577,712,400,485,722,850
+UK,South West,F,12,R,151,24,155,2,Walk,2,0.45,52,Swimming,500,500,500,500,500,500
+UK,South,F,12,R,155,24,153,2,Car,10,0.97,46,Swimming,0,0,500,500,500,500
+UK,South,F,11,R,149,23,146,1,Bus,60,0.32,24,Other activities/sports,500,500,500,500,500,500
+UK,North West,F,14,R,166,25,178,2,Car,10,0.31,39,Tennis,500,500,500,500,1000,1000
+UK,London,F,17,R,165,24,164,2,Other,20,0.48,63,Other activities/sports,500,500,500,500,1000,500
+UK,North East,F,13,R,152,20,151,1,Car,3,0,38,Swimming,790,803,500,500,148,268
+UK,East,F,15,L,156,21,157,3,Walk,15,0,60,Swimming,500,500,500,500,500,500
+UK,North West,F,16,R,172,24,172,2,Walk,5,0.93,31,Dancing,533,580,613,528,636,794
+UK,South,F,12,R,178,24,112,1,Bus,22,0.51,38,Running/Jogging,586,667,591,539,422,532
+UK,East,F,13,R,211,22,160,1,Car,15,0.57,42,Cycling,353,226,639,543,982,1000
+UK,Channel Islands,F,15,R,160,22,156,3,Bus,30,0.28,34,Football/Soccer,493,500,531,552,755,1000
+UK,North West,F,14,R,159,26,158,1,Walk,15,0.62,62,Skateboarding/Rollerblading,648,443,859,566,500,1000
+UK,South,F,11,R,145,21,145,1,Car,4,0.4,95,Dancing,776,576,507,566,1000,1000
+UK,South East,F,14,R,170,24,164,1,Bus,30,0,51,Basketball,570,380,642,597,1000,1000
+UK,East,F,14,L,160,30,90,1,Walk,30,0.35,39,Other activities/sports,707,626,460,601,439,448
+UK,South,F,12,R,154,23,144,2,Walk,45,0.34,201,Netball,743,806,718,606,535,562
+UK,North West,F,14,L,164,23,168,2,Car,45,0.32,56,Swimming,687,669,772,611,168,163
+UK,London,F,13,R,157,24,167,1,Bus,40,0,61,Dancing,1000,813,719,632,945,932
+UK,South,F,11,R,158,23,157,1,Car,15,0.4,52,Other activities/sports,783,679,646,647,137,500
+UK,East Midlands,F,12,R,163,24,162,1,Car,30,0.59,34,Swimming,582,687,488,680,284,383
+UK,North West,F,15,R,163,21,165,3,Car,15,0.73,35,Dancing,980,730,596,686,348,187
+UK,South,F,13,R,170,23,165,1,Walk,10,0.34,44,Other activities/sports,513,734,714,702,452,500
+UK,South East,F,13,R,170,26,170,1,Bus,20,0.37,43,Netball,807,869,817,709,80,76
+UK,South,F,13,L,163,25,161,1,Car,15,1.74,44,Football/Soccer,1000,667,1000,734,286,390
+UK,North West,F,13,R,148,21,156,3,Walk,20,1.32,99,Basketball,819,727,767,742,239,375
+UK,North West,F,14,R,158,23,152,1,Car,10,0.4,43,Dancing,611,991,729,758,500,767
+UK,South,F,13,R,149,22,96,2,Walk,10,0.42,35,Swimming,842,781,697,760,443,641
+UK,North East,F,11,L,154,23,144,1,Walk,25,0.29,40,Bowling,816,667,740,761,206,336
+UK,London,F,13,R,164,12,100,2,Car,15,0,48,Swimming,802,353,216,776,1000,1000
+UK,North West,F,13,R,153,21,153,1,Bus,15,0.56,61,Dancing,772,689,751,786,508,500
+UK,South,F,15,R,172,25,171,3,Walk,15,0.42,37,Other activities/sports,802,727,819,819,730,690
+UK,North West,F,13,R,143,19,156,5,Walk,4,0.73,36,Other activities/sports,794,806,826,832,1000,1000
+UK,South West,F,12,R,157,24,157,3,Car,7,0.37,32,Dancing,645,742,710,839,194,258
+UK,North East,F,11,R,152,24,147,2,Walk,10,0.53,60,Football/Soccer,714,794,770,839,2,221
+UK,North West,F,14,R,172,27,164,2,Walk,20,0.42,48,Netball,861,857,852,841,989,1000
+UK,Home Counties,F,13,L,166,25,159,2,Bus,30,0.35,32,Football/Soccer,841,838,843,843,746,696
+UK,North West,F,14,R,156,23,157,2,Walk,5,0.4,59,Football/Soccer,917,1000,931,922,752,763
+UK,Home Counties,F,11,L,153,23,150,2,Bus,35,0.31,38,Swimming,911,923,781,928,47,43
+UK,Home Counties,F,15,B,179,26,154,3,Car,3,0.03,39,Football/Soccer,717,575,943,933,1000,1000
+UK,South,F,13,R,176,24,168,3,Cycle,60,0.62,36,None,998,1000,892,934,528,558
+UK,West Midlands,F,11,R,145,22,145,2,Bus,60,0.88,64,Swimming,841,1000,933,978,0,85
+UK,Home Counties,F,12,R,160,26,158,2,Bus,15,0.35,46,Football/Soccer,1000,1000,1000,991,993,1000
+UK,South East,F,12,R,163,23,155,1,Walk,20,0.46,84,Swimming,1000,998,700,1000,508,500
+UK,South,F,13,R,142,22,142,1,Walk,15,0,35,Tennis,394,1000,287,1000,1000,1000
+UK,East,F,14,R,152,26,154,2,Car,10,0,34,Other activities/sports,1000,1000,1000,1000,409,682
+UK,South,F,11,R,145,19,137,2,Car,10,0.57,29,Football/Soccer,1000,1000,1000,1000,1000,1000
+UK,South East,F,14,R,161,27,160,2,Other,40,0.28,41,Athletics,1000,1000,1000,1000,0,0
+UK,South East,F,12,R,155,22,158,3,Car,15,0,34,Walking/Hiking,1000,1000,1000,1000,1000,1000
+UK,East,F,13,R,157,23,155,2,Bus,20,0.32,34,Dancing,738,765,1000,1000,705,696
+UK,North West,F,14,R,167,26,150,2,Bus,15,0.65,69,Football/Soccer,1000,1000,27,1000,1000,1000
+UK,Home Counties,M,14,R,176,30,168,1,Bus,25,0.38,55,Rugby Union,0,0,0,0,1000,1000
+UK,North West,M,13,R,180,30,161,3,Walk,40,0.32,28,Martial Arts,548,0,0,0,0,0
+UK,Home Counties,M,13,R,151,20,151,1,Walk,12,0.46,51,Cycling,0,0,0,0,1000,1000
+UK,East Midlands,M,14,B,168,26,173,2,Walk,2,0,49,Football/Soccer,998,28,1000,31,998,999
+UK,West Midlands,M,12,R,167,28,170,2,Car,5,0.36,33,Skateboarding/Rollerblading,0,129,258,63,1000,1000
+UK,East Midlands,M,13,R,157,25,160,1,Walk,30,0.39,36,Cycling,171,133,122,122,501,514
+UK,North West,M,14,R,177,30,177,1,Walk,45,0.32,52,Football/Soccer,528,735,245,131,530,728
+UK,North West,M,12,L,168,31,123,1,Bus,10,0.73,48,Football/Soccer,410,248,27,212,863,1000
+UK,Channel Islands,M,15,R,175,31,160,2,Bus,30,0.21,30,Football/Soccer,251,600,500,309,727,779
+UK,Home Counties,M,13,R,170,27,165,2,Car,10,0.48,63,Skateboarding/Rollerblading,393,684,696,372,750,770
+UK,North West,M,13,R,165,26,161,3,Walk,2,0,35,Other activities/sports,192,197,331,380,624,653
+UK,Home Counties,M,12,R,155,21,161,2,Bus,10,0.32,65,Football/Soccer,286,58,320,387,944,984
+UK,North East,M,12,R,156,24,158,1,Walk,5,0.1,34,Football/Soccer,662,689,403,400,0,0
+UK,South,M,14,R,175,27,169,1,Car,20,0.36,38,Football/Soccer,358,998,595,433,998,1000
+UK,East,M,15,R,158,26,157,4,Cycle,15,0.31,41,Athletics,500,500,500,500,500,500
+UK,South West,M,11,R,150,23,148,2,Bus,35,0.31,42,Cricket,500,500,500,500,1000,613
+UK,Home Counties,M,15,R,172,28,176,2,Car,22,0.17,37,Golf,1000,1000,1000,500,1000,1000
+UK,West Midlands,M,13,R,153,20,90,1,Car,20,0.53,30,Athletics,696,1000,585,500,1000,1000
+UK,North East,M,12,R,172,21,154,1,Bus,20,0.4,53,Football/Soccer,593,573,500,500,595,389
+UK,North West,M,12,L,148,21,138,3,Walk,25,0.29,40,Rugby Union,0,129,0,500,1000,1000
+UK,South West,M,13,L,153,25,151,2,Bus,25,0.31,59,Skateboarding/Rollerblading,1000,500,500,500,500,500
+UK,North East,M,11,R,153,24,120,2,Car,15,0.57,32,Rugby Union,1000,664,751,500,604,500
+UK,South,M,13,L,160,30,170,10,Walk,10,0,34,Football/Soccer,500,500,500,500,500,593
+UK,South East,M,14,R,180,28,182,1,Car,20,0.32,32,Other activities/sports,441,313,517,550,500,781
+UK,London,M,12,R,151,26,152,3,Walk,8,0.39,37,Football/Soccer,1000,879,678,557,702,669
+UK,North East,M,13,R,167,25,165,2,Walk,10,0.33,36,Athletics,575,578,570,564,689,537
+UK,West Midlands,M,12,R,152,23,95,2,Bus,15,0.31,51,Football/Soccer,313,530,375,568,999,1000
+UK,East Midlands,M,12,L,156,26,162,2,Bus,35,0.33,47,Cricket,736,879,566,570,705,1000
+UK,East,M,12,R,164,26,155,1,Walk,25,0.48,68,Athletics,525,579,642,628,740,500
+UK,London,M,12,R,160,25,164,2,Walk,20,0.28,57,Football/Soccer,642,500,662,646,537,609
+UK,North West,M,14,R,181,27,176,2,Walk,4,0.35,67,Cricket,606,560,638,664,248,43
+UK,East,M,12,R,158,24,150,3,Bus,15,0.34,42,Football/Soccer,730,272,268,671,1000,1000
+UK,East,M,11,L,148,21,145,2,Car,8,0.48,62,Swimming,0,806,452,677,839,774
+UK,Home Counties,M,14,R,152,20,120,1,Bus,20,0.29,35,Football/Soccer,702,286,685,685,553,582
+UK,North West,M,12,R,149,23,154,1,Walk,10,0.31,49,Football/Soccer,934,697,659,689,424,567
+UK,North Wales,M,13,R,168,27,168,3,Walk,15,0.32,52,Cycling,824,500,239,689,242,658
+UK,West Midlands,M,14,R,164,24,154,2,Bus,15,0.25,53,Football/Soccer,837,1000,210,694,1000,1000
+UK,Northern Ireland,M,12,R,165,27,168,1,Bus,20,0.5,59,Football/Soccer,684,684,639,701,595,606
+UK,Home Counties,M,13,R,166,28,167,3,Car,25,0.39,43,Football/Soccer,1000,758,754,743,1000,1000
+UK,East Midlands,M,14,R,173,25,174,3,Bus,40,0.35,29,Skateboarding/Rollerblading,700,698,720,748,333,662
+UK,North West,M,12,L,159,26,167,1,Walk,10,1.59,37,Rugby Union,758,864,757,750,132,130
+UK,Home Counties,M,13,R,158,28,170,2,Car,5,0.31,35,Cricket,1000,1000,724,754,620,622
+UK,South,M,13,R,160,20,167,2,Bus,60,0.37,35,Golf,739,678,626,779,663,650
+UK,North West,M,14,R,168,28,166,2,Walk,5,0.28,66,None,689,746,719,789,997,1000
+UK,North West,M,12,R,140,22,137,1,Walk,15,0.31,39,Cricket,531,746,936,795,1000,1000
+UK,South,M,13,R,164,32,164,6,Car,40,0,41,Athletics,372,700,767,806,1000,1000
+UK,Home Counties,M,12,R,166,26,171,1,Car,15,0.31,43,Basketball,944,893,832,835,730,638
+UK,South,M,12,R,161,29,157,1,Cycle,30,0.29,70,Golf,861,1000,894,870,793,934
+UK,CA,M,14,R,172,25,174,2,Bus,15,0.25,80,Table Tennis,703,729,647,878,230,252
+UK,Home Counties,M,12,R,147,23,143,1,Bus,30,0.35,64,Football/Soccer,823,640,889,890,694,821
+UK,East,M,13,R,162,22,147,1,Cycle,15,0.4,40,Tennis,500,499,500,915,787,1000
+UK,South,M,14,R,151,23,144,2,Walk,15,0.53,40,Football/Soccer,863,927,920,927,933,949
+UK,America,M,12,R,173,28,172,1,Car,25,0.42,36,Swimming,778,937,701,942,160,208
+UK,North West,M,11,R,145,23,146,1,Bus,8,0,65,Football/Soccer,900,367,891,949,717,604
+UK,South,M,13,R,166,30,163,2,Walk,15,0.29,65,Basketball,687,982,643,991,81,1000
+UK,North West,M,11,R,147,25,142,3,Car,5,0,52,Rugby League,1000,4,964,994,29,0
+UK,East,M,15,R,185,28,175,3,Car,5,0.46,45,Cricket,0,0,1000,1000,1000,500
+UK,South,M,15,B,187,29,182,2,Walk,30,0.35,49,Football/Soccer,1000,1000,1000,1000,1000,1000
+UK,South West,M,13,R,154,25,155,1,Walk,5,0.68,26,Skateboarding/Rollerblading,1000,1000,1000,1000,500,1000
+UK,North West,M,14,R,177,26,178,2,Car,10,0.32,51,Cycling,651,997,1000,1000,1000,1000
+UK,Home Counties,M,13,R,175,26,173,1,Bus,60,0.42,36,Other activities/sports,1000,1000,1000,1000,0,0
+UK,North West,M,15,L,177,28,163,1,Walk,15,0.32,47,None,1000,1000,922,1000,772,868
+UK,North East,M,11,R,160,24,148,1,Bus,25,0,38,Rugby Union,1000,1000,1000,1000,271,123
+UK,South,M,14,R,165,25,165,2,Cycle,20,0.32,30,Martial Arts,1000,1000,1000,1000,0,0
+UK,North West,M,14,R,175,27,169,2,Walk,15,0,36,Rugby Union,500,834,682,1000,349,351
+UK,South,M,14,R,164,23,166,1,Walk,10,0.35,34,Football/Soccer,1000,993,1000,1000,157,170
+UK,West Midlands,M,14,R,164,26,129,2,Cycle,10,0,39,Football/Soccer,1000,1000,1000,1000,1000,1000
+UK,Home Counties,M,11,R,158,25,139,1,Bus,20,0.34,50,Football/Soccer,1000,1000,1000,1000,240,363
+USA,GU,F,17,R,163,23,164,2,Bus,10,0.733,51,Baseball/Softball,0,0,0,0,0,0
+USA,MI,F,17,R,175,20,175,2,SkateBoarding/Rollerblading,20,0,32,Lacrosse,0,0,0,0,0,0
+USA,NE,F,16,R,154,23,159,1,Car,10,0.45,0,Baseball/Softball,34,901,28,3,1,29
+USA,OK,F,17,R,160,22,150,1,Car,10,0.796,57,Running/Jogging,8,5,7,6,10,9
+USA,NY,F,13,L,152,25,155,1,Walk,15,1,42,Dancing,6,3,8,9,9,9
+USA,NE,F,14,R,154,26,149,1,Car,8,0.323,47,Other,59,353,219,27,695,700
+USA,RI,F,12,R,153,21,160,1,Bus,15,0.673,39,None,492,5,11,37,1000,1000
+USA,SC,F,16,R,160,23,155,1,Car,12,0.379,45,None,0,0,50,50,100,100
+USA,WI,F,12,L,158,24,158,1,Car,3,0.411,34,Baseball/Softball,5,91,27,64,401,840
+USA,MD,F,12,R,155,24,150,2,Bus,7,0.774,55,Basketball,100,100,99,95,44,55
+USA,GU,F,15,R,151,19,152,1,Bus,20,0,3,Football/Soccer,99,99,99,99,100,100
+USA,KS,F,10,R,140,15,140,1,Walk,10,0,57,Basketball,100,100,100,100,100,100
+USA,MA,F,11,R,165,25,154,1,Car,2,0.65,45,Basketball,700,500,900,200,800,900
+USA,CT,F,13,R,163,22,163,1,Bus,30,0.329,45,Gymnastics,251,102,506,230,754,1000
+USA,CA,F,15,R,165,25,174,1,Car,25,0.334,45,Basketball,476,610,727,273,749,813
+USA,MA,F,12,R,154,20,152,2,Bus,20,0.34,46,Hockey (Ice),0,900,900,300,100,500
+USA,WI,F,14,R,160,26,153,1,Walk,8,0.594,37,Athletics,400,500,200,300,800,1000
+USA,CA,F,11,R,156,25,152,1,Car,25,0.365,46,Basketball,727,75,1000,348,487,497
+USA,WI,F,17,L,175,20,180,3,Bus,7,0.345,46,Walking/Hiking,800,400,600,400,600,600
+USA,NY,F,12,R,155,21,155,1,Bus,35,0.456,41,Dancing,545,283,444,443,150,1000
+USA,MN,F,17,R,173,27,152,1,Car,15,0.42,27,Football (American),642,561,380,497,350,745
+USA,NY,F,17,R,160,23,161,2,Rail,35,0.349,40,Walking/Hiking,700,800,500,500,700,700
+USA,TX,F,10,R,138,21,128,2,Car,4,0.823,58,Gymnastics,1000,1000,1000,500,500,500
+USA,WY,F,11,R,150,23,140,1,Bus,5,0.494,35,Football/Soccer,900,1000,1000,500,2,3
+USA,VA,F,17,R,167,26,170,1,Car,10,0.327,53,Swimming,800,800,500,500,1000,1000
+USA,NE,F,14,R,158,27,165,1,Car,2,0.481,31,Dancing,400,600,700,500,300,200
+USA,VA,F,16,B,168,24,168,2,Car,30,0.435,36,Swimming,1000,1000,503,503,203,604
+USA,MD,F,10,R,124,20,138,1,Bus,10,0.579,53,Gymnastics,647,706,406,508,626,813
+USA,CA,F,17,R,153,25,153,2,Car,15,0.382,34,Walking/Hiking,497,684,930,572,1000,545
+USA,FL,F,16,R,152,23,157,1,Car,10,0.4,67,Swimming,800,600,700,600,500,400
+USA,MA,F,13,R,157,23,152,4,Bus,10,0.387,43,Dancing,500,500,600,600,600,600
+USA,VA,F,16,R,160,27,150,1,Car,20,0.37,38,Swimming,900,400,300,600,800,900
+USA,MI,F,15,R,155,22,143,1,Car,15,0.35,40,Walking/Hiking,701,647,610,610,647,749
+USA,CA,F,16,R,158,22,151,1,Car,8,0,49,Other,850,800,900,650,700,750
+USA,DE,F,17,R,166,13,161,1,Car,10,0.614,63,Dancing,583,578,294,684,465,599
+USA,OH,F,11,L,149,23,150,1,Bus,20,0.49,47,Walking/Hiking,733,770,749,695,41,604
+USA,CO,F,17,R,168,24,155,2,Car,2,0.453,48,Lacrosse,720,945,575,700,550,900
+USA,MA,F,17,R,168,26,163,2,Car,14,0.532,23,Tennis,500,500,700,700,1000,1000
+USA,IN,F,17,R,163,23,163,2,Walk,3,0.3,31,Other,500,500,500,700,300,300
+USA,WY,F,12,R,213,27,185,2,Bus,7,0.851,44,Football/Soccer,1000,572,1000,706,5,898
+USA,IN,F,17,L,157,21,163,1,Car,7,0.98,52,Dancing,900,800,700,750,500,1000
+USA,TX,F,11,R,149,21,150,1,Bus,20,0.658,62,Swimming,867,867,945,789,123,645
+USA,CA,F,17,R,168,24,162,2,Car,10,0.581,47,Walking/Hiking,750,750,800,799,950,1000
+USA,CA,F,17,R,165,24,167,1,Car,8,0.522,47,Walking/Hiking,910,900,1000,800,500,
+USA,PA,F,16,R,168,22,160,2,Car,7,0.543,45,Athletics,800,700,600,800,200,300
+USA,IN,F,17,R,159,23,154,2,Car,13,0.793,37,Swimming,1000,900,800,800,900,1000
+USA,IN,F,17,R,158,20,158,1,Car,5,0.45,49,Football/Soccer,670,900,700,800,0,200
+USA,GU,F,15,R,161,22,163,1,Car,20,0,65,Swimming,620,503,620,802,770,1000
+USA,NC,F,17,L,178,26,180,1,Car,10,0.267,28,Other,800,850,500,840,999,999
+USA,WI,F,17,R,170,23,173,1,Car,20,0.442,37,Other,900,800,800,850,500,1000
+USA,CO,F,16,R,169,23,174,1,Car,7,0.306,44,Athletics,900,800,950,850,950,950
+USA,MN,F,13,R,164,24,154,2,Car,10,0.818,60,Dancing,802,1000,604,866,765,1000
+USA,CO,F,17,R,170,24,164,1,Car,4,0.387,35,Martial Arts,695,519,791,882,433,656
+USA,WI,F,13,R,158,23,159,1,Bus,3,0,44,Baseball/Softball,1000,1000,999,899,500,500
+USA,PA,F,17,B,178,27,178,1,Car,12,0.351,38,Lacrosse,1000,800,200,900,800,1000
+USA,SC,F,16,R,158,21,151,2,Car,11,0.296,39,Baseball/Softball,900,900,900,900,900,900
+USA,NJ,F,16,R,159,25,165,1,Car,15,0.407,34,Swimming,700,700,900,900,500,600
+USA,FL,F,16,R,167,23,166,3,Car,35,0.312,36,Other,800,800,800,900,1000,1000
+USA,IN,F,17,R,157,24,157,2,Car,10,0.682,41,Tennis,1000,900,1000,900,800,800
+USA,CA,F,16,R,157,17,149,2,Car,20,0.793,51,Tennis,600,500,1000,900,0,200
+USA,IN,F,16,R,171,24,174,2,Car,12,0.384,37,Lacrosse,800,500,900,900,500,1000
+USA,NY,F,16,R,158,22,164,1,Car,25,0.502,28,Tennis,1000,800,1000,900,400,500
+USA,NC,F,15,R,154,23,154,2,Bus,15,0.844,28,Football/Soccer,880,845,925,909,893,1000
+USA,TX,F,17,R,155,14,155,2,Bus,25,0.565,58,Football/Soccer,262,503,770,925,422,433
+USA,CA,F,12,R,167,24,167,2,Cycle,24,0.421,43,Football/Soccer,834,738,930,925,230,289
+USA,CA,F,17,R,160,22,152,1,Car,45,0.463,32,Dancing,800,750,850,950,1000,1000
+USA,KS,F,17,R,157,20,157,3,Bus,22,0.378,60,Hockey (Ice),899,500,500,962,963,999
+USA,NJ,F,16,R,170,25,165,1,Car,25,0.358,41,Other,759,348,829,963,412,396
+USA,NC,F,16,R,168,23,197,1,Car,7,0.529,39,Basketball,985,985,970,980,500,500
+USA,TX,F,17,R,165,25,163,2,Car,20,0.633,54,Athletics,999,996,1000,997,100,998
+USA,SC,F,15,R,165,23,163,1,Car,2,0.36,35,Other,800,900,500,999,300,1000
+USA,PA,F,12,L,165,19,173,1,Car,15,0.204,75,Skateboarding/Rollerblading,1000,1000,1000,1000,1000,1000
+USA,GU,F,13,R,149,23,151,1,Car,15,0.439,56,Baseball/Softball,500,1000,1000,1000,100,300
+USA,OH,F,12,R,163,24,161,1,Car,3,0.4,50,Swimming,700,900,1000,1000,200,300
+USA,GU,F,15,L,154,21,150,3,Car,20,0,15,Basketball,1000,1000,1000,1000,1000,1000
+USA,TX,F,11,R,143,21,148,2,Car,5,0.801,46,Other,500,1000,1000,1000,0,1
+USA,NC,F,17,R,170,27,170,1,Car,5,0.383,32,Football/Soccer,500,600,1000,1000,100,500
+USA,GA,F,11,R,115,25,110,1,Car,10,0,30,Football (American),50,50,1000,1000,1000,1000
+USA,WY,F,12,R,147,22,142,1,Bus,10,0.456,33,Swimming,1000,1000,1000,1000,500,1000
+USA,NY,F,10,R,157,22,150,1,Bus,6,0.44,46,Running/Jogging,1000,904,583,1000,786,615
+USA,PA,F,17,R,183,27,192,1,Bus,10,0.418,49,Basketball,1000,824,508,1000,385,481
+USA,SC,F,16,R,172,25,170,2,Car,5,0.518,52,Walking/Hiking,1000,1000,1000,1000,1000,1000
+USA,DC,F,12,R,158,25,154,3,Car,15,0.407,35,Basketball,1000,1000,1000,1000,500,600
+USA,IN,F,16,L,154,15,132,1,Bus,15,0.73,56,Other,1000,1000,10,1000,0,100
+USA,NC,F,17,R,170,26,168,2,Car,5,0.326,38,Other,1000,1000,1000,1000,1000,1000
+USA,NY,F,12,R,147,20,169,2,Walk,10,0,57,Swimming,1000,1000,1000,1000,0,0
+USA,OH,F,11,R,160,25,161,1,Car,20,0,0,Gymnastics,1000,1000,150,,0,0
+USA,NJ,F,15,R,153,23,152,2,Walk,10,0.281,37,Running/Jogging,1000,1000,1000,,900,1000
+USA,PA,F,11,L,140,17,150,2,Bus,5,0,10,Bowling,1000,500,500,,1000,1000
+USA,PA,F,17,R,159,22,150,1,Car,5,0.328,42,None,200,800,500,,900,1000
+USA,GA,F,16,R,152,23,150,2,Bus,45,0.5,34,Other,642,524,529,,743,904
+USA,ID,F,17,R,164,23,162,1,Car,5,0.422,37,Tennis,1000,1000,900,,500,550
+USA,TX,F,17,R,165,23,172,1,Car,7,0.25,34,Walking/Hiking,551,722,668,,1000,1000
+USA,GA,F,11,R,155,21,159,3,Bus,12,0.39,27,Athletics,941,503,874,,468,345
+USA,NM,F,17,R,171,22,174,2,Car,9,0.261,44,Baseball/Softball,800,200,900,,700,600
+USA,FL,F,17,R,160,22,156,2,Car,23,0.5,48,Football/Soccer,900,950,980,,800,850
+USA,SC,F,16,R,165,24,160,1,Car,15,0.25,36,Football/Soccer,450,550,400,,880,900
+USA,SC,F,16,B,152,22,168,1,Car,10,0,38,Other,460,455,348,,1000,1000
+USA,UT,F,16,R,168,26,185,1,Walk,20,0.296,29,Basketball,0,0,1000,,1000,1000
+USA,SC,F,17,R,158,25,145,1,Car,5,0.312,49,Basketball,500,640,743,,1000,1000
+USA,IN,F,17,R,150,22,152,1,Car,8,0.35,38,Table Tennis,845,845,845,,310,535
+USA,SC,F,17,L,161,23,165,2,Car,7,0.372,54,Football/Soccer,700,700,500,,700,700
+USA,AZ,F,17,B,155,24,165,3,Car,5,0.407,40,Dancing,476,679,348,,1000,1000
+USA,HI,F,14,R,147,20,153,2,Car,6,0.346,35,Dancing,1000,500,800,,300,300
+USA,HI,F,14,R,170,24,165,1,Car,30,0.697,52,Other,1000,1000,1000,,1000,1000
+USA,HI,F,14,R,149,21,149,2,Car,20,0.39,56,Athletics,750,750,650,,700,700
+USA,SC,F,15,R,158,20,151,1,Car,7,0.827,47,Walking/Hiking,800,800,750,,600,600
+USA,HI,F,14,R,152,24,156,2,Car,30,0.414,45,Other,500,500,700,,300,300
+USA,CA,M,17,R,173,28,172,1,Car,10,0.31,51,Dancing,0,0,0,0,1000,1000
+USA,WY,M,13,R,164,24,157,2,Bus,60,0,0,Football (American),0,0,0,0,0,0
+USA,CO,M,17,R,182,25,185,1,Walk,15,0.537,56,Dancing,5,2,6,1,3,4
+USA,NY,M,11,R,152,10,100,1,Bus,20,0.345,0,Football (American),12,43,5,6,9,7
+USA,CA,M,12,R,173,28,173,1,,15,0.332,48,Table Tennis,8,10,3,7,10,10
+USA,MD,M,13,R,165,18,160,2,Bus,15,0.729,60,Cycling,10,10,10,10,10,10
+USA,NC,M,13,R,168,28,170,1,Walk,15,0.68,68,Baseball/Softball,16,20,316,43,37,378
+USA,MI,M,17,R,175,26,182,1,Car,8,0.504,47,Tennis,50,50,50,50,950,950
+USA,NC,M,14,R,140,24,140,1,Bus,20,0.371,54,Running/Jogging,1000,1000,1000,50,80,1000
+USA,MI,M,16,R,198,23,198,1,Bus,15,0.327,41,Other,182,273,80,86,765,765
+USA,WI,M,13,R,156,26,164,1,Car,10,0.359,53,Other,497,578,353,86,0,626
+USA,NJ,M,17,L,180,30,193,1,Car,12,0.39,62,Football (American),200,200,100,100,1000,1000
+USA,OH,M,10,R,147,23,150,1,Car,20,0.7,4,Football/Soccer,0,0,0,100,,
+USA,MD,M,13,R,160,26,203,3,Bus,60,0,90,Basketball,50,25,75,100,100,100
+USA,NC,M,15,R,178,28,181,1,Car,12,0.251,49,Running/Jogging,850,1000,200,150,600,650
+USA,IL,M,12,R,148,25,154,1,Car,5,0,42,Basketball,500,500,400,200,25,1
+USA,OH,M,16,R,178,29,181,1,Car,10,0.25,30,Basketball,300,300,200,200,500,800
+USA,MA,M,14,R,175,20,165,1,Bus,30,0.388,82,Running/Jogging,400,500,300,200,900,800
+USA,IL,M,15,L,173,26,173,3,Walk,16,0.471,45,Other,156,156,3,267,230,680
+USA,WI,M,14,R,178,26,169,1,Bus,30,0.223,63,Football/Soccer,700,500,100,300,999,900
+USA,VA,M,17,R,163,23,158,2,Car,20,0.305,37,Football/Soccer,999,999,500,350,700,400
+USA,CA,M,17,R,170,27,168,1,Walk,20,0.434,38,Football/Soccer,350,350,350,350,200,200
+USA,NJ,M,17,R,180,26,182,1,Car,15,0,33,Baseball/Softball,526,348,647,385,658,833
+USA,WI,M,14,R,185,32,178,1,Bus,20,0.423,48,Swimming,500,600,300,400,800,1000
+USA,MN,M,16,R,183,26,183,1,Bus,40,0.417,39,Other,500,700,100,400,700,900
+USA,CA,M,17,R,168,28,170,3,Car,15,0.894,34,Football/Soccer,500,500,300,400,700,600
+USA,WI,M,11,R,143,20,142,2,Car,3,0.492,62,Football/Soccer,551,1000,321,412,160,128
+USA,RI,M,12,R,149,22,149,1,Car,2,0.373,55,Baseball/Softball,1000,1000,497,428,1000,1000
+USA,TX,M,9,L,144,21,139,1,Car,3,0.802,50,Football (American),850,850,750,430,200,300
+USA,NC,M,17,R,185,17,177,1,Car,8,0.116,41,Running/Jogging,492,428,599,433,807,1000
+USA,FL,M,12,R,173,26,173,1,Car,10,0.307,49,Basketball,340,850,300,450,234,850
+USA,NC,M,13,R,172,26,177,1,Bus,25,0.43,41,Football (American),1000,160,626,471,1000,332
+USA,MD,M,15,R,169,24,175,2,Bus,50,0.319,49,Baseball/Softball,861,428,342,481,615,765
+USA,IL,M,17,L,173,26,173,2,Car,20,0.273,30,Martial Arts,642,358,791,492,102,316
+USA,RI,M,14,R,165,26,165,1,Bus,20,0.252,37,Basketball,500,500,500,500,500,500
+USA,SC,M,16,R,179,27,184,1,Car,15,0.837,42,Football (American),850,800,900,500,500,900
+USA,CO,M,17,B,177,30,184,1,Other,6,0.28,48,Swimming,0,0,1000,500,250,1000
+USA,CA,M,15,R,139,31,174,1,Car,10,0,50,Football (American),100,100,500,500,600,1000
+USA,CO,M,17,R,191,25,193,2,Car,6,0.369,33,Football/Soccer,420,666,400,500,700,900
+USA,MA,M,17,R,173,35,173,2,Car,20,0.376,37,Running/Jogging,1000,560,800,500,200,200
+USA,WI,M,17,R,178,26,177,2,Car,10,0.333,46,Football (American),500,500,500,500,1000,1000
+USA,CA,M,17,R,173,22,171,1,Car,10,0.289,40,Tennis,500,500,500,500,500,500
+USA,SC,M,17,L,182,28,170,1,Car,10,0,45,None,300,500,1000,500,0,700
+USA,VA,M,16,R,170,17,168,1,Car,20,0,34,Other,500,500,500,500,1000,1000
+USA,WI,M,16,R,186,26,183,1,Car,7,0.286,34,Athletics,765,668,326,535,262,358
+USA,CO,M,17,R,213,32,208,2,Car,4,0.309,45,Tennis,465,652,861,540,540,802
+USA,RI,M,11,L,149,23,146,1,Car,2,0.516,50,Football/Soccer,1000,1000,663,545,476,551
+USA,AZ,M,17,R,191,28,181,2,Car,30,0.371,42,Golf,487,257,551,551,914,914
+USA,MI,M,17,R,185,27,184,1,Car,10,0.297,33,Football/Soccer,332,225,439,572,187,139
+USA,SC,M,16,R,178,25,162,1,Other,12,0.476,37,Baseball/Softball,500,800,1000,600,200,100
+USA,WI,M,12,R,166,25,165,1,Bus,15,0.601,55,Rowing,310,455,326,652,1000,1000
+USA,GU,M,12,L,155,24,158,1,Car,12,0.487,0,None,775,550,600,665,400,45
+USA,PA,M,16,R,173,22,110,3,Bus,15,0.693,51,Table Tennis,800,300,400,700,900,700
+USA,VA,M,17,R,162,23,154,1,Car,5,0.271,32,Basketball,679,610,818,717,299,668
+USA,CA,M,15,L,184,29,191,1,Car,14,0.338,54,Athletics,562,723,823,725,524,423
+USA,IL,M,12,R,159,26,162,1,Car,2,0.751,45,Football/Soccer,900,450,500,750,400,850
+USA,IN,M,17,R,179,25,178,1,Car,2,0.26,30,Baseball/Softball,791,444,257,759,898,898
+USA,GU,M,13,R,175,28,185,2,Car,15,0.364,64,Table Tennis,629,682,545,769,1000,999
+USA,MA,M,17,R,180,23,179,2,Bus,10,0.345,51,None,300,100,500,800,900,900
+USA,CA,M,17,R,177,27,193,2,Car,20,0.337,28,Football/Soccer,900,700,750,800,700,500
+USA,NH,M,17,R,180,26,183,1,Car,10,0.31,39,Football/Soccer,770,845,604,824,813,920
+USA,CA,M,12,R,146,28,150,2,Cycle,5,0.229,44,Baseball/Softball,465,100,642,832,11,53
+USA,CA,M,17,R,180,27,174,2,Car,7,0,29,Football/Soccer,900,890,960,840,700,810
+USA,PA,M,16,R,170,29,177,2,Car,17,0.432,68,Bowling,850,900,950,850,900,800
+USA,IN,M,17,R,181,28,177,2,Car,15,0.853,58,Football (American),500,760,1,873,1000,1000
+USA,VA,M,17,R,175,26,175,2,Car,5,0.25,43,Football/Soccer,500,500,500,900,500,300
+USA,CO,M,16,R,167,24,160,1,Bus,13,0.318,31,Other,781,668,529,952,235,487
+USA,UT,M,15,R,171,26,174,2,Bus,20,0,40,Skateboarding/Rollerblading,1000,1000,1000,1000,900,1000
+USA,VI,M,17,R,175,29,174,1,Bus,15,0,39,Baseball/Softball,750,900,600,1000,1000,1000
+USA,CA,M,17,R,168,24,200,2,Car,15,0.251,45,Cycling,594,590,500,1000,1000,1000
+USA,CA,M,13,R,158,15,158,2,SkateBoarding/Rollerblading,8,0.143,55,Football/Soccer,444,1000,1000,1000,567,674
+USA,IL,M,11,R,140,22,132,1,Walk,10,0.28,56,Lacrosse,1000,1000,1000,1000,200,200
+USA,TX,M,11,R,148,23,150,2,Car,3,0.5,54,Football/Soccer,1000,1000,1000,1000,1,999
+USA,MO,M,14,R,169,24,179,1,Bus,20,0.363,0,Walking/Hiking,1000,1000,1000,1000,0,0
+USA,OH,M,15,R,125,27,198,1,Bus,50,0.359,45,Baseball/Softball,1000,1,1000,1000,0,1000
+USA,NC,M,12,R,152,22,152,1,Bus,45,0.71,68,Basketball,998,200,700,1000,70,700
+USA,PA,M,16,R,194,29,194,1,Car,15,0.297,42,Basketball,650,600,200,,250,500
+USA,AL,M,17,L,191,26,194,1,Car,20,0.328,34,Swimming,540,550,460,,870,880
+USA,FL,M,17,R,180,30,186,1,Car,10,0.235,50,Basketball,456,785,455,,1000,1000
+USA,NY,M,10,R,156,24,162,2,Bus,5,0.21,43,Baseball/Softball,500,600,700,,200,300
+USA,HI,M,15,R,160,29,163,2,Car,30,0.346,48,Football (American),690,765,422,,406,802
+USA,SC,M,17,R,177,26,177,2,Car,25,0.25,55,Baseball/Softball,1000,800,600,,500,600
+USA,PA,M,9,R,150,21,231,1,Bus,45,0.36,51,Swimming,1000,500,600,,30,15
+USA,TX,M,16,R,187,29,192,1,Car,7,0.265,31,Swimming,449,979,690,,1000,1000
+USA,SC,M,17,R,120,18,152,2,Car,20,0.492,39,Other,800,900,500,,1000,900
+USA,CA,M,17,R,190,30,190,3,Car,20,0.145,7,Swimming,1000,1000,1000,,0,0
+USA,IN,M,17,R,175,25,173,2,Car,16,0.196,40,Athletics,1000,600,1000,,200,900
+USA,FL,M,15,R,180,26,181,2,Walk,20,0.482,33,Martial Arts,200,300,300,,1000,1000
+USA,SC,M,17,R,189,29,189,2,Bus,15,0.695,54,Other,500,500,500,,500,500
+USA,PA,M,11,R,151,25,151,1,Car,3,0,55,Swimming,1000,730,600,,20,

@@ -1,0 +1,126 @@
+---
+title: "3CaseStudy"
+author: "TomHollinberger"
+date: "9/7/2020"
+output: 
+  html_document: 
+    keep_md: yes
+    toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r}
+library(tidyverse)  #has function to read files
+df_orig <- read_csv("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/Week_03/3CaseStudy/CensusAtSchool.csv")
+
+str(df_orig)
+df_orig
+df_inch <- df_orig
+df_inch <- mutate(df_inch,Height = Height/2.54, Foot_Length = Foot_Length/2.54, Arm_Span = Arm_Span/2.54 )
+head(df_inch, n=10)
+df_environment <- filter(df_inch, Importance_reducing_pollution >= 750 | Importance_recycling_rubbish >=750 |	Importance_conserving_water	>=750 | Importance_saving_enery >=750 | Importance_owning_computer >=750 |	Importance_Internet_access >=750)
+#would be nice to "filter if not start with Import"
+View(df_environment)
+df_environment <- (arrange(df_environment, Ageyears))
+df_environment
+head(df_environment, n=10)
+df_extra <- select(df_orig, Country,	Region,	Gender,	Ageyears,	Handed,	Height,	Foot_Length,	Arm_Span,	Languages_spoken,	Travel_to_School,	Travel_time_to_School,	Reaction_time,	Score_in_memory_game,	Favourite_physical_activity)
+#would be nice to "select if not start with"
+#easy to copy and paste column headers from excel, then insert commas
+head(df_extra, n=10)
+df_numbers <- df_orig
+df_numbers <- group_by(df_numbers,Country,Gender)
+df_numbers <- summarise(df_numbers, count = n())
+head(df_numbers, n=10)
+df_orig
+df_CountryGenderImportances <- select(df_orig, Country, Gender, Importance_reducing_pollution, Importance_recycling_rubbish, Importance_conserving_water, Importance_saving_enery,	Importance_owning_computer,	Importance_Internet_access)
+head(df_CountryGenderImportances, n=10)
+
+df_CountryGenderGrp <- group_by(df_CountryGenderImportances, Country, Gender)
+df_CountryGenderGrp
+df_CountryGenderGrpSum <- summarise(df_CountryGenderGrp)
+View(df_CountryGenderGrp)
+df_CountryGenderGrpSum <- summarise(df_CountryGenderGrp,
+                       Count_reducing_pollution = sum(!is.na(Importance_reducing_pollution)), 
+                       Mean_reducing_pollution = mean(Importance_reducing_pollution, na.rm = TRUE),
+                       Standdev_reducing_pollution = sd(Importance_reducing_pollution, na.rm = TRUE),
+                       Count_recycling_rubbish = sum(!is.na(Importance_recycling_rubbish)),                     
+                       Mean_recycling_rubbish = mean(Importance_recycling_rubbish, na.rm = TRUE),
+                       Standdev_recycling_rubbish = sd(Importance_recycling_rubbish, na.rm = TRUE),
+                       Count_conserving_water = sum(!is.na(Importance_conserving_water)),
+                       Mean_conserving_water = mean(Importance_conserving_water, na.rm = TRUE),
+                       Standdev_conserving_water = sd(Importance_conserving_water, na.rm = TRUE),
+                       Count_saving_enery = sum(!is.na(Importance_saving_enery)),
+                       Mean_saving_enery = mean(Importance_saving_enery, na.rm = TRUE),
+                       Standdev_saving_enery = sd(Importance_saving_enery, na.rm = TRUE),
+                       Count_owning_computer = sum(!is.na(Importance_owning_computer)),
+                       Mean_owning_computer = mean(Importance_owning_computer, na.rm = TRUE),
+                       Standdev_owning_computer = sd(Importance_owning_computer, na.rm = TRUE),
+                       Count_Internet_access = sum(!is.na(Importance_Internet_access)),
+                       Mean_Internet_access = mean(Importance_Internet_access, na.rm = TRUE),
+                       Standdev_Internet_access = sd(Importance_Internet_access, na.rm = TRUE))
+df_CountryGenderGrpSum
+View(df_CountryGenderGrpSum)
+```
+
+
+## [8 ] Create an .Rmd file that has two sections:
+###  Section 1: Give the first 10 rows of each of the data frames you created
+```{r}
+head(df_orig, n = 10)
+head(df_inch, n = 10)
+head(df_environment, n = 10)
+head(df_extra, n = 10)
+head(df_numbers, n = 10)
+head(df_CountryGenderImportances, n = 10)
+head(df_CountryGenderGrp, n = 10)
+head(df_CountryGenderGrpSum, n = 10)
+
+```
+
+
+
+
+
+
+
+### Section 2: Include a summary of your findings to the question which includes at least one visualization to support your findings.
+
+```{r}
+ggplot(data = df_CountryGenderGrp) +
+geom_boxplot(mapping = aes(x = Gender, y = Importance_reducing_pollution)) +
+  facet_wrap(~ Country, nrow = 1)
+
+ggplot(data = df_CountryGenderGrp) +
+  geom_boxplot(mapping = aes(x = Gender, y = Importance_recycling_rubbish)) +
+  facet_wrap(~ Country, nrow = 1)
+
+ggplot(data = df_CountryGenderGrp) +
+  geom_boxplot(mapping = aes(x = Gender, y = Importance_conserving_water)) + 
+  facet_wrap(~ Country, nrow = 1)
+
+ggplot(data = df_CountryGenderGrp) +    
+  geom_boxplot(mapping = aes(x = Gender, y = Importance_saving_enery)) +
+  facet_wrap(~ Country, nrow = 1)
+
+ggplot(data = df_CountryGenderGrp) +
+  geom_boxplot(mapping = aes(x = Gender, y = Importance_owning_computer)) + 
+  facet_wrap(~ Country, nrow = 1)
+
+ggplot(data = df_CountryGenderGrp) +  
+  geom_boxplot(mapping = aes(x = Gender, y = Importance_Internet_access)) +
+  facet_wrap(~ Country, nrow = 1)
+
+#How to stitch these together in one chart?  So that distinct variables are the groups(data series)
+```
+
+
+#### **Summary Observations:**
+
+1.  Males, across the board, and especially in USA, gave lower scores, and are less concerned about environmental matters.
+2.  Males are generally more concerned (gave higher scores) to computer-related issues.
+     
