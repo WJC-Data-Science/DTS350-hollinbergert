@@ -1,7 +1,7 @@
 #' ---
 #' title: "Case Study 4 : Data Dissection"
 #' author: "TomHollinberger"
-#' date: "9/17/2020"
+#' date: "9/20/2020"
 #' output: 
 #'  html_document: 
 #'    keep_md: yes
@@ -16,15 +16,19 @@
 #' YOU CAN PRESS ctrl+shift+K AND GO STRAIGHT TO A HTML.  <br>
 #' SKIPS THE HANDWORK OF CREATING A RMD, AFTER THE ORIGINAL WORK IS NONE IN A RSCRIPT.<br>
 #'
+#' _________________________________
+#'  
+#' _________________________________
+#' 
 #'# **Case Study 4 : Data Dissection** 
 #'
 #' _________________________________
 #'   
 #'## Introduction:<br>
 #'  This analysis uses the nycflights13::flights data to review flight delays.<br>
-#'  Arrival and Departure delays are measured in minutes.<br>
+#'  Arrival and Departure delays are measured in minutes.<br> <br>
 #'  There are: 3 Origin airports, 105 destination airports, 16 carriers,  <br>
-#'  4044 Airplanes, 3844 routes, 1 year (2013)  <br> 
+#'  4044 Airplanes, 3844 routes, 1 year (2013)  <br> <br>
 #' In this analysis, we determine:<br>
 #' 1. Least departure delays,<br>
 #' 2. Least arrival delays, and<br>
@@ -53,13 +57,17 @@ unique(flts$flight)   #3844 routes
 unique(flts$year)     # 1 year  
 unique(flts$carrier)
 
-#'## A Visualization showing the complexity of the data<br>
-#'#' Distributions of Arr_Delays and Dep_Delays -- using Density Plot from Top 50 Master List
 #'
-#'
-#' Distribution of Arr_Delays (Red) and Dep_Delays (Green)  -- using Density Plot from Top 50 Master List<br>
+#' _________________________________
+#' _________________________________
+#' 
+#'## 3 Visualizations showing the complexity of the data<br>
+#' _________________________________
+#' 
+#'### Viz 1 : Distribution of Dep_Delays (Green) and Arr_Delays (Red) INcluding Outliers<br>
+#' Using Density Plot from Top 50 Master List<br>
 #' Using all flights, did not remove outliers.<br>
-#' Note that arrival delays in red extend well beyond 1000.<br>
+#' Note that arrival delays in red extend well **beyond 1000.**<br>
 
 ggplot(flts) +
   geom_density(aes(arr_delay), alpha = 0.8, color = "Green", size = 1) + 
@@ -70,20 +78,22 @@ ggplot(flts) +
        x = "Arrival and Departure Delays in Minutes"
   )
 
+#'
+#' _________________________________
 
-#' Distribution of Arr_Delays (Red) and Dep_Delays (Green)  -- using Density Plot from Top 50 Master List<br>
-#' HAving removed outliers.<br>
-#' Note that arrival delays in red now extend to around 600.<br>
-
-#' Strip Off Arr_Delay Outliers using https://rpubs.com/Mentors_Ubiqum/removing_outliers
+#' Strip Off Arr_Delay Outliers prior to Viz2 using https://rpubs.com/Mentors_Ubiqum/removing_outliers
 outliers <- boxplot(flts$arr_delay, plot=FALSE)$out #assign the outlier arr_delay values into a vector
 print(outliers) # Check the results
 flts[which(flts$arr_delay %in% outliers),] # First you need find in which rows the outliers are
 fltsout <- flts[-which(flts$arr_delay %in% outliers),]  #remove the rows containing the outliers
 str(fltsout)  #look at the data without outliers
 summary(fltsout)  #look at the data without outliers
+#' 
+#'### Viz 2 : Distribution of Dep_Delays (Green) and Arr_Delays (Red) EXcluding Outliers
+#' Using Density Plot from Top 50 Master List<br>
+#' USing only non-outlier flights<br>
+#' Note that arrival delays in red now extend to **around 600.**<br>
 
-#' Now Plot
 ggplot(fltsout) +
   geom_density(aes(arr_delay), alpha = 0.8, color = "Red", size = 1) + 
   geom_density(aes(dep_delay), alpha = 0.8, color = "Green", size = 1) + 
@@ -93,13 +103,15 @@ ggplot(fltsout) +
        x = "Arrival and Departure Delays in Minutes"
   )
 
-
-#' Now a zoom-in to the Arrival Delays<br>
-#' Note this shows that the industry, on average, has early arrivals by about 12 minutes. 
+#'
+#' _________________________________
+#' 
+#'### Viz 3 : Zoom-in to the Arrival Delays EXcluding Outliers
+#' Note this shows that the industry, on average, arrives about **12 minutes early**. 
 
 g <- ggplot(fltsout, aes(arr_delay))
 g + geom_density(aes(), alpha = 0.8, color = "Red", size = 1) + 
-  labs(title = "Zoom-In to Arrival Delays, Outliers excluded", 
+  labs(title = "Zoom-In to Arrival Delays, EXcluding Outliers", 
        subtitle = "All months and all locations.",
        caption = "Source: fltsout.                           Negative times represent early arrivals.",
        x = "Arrival Delays in Minutes"
@@ -109,7 +121,8 @@ g + geom_density(aes(), alpha = 0.8, color = "Red", size = 1) +
 
 #'
 #' _________________________________
-#'  
+#' _________________________________
+#'   
 #'
 #'## Question 1. If I am leaving before noon, which two airlines do you recommend at each airport (JFK, LGA, EWR) that will have the lowest delay time at the 75th percentile?
 
@@ -132,8 +145,8 @@ str(grpd)
 grpd$carrier <- as.factor(grpd$carrier)
 grpd$Q3depdelay <- as.factor(grpd$Q3depdelay)
 
-
-# Draw Bar Chart plot
+#'
+#' ### Plot 1:
 ggplot(grpd, aes(x = carrier, y = Q3depdelay)) +    
 #ggplot(grpd, aes(x = reorder(Q3depdelay,origin,carrier), y = Q3depdelay)) + 
   geom_bar(stat="identity", width=.5, fill="tomato3") + 
@@ -145,15 +158,17 @@ ggplot(grpd, aes(x = carrier, y = Q3depdelay)) +
        x = "Carriers at Each Airport") +                                          
   theme(axis.text.x = element_text(angle=65, vjust=0.6))
 #'
-#' ### Interpretation:
-#' Note that negative numbrs are early departures, so the most reliable will have the most negative 75th percentile. <br>
+#' ### Interpretation 1:
+#' Note that negative numbers are early departures, so the most reliable will have the most negative 75th percentile. <br>
 #' At EWR, the 2 most reliable carriers are 9E and a three-way tie for seci=ond place between B6, DL, and US.<br>
 #' At JFK, the 2 most reliable carriers are a five way tie between: 9E, DL, EV, HA and MQ.<br>
 #' At LGA, the 2 most reliable carriers are US and YV.<br>
 #'
 #'
+#'
 #' _________________________________
-#'  
+#' _________________________________
+#'   
 #' ## Question 2.  Which origin airport is best to minimize my chances of a late arrival (AT THE OTHER END) when I am using Delta Airlines?
 #'Install and read in the appropriate libraries
 library(ggplot2)
@@ -180,8 +195,8 @@ fodlbyarpt <- group_by(fodl, origin)
 fodlbyarpt
 fodlgrpd <- summarise(fodlbyarpt, meandlarrdelay = mean(arr_delay, na.rm = TRUE)) # Produce the mean for each origin airport
 fodlgrpd
-
-#' Draw Bar Chart plot
+#'
+#' ### Plot 2:
 ggplot(fodlgrpd, aes(x = origin, y = meandlarrdelay)) +
   geom_bar(stat="identity", width=.5, fill="tomato3") + 
   labs(title="Late Arrivals of Delta Flights Originating from these Airports", 
@@ -190,17 +205,18 @@ ggplot(fodlgrpd, aes(x = origin, y = meandlarrdelay)) +
        y = "Delta Arrival Delays at the OTHER END,",
        x = "when ORIGINATING from these Airports") +                                          
   theme(axis.text.x = element_text(angle=65, vjust=0.6))
-
 #'
-#' ### Interpretation:
-#' Note that negative numbrs are early arrivals, so the latest arrivals have the largest positive number.<br>
+#' ### Interpretation 2:
+#' Note that negative numbers are early arrivals, so the latest arrivals have the largest positive number.<br>
 #' Note that we are measuring the arrival at ANOTHER airport, of flights ORIGINATING at these three airports.  <br>
-#' JFK has the largest negative number, meaning that it has the earliest arrival times.<br>
+#' JFK has the largest negative number, meaning that planes that depart from JFK have the earliest arrivals at whatever destination they are flying to.<br>
 #' 
+#'
 #'
 #' _________________________________
-#' 
-#' ## Question 3.  Which destination airport is the worst (based on Mean Arrival Delays) airport for arrival time?
+#' _________________________________
+#'    
+#' ## Question 3.  Which destination airport is the worst *(based on Mean Arrival Delays)* airport for arrival time?
 library(ggplot2)
 library(dplyr)
 library(tidyverse)
@@ -228,7 +244,8 @@ fobdgrpdbad
 fobdgrpdbad$destf <- as.factor(fobdgrpdbad$dest)
 fobdgrpdbad$meanarrdelayf <- as.factor(fobdgrpdbad$meanarrdelay)
 
-# Draw Ordered Bar Chart plot
+#'
+#' ### Plot 3:
 ggplot(fobdgrpdbad, aes(x = reorder(meanarrdelay,dest), y = meanarrdelay)) +
   geom_bar(stat="identity", width=.5, fill="tomato3") + 
   geom_col(aes(fill = meanarrdelayf)) +  
@@ -251,12 +268,14 @@ ggplot(fobdgrpdbad, aes(x = reorder(meanarrdelay,dest), y = meanarrdelay)) +
   )
   
 #'
-#' ### Interpretation:
+#' ### Interpretation 3:
 #' Note that negative numbers are early arrivals, so the worst airports have the largest positive mean.<br>
 #' CAE (Columbia, South Carolina) and JAC (Jackson Hole, Wyoming) are by far the worst airports.
 #'
+#'
 #' _________________________________
-#'  
+#' _________________________________
+#'     
 #'<br><br><br>
 
 
