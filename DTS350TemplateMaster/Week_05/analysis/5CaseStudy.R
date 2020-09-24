@@ -145,6 +145,19 @@ yates    #has 192 rows (combinations)
 view(yates)  #then click on column header of Count to sort high to low, and see the most frequently occuring population-sector
 
 
+#' YatesPLUS  (All Combinations including place and education)
+#' first need to create categories for age <26 <51 <76
+gdfd3 <- mutate(gdfd2, youngold = ceiling(age/25))
+view(gdfd3)
+
+by_allplus <- group_by(gdfd3, intent, police, sex, race, youngold, place, education)
+yatesplus <- summarize(by_allplus,
+                   count = n())
+
+yatesplus    #has 2280 rows (combinations)
+
+view(yatesplus)  #then click on column header of Count to sort high to low, and see the most frequently occuring population-sector
+
 
 
 #'  
