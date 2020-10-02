@@ -275,6 +275,7 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
   geom_boxplot(mapping = aes(x = reorder(class, hwy, FUN = median), y = hwy)) +
   coord_flip()
+
 #'
 #' #### 7.5.1.1 Exercises
 #'1.	Use what you’ve learned to improve the visualisation of the departure times of cancelled vs. non-cancelled flights.What variable in the diamonds dataset is most important for predicting the price of a diamond? How is that variable correlated with cut? Why does the combination of those two relationships lead to lower quality diamonds being more expensive?
@@ -337,11 +338,17 @@ ggplot(data = smaller) +
 #'Another option is to bin one continuous variable so it acts like a categorical variable. Then you can use one of the techniques for visualising the combination of a categorical and a continuous variable that you learned about. For example, you could bin carat and then for each group, display a boxplot:
   ggplot(data = smaller, mapping = aes(x = carat, y = price)) + 
   geom_boxplot(mapping = aes(group = cut_width(carat, 0.1)))
+  
+
+ggplot(data = smaller, mapping = aes(x = carat, y = price, fill = cut)) + 
+    geom_boxplot(varwidth = TRUE)
+
+
 #'
 #'cut_width(x, width), as used above, divides x into bins of width width. By default, boxplots look roughly the same (apart from number of outliers) regardless of how many observations there are, so it’s difficult to tell that each boxplot summarises a different number of points. One way to show that is to make the width of the boxplot proportional to the number of points with varwidth = TRUE.
 #'Another approach is to display approximately the same number of points in each bin. That’s the job of cut_number():
 ggplot(data = smaller, mapping = aes(x = carat, y = price)) + 
-  geom_boxplot(mapping = aes(group = cut_number(carat, 20), varwidth = TRUE))
+  geom_boxplot(mapping = aes(group = cut_number(carat, 20)))
 #'
 #'#### 7.5.3.1 Exercises
 #'1.	Instead of summarising the conditional distribution with a boxplot, you could use a frequency polygon. What do you need to consider when using cut_width() vs cut_number()? How does that impact a visualisation of the 2d distribution of carat and price?
@@ -374,7 +381,7 @@ library(modelr)
 mod <- lm(log(price) ~ log(carat), data = diamonds)
 
 diamonds2 <- diamonds %>% 
-  add_residuals(mod) %>% 
+  add_residuals(mod) %>%   #adds residuals to dataframe
   mutate(resid = exp(resid))
 
 ggplot(data = diamonds2) + 
