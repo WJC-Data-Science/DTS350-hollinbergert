@@ -1,5 +1,5 @@
 #' ---
-#' title: "Task 11 World Data Investigations Part 2"
+#' title: "Chap 7 Notes"
 #' author: "TomHollinberger"
 #' date: "10/01/2020"
 #' output: 
@@ -336,7 +336,7 @@ ggplot(data = smaller) +
   geom_hex(mapping = aes(x = carat, y = price))
 #'
 #'Another option is to bin one continuous variable so it acts like a categorical variable. Then you can use one of the techniques for visualising the combination of a categorical and a continuous variable that you learned about. For example, you could bin carat and then for each group, display a boxplot:
-  ggplot(data = smaller, mapping = aes(x = carat, y = price)) + 
+ggplot(data = smaller, mapping = aes(x = carat, y = price)) + 
   geom_boxplot(mapping = aes(group = cut_width(carat, 0.1)))
   
 
