@@ -1,0 +1,10 @@
+Team meeting notes 10/6/20
+Tom served as team leader; notes were taken by Brooks
+
+-Tom went through the visualizations from his report, identifying what results were expected and what were surprising.
+
+-He went back to stats, and brought in a regression. Nice.
+
+-We came to similar overall conclusions. Larger diamonds are generally more expensive, and that tends to outweigh quality factors (color, clarity).
+
+-Lastly, we spent some time looking at the next Case Study. 
