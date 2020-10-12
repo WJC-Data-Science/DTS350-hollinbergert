@@ -23,20 +23,8 @@ library(dplyr)
 library(foreign)  #for read.dbf
 
 
-
-
-
-
-#'[ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the .xlsx file.
-#'[ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries.
-#'[ ] Create an .Rmd file with 1-2 paragraphs summarizing your graphics and how those graphics answer the driving question.
-#'[ ] Compile your .md and .html file into your git repository.
-#'[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique).
-#'[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub.
-
-
-
-#'[ ] Use the correct functions from library(haven) , library(readr), and library(readxl) to load the 6 data sets listed here.
+#'
+#'## [ ] Use the correct functions from library(haven) , library(readr), and library(readxl) to load the 6 data sets listed here.
 
 #'If files are   
 #' .rds   use read_rds 
@@ -46,8 +34,7 @@ library(foreign)  #for read.dbf
 #' .xlsx  use downloader
 
 
-#'
-#' #### Links to files to download, 
+#' Links to files to download, 
 #' these were right-click copylink from moodle page.
 #' https://github.com/WJC-Data-Science/DTS350/blob/master/Height.xlsx     #Tubingen  xlsx format
 #' https://github.com/WJC-Data-Science/DTS350/blob/master/germanconscr.dta   #German conscripts  Stata format
@@ -135,16 +122,20 @@ summary(a6sav)
 
 #' End of download
 
-
-#'[ ] Tidy the Worldwide estimates .xlsx file.
-#'[ ] Make sure the file is in long format with year as a column. See here for an example of the final format.
-#'[ ] Use the separate() and mutate() functions to create a decade column.
+#'
+#' ## [ ] Tidy the Worldwide estimates .xlsx file.
+#' ###[ ] Make sure the file is in long format with year as a column. See here for an example of the final format.
+#' ###[ ] Use the separate() and mutate() functions to create a decade column.
 
 a1long <- a1xlsx %>%
   pivot_longer(c(`1800`:`2011`), names_to = "year_actual", values_to = "height.cm") 
 a1long
 str(a1long)
 summary(a1long)
+
+
+
+a1long
 
 unique(a1long$year_actual)  #confirmed from 1800 to 2011 inclusive, no years missing.
 unique(a1long$`Continent, Region, Country`)   #confirmed 286 different geo-entities.  Differing hierarchy-levels Continent region country. Does not appear to be any typo-dupes.
@@ -153,6 +144,14 @@ unique(a1long$`Continent, Region, Country`)   #confirmed 286 different geo-entit
 a1longyrsep <- a1long %>%
   separate(year_actual, into = c("century", "decade", "year"), sep = c(2,3), remove = FALSE) 
 a1longyrsep
+
+#' change year_actual, century, decade, and year to a numeric
+a1longyrsep$year_actual <- as.numeric(a1longyrsep$year_actual)
+a1longyrsep$century <- as.numeric(a1longyrsep$century)
+a1longyrsep$decade <- as.numeric(a1longyrsep$decade)
+a1longyrsep$year <- as.numeric(a1longyrsep$year)
+a1longyrsep  #year_actual, century, decade, and year are now all dbl's
+
 
 #' Convert from centimeters to inches, and keep both columns
 #' install measurements package, load library
@@ -173,13 +172,14 @@ a1longyrsepinchdec <- a1longyrsepinch
 a1longyrsepinchdec$year_actual
 a1longyrsepinchdec$year_actual <- as.numeric(a1longyrsepinchdec$year_actual)
 a1longyrsepinchdec$year_actual
-mutate(a1longyrsepinchdec, year_decade = 10*floor(year_actual/10))    #shows the decade column
+# add_column(a1longyrsepinchdec, year_decade = 10*floor(a1longyrsepinchdec$year_actual/10))
 
-a1longyrsepinchdec  #doesn't show the decade column
+a1longyrsepinchdec <- mutate(a1longyrsepinchdec, year_decade = 10*floor(year_actual/10))    #shows the decade column
+
+a1longyrsepinchdec  #NOTE: NEED TO HAVE ASSIGNMENT OPERATOR IN THE PREVIOUS LINE, to make the new column show up.
 
 a1longyrsepinchdec$year_actual  #looks good
-unique(a1longyrsepinchdec$year_decade)  #but it says it's an uninitialized column
-
+unique(a1longyrsepinchdec$year_decade)  #OK
 
 
 a1longyrsepinchdec
@@ -187,20 +187,16 @@ a1final <- a1longyrsepinchdec
 a1final
 
 
-#'
-mutate(a1longyrsepinchdec, year_decade = 10*as.integer(floor(year_decade/10)))  
 
-# from https://stackoverflow.com/questions/46899004/is-there-a-function-in-r-that-can-round-down-or-up-to-an-integer
-year_decade
                                                                      
                                                                      
 #'
-#' ## Combine 5 Year / Height Databases
-#'[ ] Import the other five datasets into R and combine them into one tidy dataset.
-#'[ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id.
+#'## Combine 5 Year / Height Databases
+#'### [ ] Import the other five datasets into R and combine them into one tidy dataset.
+#'### [ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id.
 
 
-
+#'
 #' ### Clean a2dta  (GermanConscipt)
 str(a2dta)
 #' keep bdec = Year,  height = height.cm, mutate to (because rename didnt work) birth_year & height.cm, create height.in using conversion, create study as a constant.
@@ -242,8 +238,8 @@ a3d
 a3e <- select(a3d,birth_year,height.in,height.cm,study)  #select and reorder columns
 a3e
 
-
-#' ### Clean a4dbf  (Souteast)
+#'
+#' ### Clean a4dbf  (Southeast)
 str(a4dbf)
 #' keep SJ & CMETER , mutate to (because rename didnt work) as birth_year & height.cm, create height.in using conversion, create study as a constant.
 a4dbf
@@ -334,7 +330,7 @@ a6f <- filter(a6c, RT216F == -1 | RT216F == -2)
 a6f
 #' Results in 6 rows with -1 in feet, and 1 in inches, or -2 in feet and -2 in inches.  We should delete these rows.
 #' So, we filter out and keep all that are NOT RT216F == -1 | RT216F == -2 
-a6g <- filter(a6c, RT216F != -1) #can't do compoait or with not equal
+a6g <- filter(a6c, RT216F != -1) #can't do composite OR with not equal
 a6h <- filter(a6g, RT216F != -2)
 a6h
 unique(a6h$RT216F)
@@ -364,7 +360,7 @@ a6f <- filter(a6c, DOBY == -1 | DOBY == -2)
 a6f
 #' Results in 5 rows with -1 or -2 in DOBY.  We should delete these rows.
 
-a6j <- filter(a6i, DOBY != -1) #can't do composite or with not equal
+a6j <- filter(a6i, DOBY != -1) #can't do composite OR with not equal
 a6k <- filter(a6j, DOBY != -2)
 a6k
 unique(a6k$DOBY)   # values 1 thru 70, so we'll just unite a "19 in front of them. Since DOBY is a dbl, we'll numerically add 1900.
@@ -376,6 +372,7 @@ a6m
 a6n <- select(a6m,birth_year,height.in,height.cm,study)  #select and reorder columns
 a6n
 
+#'
 #'### Bind the 5 Tables together
 
 
@@ -384,7 +381,7 @@ a6n
 #select(birth_year, height.in, height.cm, study)
 #'
 #' then use the following to combine your five individual measures into one dataset.
-alldata <- bind_rows(a2e, a3e, a4e, a5e, a6n)   #but got error that birth_year were various types.
+#' alldata <- bind_rows(a2e, a3e, a4e, a5e, a6n)   #but got error that birth_year were various types.
 
 #'check variable type for birth_year in each of the 5 tables, change all to numeric
 str(a2e$birth_year)    #num
@@ -413,8 +410,8 @@ summary(alldata)
 
 
 #'
-#' ## Save 2 Datasets to repo
-#'[ ] Save the two tidy datasets to your repository - The world country estimates and the row-combined individual measurements.
+#'##[ ] Save the two tidy datasets to your repository - 
+#' The world country estimates and the row-combined individual measurements.
 #' I'll save as RDS based on this advice https://www.r-bloggers.com/2019/05/how-to-save-and-load-datasets-in-r-an-overview/
 
 getwd()   #"E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/Week_07/analysis"
@@ -424,175 +421,70 @@ saveRDS(alldata, file = "alldata.Rds")
 
 
 #'
-#'## Plot of Height 
-#'[ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the .xlsx file.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#'This Worked
-#' Download the RDS.  To get the link, I went thru these steps, click link in moodle to github repo, double clicked on filelink, which opens another page with a download button, I rightclicked on the download button and copylink. Paste in this r-script codeline. 
-dowrds <- read_rds(url("https://github.com/WJC-Data-Science/DTS350/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.RDS"))
-dowrds
-summary(dowrds)
-
-
-
-
-#'Movie1 <- read_rds(url("https://github.com/WJC-Data-Science/DTS350/raw/master/Boxoffice_Movie_Cost_Revenue.RDS"))
-#' Movie2 <- read_dta("https://github.com/WJC-Data-Science/DTS350/raw/master/Boxoffice_Movie_Cost_Revenue.dta")
-
-#'This worked  but in github, had to click on the file, then open new page, and rightclick the raw button and copylink
-#' download the .csv
-tmpcsv <- tempfile()
-tmpcsv
-tempdir()
-download("https://github.com/WJC-Data-Science/DTS350/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.csv",tmpcsv, mode = "wb")
-dowcsv <- read_csv(tmpcsv)
-dowcsv
-summary(dowcsv)
-
-
-
-
-
-
-
-
-
-
-#'[ ] Check that all five files you have imported into R are in fact the same with all_equal(). You might need to include convert = TRUE in the function. Read about the function for more information.
-#'dowrds  dowcsv  dowdta   dowsav   dowxlsx
-#' Compare all 5, using dowrds as the baseline, and using convert = TRUE to have all_equal convert the variable types to be similar
-all_equal(dowrds, dowcsv, convert = TRUE)   # answer is TRUE, so dowrds & dowcsv are all completely the same.
-all_equal(dowrds, dowdta, convert = TRUE)   # answer is TRUE, so dowrds & dowcsv & dowdta  are all completely the same.
-all_equal(dowrds, dowsav, convert = TRUE)   # answer is TRUE, so dowrds & dowcsv & dowdta & dowsav are all completely the same.
-all_equal(dowrds, dowxlsx, convert = TRUE)  # answer is TRUE, so dowrds & dowcsv & dowdta & dowsav & dowxlsx are all completely the same.
-
-#'check out the data
-str(dowrds)  #three vars  contest_period (char), variable (char), value (dbl)
-unique(dowrds$contest_period)  #there are 100 timeslots  "January-June1990" six month brackets, rolling forward one month at a time, thru April-September1998.
-unique(dowrds$variable)
-summary(dowrds$value)
-
-
-#'[ ] Use one of the files to make a graphic showing the performance of the Dart, DJIA, and Pro stock selections.
-ggplot(dowrds, aes(contest_period, value)) +
-  geom_point(aes(colour = variable)) +
-  labs(
-    x = "Contest Period",
-    y = "Dow Value",
-    colour = "variable"
-  )
-
-#But need to date-ize the x axis conest_period to then be able to produce a connected scatterplot https://www.r-graph-gallery.com/connected_scatterplot_ggplot2.html 
-
-
-
-
-
-#'[ ] Include a boxplot, the jittered returns, and the average return in your graphic
-
-averages <- dowrds %>%    #pg 5.13
-  group_by(variable) %>% 
-  summarise(avgvalue = mean(value))
-averages
-
-ggplot(dowrds, aes(factor(variable), value)) +    
-  geom_boxplot() +
-  geom_jitter() +
-  geom_hline(data = averages, mapping = aes( yintercept = avgvalue, color = variable)) +
-  facet_wrap(~ variable, nrow = 1) +
-  theme(axis.text.x = element_blank())          
-
-
-
-
-#'[ ] Tidy the data.
-#'[ ] The contest_period column is not “tidy”. We want to create a month_end and year_end column from the information it contains.
-#'Strip off the Year -- position-delimited
-dowrds2 <- dowrds %>%
-  separate(contest_period, into = c("Beg_End", "year_end"), sep = -4)  #position-delimited 4th from end, pull off last 4 digits
-head(dowrds2)
-
-#'Strip off the End Month -- character-delimited
-dowrds3 <- dowrds2 %>%
-  separate(Beg_End, into = c("month_beg", "month_end"), sep = "-")  #position-delimited 4th from end, pull off last 4 digits
-head(dowrds3)
-
-# Fix typos:  (seen in a table in future steps) Dec. needs to become December, Feuary needs to become February.
-dowrds3 <- dowrds3 %>%
-  mutate(month_end = replace(month_end, month_end == "Dec.", "December"))
-dowrds3 <- dowrds3 %>%
-  mutate(month_end = replace(month_end, month_end == "Febuary","February"))
-
-head(dowrds3)  
-
-
-
-
-#'[ ] Save your “tidy” data as an .rds object.
-dowrds4 <- select(dowrds3,"month_end","year_end","variable","value")
-dowrds4
-write_rds(dowrds4,"E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/Week_07/Class_Task_13/dowrds4.rds")
-
-
-
-#'[ ] Create a plot that shows the six-month returns by the year in which the returns are collected.
-#' By month and year on the x axis, values on the y, 3 tracks corresponding to the 3 variables?
-
-
-
-library(DataCombine)
-
-# Create original data
-ABData <- data.frame(a = c("London, UK", "Oxford, UK", "Berlin, DE",
-                           "Hamburg, DE", "Oslo, NO"),
-                     b = c(8, 0.1, 3, 2, 1))
-
-# Create replacements data frame
-Replaces <- data.frame(from = c("January","February","March","April","May","June","July","August","September","October","November","December"), to = c(01,02,03,04,05,06,07,08,09,10,11,12))
-
-# Replace patterns and return full data frame
-dowrds4
-
-dowmonbr <- FindReplace(data = dowrds4, Var = monthnbr, replaceData = Replaces,
-                        from = "from", to = "to", exact = FALSE)
-dowmonbr
-
-# Replace patterns and return the Var as a vector
-ABNewVector <- FindReplace(data = ABData, Var = "a", replaceData = Replaces,
-                           from = "from", to = "to", vector = TRUE)
-
-
-
-
-
-
-#'[ ] Create a table using code of the DJIA returns that matches the table shown below (“spread” the data).
-#' https://www.guru99.com/r-dplyr-tutorial.html
-
-#' Gives a table, but need to solve the Month alpha sort vs chron sort problem
-x <- c("January","February","March","April","May","June","July","August","September","October","November","December")
-
-dowrds4Chron <- arrange(dowrds4, factor(month_end, levels = x))
-dowrds4Chron
-
-dowrds4ChronDJIA <- dowrds4Chron %>%
-  filter(variable == "DJIA")
-dowrds4ChronDJIA
-
-spread(dowrds4ChronDJIA,year_end,value)
-
+#' Plot of Height x Decade from .XLS data, highlighting Germany-related datapoints
+
+
+unique(a1final$`Continent, Region, Country`)
+#" Three values related to Germany:"Federal Republic of Germany (until 1990)"  "German Democratic Republic (until 1990)"  "Germany"      
+
+#' Create Germany subset
+a1final
+a1germany <- filter(a1final, a1final$`Continent, Region, Country` == "Federal Republic of Germany (until 1990)" | `Continent, Region, Country` ==  "German Democratic Republic (until 1990)" | `Continent, Region, Country` ==  "Germany")
+a1germany
+
+
+
+str(a1longyrsepinchdec$century)
+str(a1longyrsepinchdec$decade)
+
+#' Plot with all datapoints, no highlighting
+library(ggplot2)
+ggplot(data = a1longyrsepinchdec, mapping = aes(x = (century*100) + (decade*10), y = height.in), alpha = 1/1000) + #can't get alpha to work
+  geom_point()
+
+
+#'
+#' ## PLOT 1 : Plot of XLSX data, highlighting 3 Germany-related datapoints in Red.
+#' ### [ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the .xlsx file.
+library(ggplot2)
+ggplot() + 
+  geom_point(data = a1longyrsepinchdec, mapping = aes(x = (century*100) + (decade*10) - 10, y = height.in)) +
+  geom_point(data = a1germany, mapping          = aes(x = (century*100) + (decade*10) - 10, y = height.in), color = "red")
+#'
+#' ## PLOT 1 INSIGHTS : XLSX dataset : Humans Getting Taller? Germans Getting Taller? 
+#' The data was from a wide range of countries around the world.  From 1810 to 1970, the mean seems to increase from about 65 to 67.5 inches.  Also, the range increases, likely the result of a more robust ability to sample in the far reaches of the increasingly civilized world.  The Germany-related datapoints in red are falling in real numbers and also falling in position within each decade's distributiuon from 1800 to 1840's.  The low point in the 1840's is consistent with the particularly difficult time politically and economically for Germany.  After the 1840's, Germany's real numbers and position in the distribution have consistently increased.  
+#'
+
+#'
+#' ## PLOT 2 : Small-Multiples Plots of the Five Studies
+#'### [ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries.
+alldata
+library(ggplot2)
+ggplot() +
+  geom_point(data = alldata, mapping = aes(x = (10*floor(birth_year/10)), y = (height.in), color = study))
+#'
+#' ## PLOT 2 INSIGHTS : 5 Studys  : Humans Getting Taller?  
+#' The graph shows more inforamtion about the scope of the studies than whether humans have been geting taller.  The might be a slight increase inside the Southeast study from years 1760 to 1790.  And there is dfintiely a reduced variation.  Teh BLS study shows a similar mean, but wider variation.  The German Conscripts and German Prisoners dataset shows a lower mean and less variation, but this may be attributable to the type of population adn how that population was selected in the first place.  The Wisconsin dataset shows the widest variation and prhaps a higher mean.     
+
+#' Small-multiples faceting doesn't help in comparison.
+alldata
+library(ggplot2)
+ggplot() +
+  geom_point(data = alldata, mapping = aes(x = (10*floor(birth_year/10)), y = (height.in), color = study)) +
+  facet_wrap(vars(study), nrow = 1) 
+#  geom_hline(data = alldata, mapping = aes( yintercept = mean(height.in), color = study)) 
+
+#' DOES NOT WORK  
+#'#' Try creating some group means with group = study
+#'alldata
+#'unique(alldata$study)
+#'alldatagrpdmean <- group_by(alldata, study, decade)  
+#'summarise(alldatagrpdmean, studymean = mean(height.in, na.rm = TRUE)) # Produce the mean for each study
+
+#'alldatagrpdmean
+#'
+#' from Chap 5 example
+#'by_yr <- group_by(alldata, birth_year)
+#'summarise(by_yr, yrmean = mean(height.in, na.rm = TRUE))
 
 
