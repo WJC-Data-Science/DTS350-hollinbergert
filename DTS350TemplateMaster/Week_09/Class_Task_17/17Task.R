@@ -37,5 +37,5 @@ ggplot(data = dowrds1, mapping = aes(x = month_endf, y = value, group = variable
 #'### [ ] **Plot 1 Insight** :  DJIA has less variability throughout the year, and longitudinally for any specific month across eight years.  With this reduced DJIA variation, a mild pattern can be seen starting relatively high in January, raising a little more in Feb thru May, then dropping to lows in Oct thru Nov, then rising in Dec.  Similar patterns in the DARTS or PROS data are extremely vague.
 #'
 #'
-#'### [ ] Using drop=FALSE in the scale_x_discrete command didn't alter the graph very much.  It removed the x-axis text and replaced it with the default (variable name).  I suppose that since months are now factors, the drop=FALSE didn't apply.
+#'### [ ] Using drop=FALSE in the scale_x_discrete command didn't alter the graph very much.  It removed the x-axis text and replaced it with the default (variable name).  Drop = FALSE is supposed to allow visibility (and charting) of those levels for which there were no observations.  Since our data was tidy and complete, there were apparently no rows with blanks in the month_end column.
 #' 
