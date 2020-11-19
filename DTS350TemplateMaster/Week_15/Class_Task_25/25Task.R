@@ -50,7 +50,7 @@ tail(eqs5)
 
 
 
-#World Map    This works
+#World Map    This did work, and now it doesn't : FRUSTRATING!   And no error message.
 world_map_data <- ne_countries(scale = "medium", returnclass = "sf")
 world_map <- map('world', fill = TRUE, plot = FALSE) %>% st_as_sf()
 
@@ -74,6 +74,7 @@ ggplot(eqs5, aes(lng, lat, size = mag * 10, color = "red")) +
 
 
 # Can't get the world map and the earthquake pops to coexist on the same ggplot
+#Error: Error: `mapping` must be created by `aes()`
 ggplot() +
   geom_sf(data = world_map, aes(fill = NA)) +
   geom_point(eqs5, aes(lng, lat, size = mag * 10, color = "red")) +
