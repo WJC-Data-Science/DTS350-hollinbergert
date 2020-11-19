@@ -54,30 +54,35 @@ tail(eqs5)
 world_map_data <- ne_countries(scale = "medium", returnclass = "sf")
 world_map <- map('world', fill = TRUE, plot = FALSE) %>% st_as_sf()
 
-ggplot() +
-  geom_sf(data = world_map, fill = NA) +
-  theme_bw() 
+#ggplot() +
+#  geom_sf(data = world_map, fill = NA) +
+#  theme_bw() 
 
 
 #Earthquake Pops  This works
-ggplot(eqs5, aes(lng, lat, size = mag * 10, color = "red")) +
-  geom_point() +
-  theme_bw() +
+#ggplot(eqs5, aes(lng, lat, size = mag * 10, color = "red")) +
+#  geom_point() +
+#  theme_bw() +
   # gganimate specific bits:
-  labs(title = 'time: {frame_time}', x = 'Longitude', y = 'Latitude') +
-  transition_time(time) +    #tansition_time doesn't accept state_length or transition_length arguments, so not sure how to create a slower cycling
-  enter_fade() +
-  exit_fade() +
-  ease_aes('sine-in-out') +
-  shadow_mark(alpha = .3) +
-  guides(colour = FALSE)
+#  labs(title = 'time: {frame_time}', x = 'Longitude', y = 'Latitude') +
+#  transition_time(time) +    #tansition_time doesn't accept state_length or transition_length arguments, so not sure how to create a slower cycling
+#  enter_fade() +
+#  exit_fade() +
+#  ease_aes('sine-in-out') +
+#  shadow_mark(alpha = .3) +
+#  guides(colour = FALSE)
 
 
-# Can't get the world map and the earthquake pops to coexist on the same ggplot
-#Error: Error: `mapping` must be created by `aes()`
+#'## PLOT1 : EARTHQUAKES AROUND THE WORLD LAST MONTH
+#'### This animated plot shows 124 earthquakes popping around the world in the last 30 days.
+#'### The size of the circles are relative to the magnitude of the earthquake.
+#'### The circles are somewhat transparent so you can see the build-up of successive earthquakes in the same local.
+#'### The animation uses transition_time, which aparently can't be slowed down.  But animates in sequence according to the time of occurrence 
+#'### It is sort of possible to see spatial patterns in the sequencing of the earthquakes.  For example, you can see a sequence of successive quakes going up and down the island chains north of Australia.  
+
 ggplot() +
-  geom_sf(data = world_map, aes(fill = NA)) +
-  geom_point(eqs5, aes(lng, lat, size = mag * 10, color = "red")) +
+  geom_sf(data = world_map, fill = NA) +
+  geom_point(data = eqs5, aes(lng, lat, size = mag * 10, color = "red")) +
   theme_bw() +
   # gganimate specific bits:
   labs(title = 'time: {frame_time}', x = 'Longitude', y = 'Latitude') +
