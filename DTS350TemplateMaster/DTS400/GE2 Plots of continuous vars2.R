@@ -1,3 +1,22 @@
+#' ---
+#' title: "GE2 Plots of continuous vars2 "
+#' author: "TomHollinberger"
+#' date: "11/22/2020"
+#' output: 
+#'  html_document: 
+#'    keep_md: yes
+#'    toc: TRUE
+#'    toc_depth: 6
+#'    #'    code_folding:  hide
+#'    results: 'hide'
+#'    message: FALSE
+#'    warning: FALSE
+#' ---  
+#' ---  
+#' THIS RSCRIPT USES ROXYGEN CHARACTERS.  
+#' YOU CAN PRESS ctrl+shift+K AND GO STRAIGHT TO A HTML.  
+#' SKIPS THE HANDWORK OF CREATING A RMD, AFTER THE ORIGINAL WORK IS NONE IN A RSCRIPT.
+#' sample filepath E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/
 
 # CONTINUOUS VARIABLES graph a series of scatterplots of continuous variables vs wgpa, with color = ext
 library(tidyverse)
@@ -5,7 +24,7 @@ library(dplyr)
 library(readxl)
 library(ggplot2)
 #library(ggpmisc) #for annotate with npc   #doesn't load without crashing
-setwd("E:/000 DTS 400 Internship/Orig Lists/")
+setwd("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/")
 #download.file("E:/000 DTS 400 Internship/Orig Lists/WORKFILE3",
 #             "workfiletmp.xlsx", mode = "wb")
 #This excel file contains a number of tables on different sheets of the workbook. We can see a listing of the sheets using the excel_sheets function.
@@ -364,9 +383,107 @@ v
 # manually save as wgpaxsiz at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxsiz w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
 
+#WGPAxPRNK
+gradslope <- round(coef(lm(GEwgpawofbgrad$wgpa~GEwgpawofbgrad$prnk)), digits = 5)[2]  #[2] means the 2nd coeff.  1st coeff is the y-intercept
+gradslope
+exitslope <- round(coef(lm(GEwgpawofbexit$wgpa~GEwgpawofbexit$prnk)), digits = 5)[2]
+exitslope
+GEwgpawofbgrad$prnk
+GEwgpawofbgrad$wgpa  
+cor(GEwgpawofbgrad$prnk,GEwgpawofbgrad$wgpa, use = "pairwise.complete.obs")  #http://www.r-tutor.com/elementary-statistics/numerical-measures/correlation-coefficient
+round(cor(GEwgpawofbgrad$prnk,GEwgpawofbgrad$wgpa, use = "pairwise.complete.obs"), digits = 2)
+corrsltsgrad <- cor.test(GEwgpawofbgrad$prnk,GEwgpawofbgrad$wgpa)  #http://www.sthda.com/english/wiki/correlation-test-between-two-variables-in-r
+round(corrsltsgrad$p.value, digits = 3)
+corrsltsexit <- cor.test(GEwgpawofbexit$prnk,GEwgpawofbexit$wgpa)  #http://www.sthda.com/english/wiki/correlation-test-between-two-variables-in-r
+round(corrsltsexit$p.value, digits = 3)
+
+
+# library(ggpmisc)  #for annotate with npc     #doesn't load without crashing
+library(ggplot2)  # because ggpmisc messes with ggplot, which couldn't be found
+#from https://www.rdocumentation.org/packages/ggpmisc/versions/0.3.6/topics/annotate
+
+
+#Run the Plot
+w <- ggplot(GEwgpawofb, aes(prnk, wgpa, color = status)) +
+  geom_point() +
+  geom_smooth(method = lm, lwd=1) +
+  geom_point(GEwgpawofbstatgrp, mapping = aes(x = prnkbar, y = wgpabar, size = 12, color = status), shape = 8) +  
+  #  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$rnkbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
+  #                                color = status), data = GEwgpawofbstatgrprnd) +
+  
+  #  annotate("text", x = 300, y = 2.10, hjust = 0, vjust = 0, color = "black", 
+  #           label = (str_c("Correlation    |  Significant  |   Slope of   |    Avg      |     Avg     "))) +
+  #  annotate("text", x = 300, y = 2., hjust = 0, vjust = 0, color = "black", 
+  #           label = (str_c("    Coeff         |   if p < .05    |      Line      |    rnke     |   WJC GPA   "))) +
+  annotate("text", x = .3, y = .35, hjust = 0, vjust = 0, cex = 4, color = "springgreen4", 
+           label = (str_c(" R= ",
+                          round(cor(GEwgpawofbgrad$prnk,GEwgpawofbgrad$wgpa, use = "pairwise.complete.obs"), digits = 2), 
+                          "      ,   p= ",
+                          round(corrsltsgrad$p.value, digits = 3),
+                          "           ,   ",
+                          gradslope,
+                          "  ,     " ,
+                          round(Gradwgpawofbstatgrprnd$prnkbar,digits = 1),
+                          "     ,   " ,
+                          round(Gradwgpawofbstatgrprnd$wgpabar, digits = 2), ")" ))) +
+  
+  annotate("text", x = .3, y = .2, hjust = 0, vjust = 0, color = "red",     #can't get it to use npc coords
+           label = (str_c(" R= ",
+                          round(cor(GEwgpawofbexit$prnk,GEwgpawofbexit$wgpa, use = "pairwise.complete.obs"), digits = 2), 
+                          "      ,   p= ",
+                          round(corrsltsexit$p.value, digits = 3),
+                          "    ,   ",
+                          exitslope,
+                          "  ,     " ,
+                          round(Exitwgpawofbstatgrprnd$prnkbar
+                                ,digits = 1),
+                          "     ,   " ,
+                          round(Exitwgpawofbstatgrprnd$wgpabar, digits = 2), ")" ))) +
+  
+  #   stat_cor(aes(label = paste(..r.label.., ..p.label.., sep = "~`,   `~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
+  scale_color_manual(values = listofcolors) +
+  labs(title = "The Effect of High School Class RANK / SIZE on WJC GPA ", 
+       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
+       caption = "Source: WJC Admissions Records",
+       x = "High School Class RANK / SIZE",
+       y = "William Jewell College GPA",
+       color = "Student Status:",
+       size = "                     Avg X, Avg Y:") +
+  guides(color = guide_legend(reverse = TRUE)) +
+  theme(legend.position = "bottom", legend.box = "horizontal") 
+
+#Build vertical bars
+vb0 <- annotation_custom(grid::textGrob(label = "|",                 #can't get it to use color = "red",
+                                        x = unit(.40, "npc"), y = unit(.145, "npc"), vjust = 0,   
+                                        gp = grid::gpar(cex = 2))) 
+vb1 <- annotation_custom(grid::textGrob(label = "|", 
+                                        x = unit(.55, "npc"), y = unit(.145, "npc"), vjust = 0,   
+                                        gp = grid::gpar(cex = 2))) 
+vb2 <- annotation_custom(grid::textGrob(label = "|", 
+                                        x = unit(.675, "npc"), y = unit(.145, "npc"), vjust = 0,   
+                                        gp = grid::gpar(cex = 2))) 
+vb3 <- annotation_custom(grid::textGrob(label = "|", 
+                                        x = unit(.79, "npc"), y = unit(.145, "npc"), vjust = 0,   
+                                        gp = grid::gpar(cex = 2))) 
+vb4 <- annotation_custom(grid::textGrob(label = "|", 
+                                        x = unit(.88, "npc"), y = unit(.145, "npc"), vjust = 0,  
+                                        gp = grid::gpar(cex = 2))) 
+vb5 <- annotation_custom(grid::textGrob(label = "|", 
+                                        x = unit(1, "npc"), y = unit(.145, "npc"), vjust = 0,   
+                                        gp = grid::gpar(cex = 2)))
+t1 <-  annotation_custom(grid::textGrob(label = "   Correlation      Significant     Slope of     Avg          Avg     ", 
+                                        x = unit(.4, "npc"), y = unit(.170, "npc"), vjust = 0, hjust = 0,   
+                                        gp = grid::gpar(cex = 1))) 
+t2 <-  annotation_custom(grid::textGrob(label = "    Coeff                if p < .05        Line           RANK    WJC GPA   ", 
+                                        x = unit(.4, "npc"), y = unit(.13, "npc"), vjust = 0, hjust = 0,  
+                                        gp = grid::gpar(cex = 1))) 
+v <- w + vb0 +vb1 + vb2 + vb3 + vb4 + vb5 + t1 + t2
+v
+# manually save as PLOTS3 wgpaxprnk at 744 x 581
+#ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxsiz w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
+
 
 #WGPAxENGSEM
-#WGPA x SIZE
 #Prep the Annotated Values
 gradslope <- round(coef(lm(GEwgpawofbgrad$wgpa~GEwgpawofbgrad$engsem)), digits = 5)[2]  #[2] means the 2nd coeff.  1st coeff is the y-intercept
 gradslope
@@ -481,11 +598,9 @@ round(corrsltsgrad$p.value, digits = 3)
 corrsltsexit <- cor.test(GEwgpawofbexit$tcr,GEwgpawofbexit$wgpa)  #http://www.sthda.com/english/wiki/correlation-test-between-two-variables-in-r
 round(corrsltsexit$p.value, digits = 3)
 
-
 # library(ggpmisc)  #for annotate with npc     #doesn't load without crashing
 library(ggplot2)  # because ggpmisc messes with ggplot, which couldn't be found
 #from https://www.rdocumentation.org/packages/ggpmisc/versions/0.3.6/topics/annotate
-
 
 #Run the Plot
 w <- ggplot(GEwgpawofb, aes(tcr, wgpa, color = status)) +
@@ -668,8 +783,6 @@ v
 # manually save as wgpaxhsgpa at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxhsgpa w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
 
-
-
 #WGPA x cmp
 #Prep the Annotated Values
 gradslope <- round(coef(lm(GEwgpawofbgrad$wgpa~GEwgpawofbgrad$cmp)), digits = 5)[2]  #[2] means the 2nd coeff.  1st coeff is the y-intercept
@@ -769,7 +882,6 @@ v <- w + vb0 +vb1 + vb2 + vb3 + vb4 + vb5 + t1 + t2
 v
 # manually save as wgpaxcmp at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxcmp w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
-
 
 #WGPA x mat
 #Prep the Annotated Values
@@ -871,7 +983,6 @@ v
 # manually save as wgpaxmat at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxmat w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
 
-
 #WGPA x sci
 #Prep the Annotated Values
 gradslope <- round(coef(lm(GEwgpawofbgrad$wgpa~GEwgpawofbgrad$sci)), digits = 5)[2]  #[2] means the 2nd coeff.  1st coeff is the y-intercept
@@ -972,7 +1083,6 @@ v
 # manually save as wgpaxsci at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxsci w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
 
-
 #WGPA x eng
 #Prep the Annotated Values
 gradslope <- round(coef(lm(GEwgpawofbgrad$wgpa~GEwgpawofbgrad$eng)), digits = 5)[2]  #[2] means the 2nd coeff.  1st coeff is the y-intercept
@@ -1072,7 +1182,6 @@ v <- w + vb0 +vb1 + vb2 + vb3 + vb4 + vb5 + t1 + t2
 v
 # manually save as wgpaxeng at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxeng w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
-
 
 #WGPA x rdg
 #Prep the Annotated Values
@@ -1274,380 +1383,8 @@ v
 # manually save as wgpaxdst at 744 x 581
 #ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxdst w annt 27x21 from ggsave while console exact 27x21.jpeg",  width = 27, height = 21, units = "cm")
 
-###########
-#wgpaxengsem   
-w <- ggplot(GEwgpawofb, aes(engsem, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = engsembar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of HS English Semesters on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "High School English Semesters",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$engsembar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
 
-w <- ggplot(GEwgpawofb, aes(engsem, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = engsembar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$engsembar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of HS English Semesters on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "High School English Semesters",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxengsem.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxtcr 
-w <- ggplot(GEwgpawofb, aes(tcr, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = tcrbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of TRANSFER CREDITS on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "Transfer Credits",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$tcrbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(tcr, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = tcrbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$tcrbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of TRANSFER CREDITS on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "Transfer Credits",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxtcr.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxhsgpa
-w <- ggplot(GEwgpawofb, aes(hsgpa, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = hsgpabar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of High School GPA on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "High School GPA",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$hsgpabar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(hsgpa, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = hsgpabar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$hsgpabar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of High School GPA on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "High School GPA",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxhsgpa.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxcmp
-w <- ggplot(GEwgpawofb, aes(cmp, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = cmpbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-# stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of COMPOSITE ACT SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "COMPOSITE ACT SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$cmpbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(cmp, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = cmpbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$cmpbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of COMPOSITE ACT SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "COMPOSITE ACT SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxcmp.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxmat
-w <- ggplot(GEwgpawofb, aes(mat, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = matbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ACT MATH SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT MATH SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$matbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(mat, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = matbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$matbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ACT MATH SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT MATH SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxmat.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxsci
-w <- ggplot(GEwgpawofb, aes(sci, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = scibar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The ACT SCIENCE SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT SCIENCE SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$scibar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(sci, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = scibar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$scibar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The ACT SCIENCE SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT SCIENCE SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxsci.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxeng
-w <- ggplot(GEwgpawofb, aes(eng, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = engbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ACT ENGLISH SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT ENGLISH SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$engbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(eng, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = engbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$engbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ACT ENGLISH SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT ENGLISH SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxeng.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxrdg
-w <- ggplot(GEwgpawofb, aes(rdg, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = rdgbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ACT READING SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT READING SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$rdgbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(rdg, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = rdgbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$rdgbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ACT READING SCORE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ACT READING SCORE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxrdg.jpeg",  width = 9, height = 7, units = "in")
-
-#wgpaxdst
-w <- ggplot(GEwgpawofb, aes(dst, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = dstbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ZIP-DISTANCE FROM HOME on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ZIP-DISTANCE FROM HOME",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$dstbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-w <- ggplot(GEwgpawofb, aes(dst, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = dstbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$dstbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of ZIP-DISTANCE FROM HOME on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "ZIP-DISTANCE FROM HOME",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal")   
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxdst.jpeg",  width = 9, height = 7, units = "in")
-
-
-
-
+########
 
 # BOXPLOTS of CATEGORICAL VARIABLES seg, race, hst, alum  (then split by status: grad vs non-grad)
 #This excel file contains a number of tables on different sheets of the workbook. We can see a listing of the sheets using the excel_sheets function.
@@ -1663,7 +1400,7 @@ listofcolors <- c("red","springgreen4")
 
 #Read-In the Worksheet
 #This excel file contains a number of tables on different sheets of the workbook. We can see a listing of the sheets using the excel_sheets function.
-excel_sheets("WORKFILE2.xlsx")
+excel_sheets("WORKFILE3.xlsx")
 #'Now we will load our data using the read_excel function. We will load the data from the Purchase Date April 2019 sheet.
 GEwofb <- read_excel("WORKFILE2.xlsx", sheet = "GandE without filled blanks")
 GEwofb
@@ -1894,9 +1631,9 @@ listofcolors <- c("red","springgreen4")
 
 #Read-In the Worksheet
 #This excel file contains a number of tables on different sheets of the workbook. We can see a listing of the sheets using the excel_sheets function.
-excel_sheets("WORKFILE2.xlsx")
+excel_sheets("WORKFILE3.xlsx")
 #'Now we will load our data using the read_excel function. We will load the data from the Purchase Date April 2019 sheet.
-GEwofb <- read_excel("WORKFILE2.xlsx", sheet = "GandE without filled blanks")
+GEwofb <- read_excel("WORKFILE3.xlsx", sheet = "GandE without filled blanks")
 GEwofb
 
 #Take out the "No GPA on record, so now it's: Grads and Exits with gpas, and without filled blanks
@@ -2072,7 +1809,7 @@ v <- ggplot(GEwgpawofb, aes(yrfct, wgpa, color = status)) +
 v
 ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxyr.jpeg",  width = 9, height = 7, units = "in")
 
-#wgpaxyr
+#wgpaxextyn
 ext_levels <- c("No","Yes")
 GEwgpawofb$extfct <- factor(GEwgpawofb$extyn, levels = ext_levels)
 GEwgpawofb$extfct
@@ -2094,7 +1831,7 @@ v <- ggplot(GEwgpawofb, aes(extfct, wgpa, color = status)) +
   labs(title = "The Relationship between EXITING and WJC GPA ", 
        subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
        caption = "Source: WJC Admissions Records",
-       x = "EXITED, but DO have a GPA on record ?",
+       x = "No = Graduated      ,      Yes = Exited",
        y = "William Jewell College GPA",
        color = "Student Status:",
        size = "                     Avg X, Avg Y:") +
@@ -2115,44 +1852,3 @@ v
 ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxext.jpeg",  width = 9, height = 7, units = "in")
 
 
-#WGPAxPRNK
-w <- ggplot(GEwgpawofb, aes(prnk, wgpa, color = status)) +
-  geom_point() +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = prnkbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  geom_smooth(method = lm) +
-  # stat_cor(method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of High School Class RANK / SIZE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "High School Class RANK / SIZE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") +
-  geom_text(data = GEwgpawofbstatgrprnd, aes(x = 250, y = 2.5, color = status), 
-            label = paste0('Average:   ( ',GEwgpawofbstatgrprnd$prnkbar,'  ,  ',GEwgpawofbstatgrprnd$wgpabar, ' )', '\n'), 
-            position_jitter(height = 0, seed = 2))
-w
-
-w <- ggplot(GEwgpawofb, aes(prnk, wgpa, color = status)) +
-  geom_point() +
-  geom_smooth(method = lm, lwd=1) +
-  geom_point(GEwgpawofbstatgrp, mapping = aes(x = prnkbar, y = wgpabar, size = 12, color = status), shape = 8) +  
-  ggrepel::geom_label_repel(aes(label = paste("Avg:  ", "( ", (round(GEwgpawofbstatgrprnd$prnkbar, digits = 1)),"  ,  ",(round(GEwgpawofbstatgrprnd$wgpabar, digits = 2)), " )"), sep = "  ", 
-                                color = status), data = GEwgpawofbstatgrprnd) +
-  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
-  scale_color_manual(values = listofcolors) +
-  labs(title = "The Effect of High School Class RANK / SIZE on WJC GPA ", 
-       subtitle = "All Students with a WJC GPA on record, whether or not they graduated",
-       caption = "Source: WJC Admissions Records",
-       x = "High School Class RANK / SIZE",
-       y = "William Jewell College GPA",
-       color = "Student Status:",
-       size = "                     Avg X, Avg Y:") +
-  guides(color = guide_legend(reverse = TRUE)) +
-  theme(legend.position = "bottom", legend.box = "horizontal") 
-w
-ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxprnk.jpeg",  width = 9, height = 7, units = "in")
