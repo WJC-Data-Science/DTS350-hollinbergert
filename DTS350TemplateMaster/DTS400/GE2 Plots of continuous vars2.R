@@ -130,7 +130,7 @@ GEwgpawofbstatgrp
 
 Gradwgpawofbstatgrprnd$rnkbar
 
-#WGPAxRNK
+#WGPAxRNK  NOT A GOOD LAYOUT OF ANNOTATIONS
 w <- ggplot(GEwgpawofb, aes(rnk, wgpa, color = status)) +
   geom_point() +
   geom_smooth(method = lm, lwd=1) +
@@ -152,7 +152,7 @@ w <- ggplot(GEwgpawofb, aes(rnk, wgpa, color = status)) +
 w
 ggsave("E:/000 DTS 400 Internship/PLOTS3/wgpaxrnk.jpeg",  width = 9, height = 7, units = "in")
 
-#WGPAxSIZ
+#WGPAxSIZ NOT A GOOD LAYOUT OF ANNOTATIONS
 gradslope <- round(coef(lm(GEwgpawofbgrad$wgpa~GEwgpawofbgrad$siz)), digits = 5)[2]  #[2] means the 2nd coeff, i.e., gradient of the abline.  1st coeff is the y-intercept   https://stackoverflow.com/questions/19661766/how-to-get-gradient-of-abline-in-r
 gradslope
 exitslope <- round(coef(lm(GEwgpawofbexit$wgpa~GEwgpawofbexit$siz)), digits = 5)[2]
@@ -225,7 +225,7 @@ w <- ggplot(GEwgpawofb, aes(rnk, wgpa, color = status)) +
                           "  ,     " ,
                           round(Gradwgpawofbstatgrprnd$rnkbar,digits = 1),
                           "     ,   " ,
-                          round(Gradwgpawofbstatgrprnd$wgpabar, digits = 2), ")" ))) +
+                          round(Gradwgpawofbstatgrprnd$wgpabar, digits = 2),  ))) +
   
   annotate("text", x = 150, y = .2, hjust = 0, vjust = 0, color = "red",     #can't get it to use npc coords
            label = (str_c(" R= ",
@@ -238,7 +238,7 @@ w <- ggplot(GEwgpawofb, aes(rnk, wgpa, color = status)) +
                           round(Exitwgpawofbstatgrprnd$rnkbar
                                 ,digits = 1),
                           "     ,   " ,
-                          round(Exitwgpawofbstatgrprnd$wgpabar, digits = 2), ")" ))) +
+                          round(Exitwgpawofbstatgrprnd$wgpabar, digits = 2),  ))) +
   
   #   stat_cor(aes(label = paste(..r.label.., ..p.label.., sep = "~`,   `~")), method = "pearson", label.x.npc = "left", label.y.npc = "bottom") +
   scale_color_manual(values = listofcolors) +
@@ -1851,4 +1851,46 @@ v <- ggplot(GEwgpawofb, aes(extfct, wgpa, color = status)) +
 v
 ggsave("E:/000 DTS 400 Internship/PLOTS/wgpaxext.jpeg",  width = 9, height = 7, units = "in")
 
+
+
+
+str(GEwofb)
+unique(GEwofb$status)
+Gwofb <- filter(GEwofb, status != "No GPA on record" & status != "Didn't Graduate, but had GPA")
+Gwofb
+
+#Graph of Grade Point distributions with Vertical Mean for 5 segments
+library(viridis)
+Gwofb$segment
+gr <- Gwofb %>%
+  group_by(segment) %>%
+  summarise(grp.med = median(wgpa)) 
+gr
+gr$segment <- as.character(gr$segment)
+Gwofb$segment <- as.character(Gwofb$segment)
+gr 
+Gwofb
+
+ggplot(Gwofb, aes(wgpa, color = segment)) +
+  geom_density(lwd = 2) +
+  geom_vline(aes(xintercept = grp.med, color = segment),
+             data = gr, linetype = 2, lwd = 1) +
+  labs(color = "Major Groupings",  
+    title = "WJC GPA Distribution based on Major Groupings",
+    subtitle = "Density plot of Graduate's GPAs, with median for each grouping",
+    caption = "Source: WJC Admissions Records")
+
+
+
+
+library(viridis)
+gr <- Gwofb %>%
+  group_by(segment) %>%
+  summarise(grp.med = median(wgpa)) 
+ggplot(Gwofb, aes(wgpa, color = segment)) +
+  geom_density(lwd = 2) +
+  geom_vline(aes(xintercept = grp.med, color = segment),
+             data = gr, linetype = 2, lwd = 1) +
+  facet_wrap(~ segment, ncol = 1)  +
+theme(legend.position = "none") 
 

@@ -1,17 +1,22 @@
 #' ---
 #' title: "GE "
 #' author: "TomHollinberger"
-#' date: "10/21/2020"
+#' date: "11/22/2020"
 #' output: 
 #'  html_document: 
 #'    keep_md: yes
 #'    toc: TRUE
 #'    toc_depth: 6
+#'    #'    code_folding:  hide
+#'    results: 'hide'
+#'    message: FALSE
+#'    warning: FALSE
+#' ---  
 #' ---  
 #' THIS RSCRIPT USES ROXYGEN CHARACTERS.  
 #' YOU CAN PRESS ctrl+shift+K AND GO STRAIGHT TO A HTML.  
 #' SKIPS THE HANDWORK OF CREATING A RMD, AFTER THE ORIGINAL WORK IS NONE IN A RSCRIPT.
-#' sample filepath E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/Week_09/Class_Task_16/messy_data.xlsx
+#' sample filepath E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/GE.r
 
 #' Start by loading libraries
 library(tidyverse)
@@ -41,21 +46,19 @@ library(readr)
 library(RVerbalExpressions)
 
 #' Check working directory
-#'getwd() #"C:/Users/tomho/Documents"
-setwd("E:/000 DTS 400 Internship/")
-
-
+setwd("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/")
 getwd()
 
 
-#' Download the csv
+#'Download the csv from the web ()
 #'download.file("https://educationdata.urban.org/csv/ipeds/colleges_ipeds_completers.csv","colleges_ipeds_completers.csv", "GE.csv", mode = "wb")
 
 #' Open csv in excel and filter each row to see what the column contents are (missing data = 99 for example, etc) .
 #' Also look for opening lines to skip, comment flags, column names (header row), etc 
 
 #'Now we use the read_csv function to load the data.
-ge <- read_csv("GE.csv")
+library(readr)
+ge <- read_csv("GE.csv")   
 ge    #looks good, all columns came over
 str(ge)    #says 'ext' its a col_double()
 ge$ext    #shows up as 0';'s an 1's, which is good
@@ -134,6 +137,7 @@ corrplot(cor(grads[,c(43,27,28,47,48,38)]),method='circle')
 
 #Graph of Grade Point distributions with Vertical Mean ofr 5 segments
 library(viridis)
+grads
 gr <- grads %>%
 group_by(seg) %>%
   summarise(grp.med = median(wgpa)) 
@@ -170,25 +174,27 @@ facet_wrap(~ seg, ncol = 1)
 
 
 
-#' reassign variable types, if need be
-df$aaa <- as.double(df$aaa)
-df$bbb <- as.integer(df$bbb)
-df$ccc <- as.character(df$ccc)
-df$ddd <- as.factor(df$ddd)
-df$eee <- as.double(df$eee)
-df$fff <- as.double(df$fff)
+#' Unused template for reassigning variable types, if need be
+#'df$aaa <- as.double(df$aaa)
+#'df$bbb <- as.integer(df$bbb)
+#'df$ccc <- as.character(df$ccc)
+#'df$ddd <- as.factor(df$ddd)
+#'df$eee <- as.double(df$eee)
+#'df$fff <- as.double(df$fff)
 
 #' look again
-df
+#'df
 
 #'Select Columns and Filter rows,  Create new columns, then save as the working csv 
-df2 <- df 
+#'library(tidyverse)
+#'library(dplyr)
+#'df2 <- df 
 df2 <- select(df2,aaa,bbb)   #select desired columns
-df2 <- filter(df2, bbb == 2012)   #filter only needed rows
-df2 <- mutate(df2, new = 1/aaa, new2 = 1/bbb)  #create any new derivation columns
-df2 <- 
-  head(df2, n = 10)
-write_csv(df2, "df2.csv")
+#'df2 <- filter(df2, bbb == 2012)   #filter only needed rows
+#'df2 <- mutate(df2, new = 1/aaa, new2 = 1/bbb)  #create any new derivation columns
+#'df2 <- 
+#'  head(df2, n = 10)
+#'write_csv(df2, "df2.csv")
 
 
 # PROBIT PRACTICE
@@ -196,7 +202,7 @@ write_csv(df2, "df2.csv")
 library(tidyverse)
 library(dplyr)
 
-setwd("E:/000 DTS 400 Internship/Orig Lists/")
+setwd("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/")
 getwd()
 
 prbt <- read_csv("PROBIT DATA incl no grades.csv")
@@ -233,7 +239,7 @@ prbtwgrds$seg <- as.factor(prbtwgrds$seg)
 
 str(prbtwgrds)   #confirm that they have become factors
 
-#Run the Regression
+#Run the PROBIT Regression, now including Categoricl & Binary Variables 
 myprobit <- glm(ext ~ hst + rac + alum + yr + nm + engsem + prnk + gndr + tcr + hsgpa + cmp + mat + sci + eng + rdg + dst + wgpa + seg, family = binomial(link = "probit"), 
                 data = prbtwgrds)
 
@@ -323,7 +329,7 @@ PseudoR2(myprobitabbv2, which = "all")
 PseudoR2(myprobitabbv3, which = "all")
 
 
-#REgression Throw-Out Run, WITHOUT WGPA, since it wouldn't generally be known in advance
+#P{ROBIT REgression Chase-Down, Throw-Out Run, WITHOUT WGPA, since it wouldn't generally be known in advance
 myprobita <- glm(ext ~ hst + rac + alum + yr + nm + engsem + prnk + gndr + tcr + hsgpa + cmp + mat + sci + eng + rdg + dst + seg, family = binomial(link = "probit"), 
                 data = prbtwgrds)
 
@@ -406,69 +412,5 @@ myprobitabbvm <- glm(ext ~ rnk + tcr + cmp + mat, family = binomial(link = "prob
 summary(myprobitabbvm)   #AIC 99.596, NOT LOWER, HIT MINIMUM ON LAST ROUND
 
 
-#DOWNLOAD WORKSHEET GandE w gpas -- it has grads and dng's who have gpas, but without filled blanks.  
-
-
-# CONTINUOUS graph a series of scatterplots of continuous variables vs wgpa, with color = ext
-
-library(readxl)
-
-#download.file("E:/000 DTS 400 Internship/Orig Lists/WORKFILE1",
- #             "workfiletmp.xlsx", mode = "wb")
-#This excel file contains a number of tables on different sheets of the workbook. We can see a listing of the sheets using the excel_sheets function.
-excel_sheets("WORKFILE1.xlsx")
-#'Now we will load our data using the read_excel function. We will load the data from the Purchase Date April 2019 sheet.
-GEgpas <- read_excel("WORKFILE1.xlsx", sheet = "GandE without blanks filled")
-
-#comebck and finish this
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-p <- ggplot(data = iris, mapping = aes(x = Sepal.Width, 
-                                       y = Sepal.Length, 
-                                       color = Species,
-                                       shape = Species)) +
-  geom_point() +
-  scale_shape_manual(values =  c(1, 5, 7)) +
-  scale_x_log10() +
-  scale_y_log10() +
-  scale_color_manual(values = c("purple", "orange", "blue")) +
-  labs(x = "Sepal Length (cm)",
-       y = "Sepal Width (cm)",
-       title = "This is where I would put a title",
-       color = "Species of Iris",
-       shape = "Species of Iris") + 
-  theme(plot.title = element_text(hjust = .5)) +
-  theme_bw() +
-  facet_wrap(vars(Species)) 
-
-p
-
-#First, do you have the right packages loaded to computed averages? Then calculate the averages:
-library(dplyr)
-
-# pipe on page 5.13,  group_by and summarise on pg 5.11
-averages <- iris %>%    #pg 5.13
-  group_by(Species) %>% 
-  summarise(avglength = mean(Sepal.Length))
-averages
-
-#3 horizontal lines with color to correspond to their respective obs colors?
-p + geom_hline(data = averages, mapping = aes( yintercept = avglength, color = Species))   #pg3.8
 
 

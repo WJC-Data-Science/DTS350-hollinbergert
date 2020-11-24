@@ -1,4 +1,24 @@
-# Linear Regression
+#' ---
+#' title: "GE3 Linear Regressions "
+#' author: "TomHollinberger"
+#' date: "11/22/2020"
+#' output: 
+#'  html_document: 
+#'    keep_md: yes
+#'    toc: TRUE
+#'    toc_depth: 6
+#'    #'    code_folding:  hide
+#'    results: 'hide'
+#'    message: FALSE
+#'    warning: FALSE
+#' ---  
+#' ---  
+#' THIS RSCRIPT USES ROXYGEN CHARACTERS.  
+#' YOU CAN PRESS ctrl+shift+K AND GO STRAIGHT TO A HTML.  
+#' SKIPS THE HANDWORK OF CREATING A RMD, AFTER THE ORIGINAL WORK IS NONE IN A RSCRIPT.
+#' sample filepath E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/
+#' 
+#' # Linear Regression
 
 library(tidyverse)
 library(dplyr)
@@ -10,12 +30,12 @@ library(ggplot2)
 
 # not needed since it's on the e drive   download.file("E:/000 DTS 400 Internship/Orig Lists/WORKFILE2",  "workfiletmp.xlsx", mode = "wb")
 #This excel file contains a number of tables on different sheets of the workbook. We can see a listing of the sheets using the excel_sheets function.
-excel_sheets("E:/000 DTS 400 Internship/Orig Lists/WORKFILE3.xlsx")
+excel_sheets("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/WORKFILE3.xlsx")
 #'Now we will load our data using the read_excel function. We will load the data from the Purchase Date April 2019 sheet.
-GEwfb <- read_excel("E:/000 DTS 400 Internship/Orig Lists/WORKFILE3.xlsx", sheet = "GandE with filled blanks", skip = 0)
+GEwfb <- read_excel("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/WORKFILE3.xlsx", sheet = "GandE with filled blanks", skip = 0)
 (GEwfb)
 
-setwd("E:/000 DTS 400 Internship/GE3 Linear Regression/")
+setwd("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/GE3 Linear Regression/")
 getwd()
 
 
@@ -31,22 +51,22 @@ unique(GEwgpawfb$wgpa)
 
 GEwgpawfbcorvars <- select(GEwgpawfb, wgpa, rnkneg, siz, prnk,	engsem,	tcr, hsgpa,	cmp,	mat,	sci,	eng,	rdg,	dst, hst, alum, rac, seg, nm, gndr, yr, ext, stat)
 #str(GEwgpawfbcorvars)
-corrplot.mixed(cor(GEwgpawfbcorvars), upper = "ellipse")   #problems with blanks in wgpa
+corrplot.mixed(cor(GEwgpawfbcorvars), upper = "ellipse")  
 
 #Now use levels of categorical variables for segment
 GEwgpawfbcorvars <- select(GEwgpawfb, wgpa, rnkneg, tcr, hsgpa,	cmp,	mat,	sci,	eng,	rdg,	dst, seg1, seg2, seg3, seg4, seg5, seg6)
 #str(GEwgpawfbcorvars)
-corrplot.mixed(cor(GEwgpawfbcorvars), upper = "ellipse")   #problems with blanks in wgpa
+corrplot.mixed(cor(GEwgpawfbcorvars), upper = "ellipse")   
 
 #Now add in levels for categorical and binary variables
 GEwgpawfbcorvars <- select(GEwgpawfb, wgpa, rnkneg, tcr, hsgpa,	cmp,	mat,	sci,	eng,	rdg,	dst, seg1, seg2, seg3, seg4, seg5, seg6, race1, race2, race3, race4, race5, race6, race7, alum0, alum1, alum2, alum3, hst1, hst2, hst3, hst4, nm, gndr, yr, ext, stat)
 #str(GEwgpawfbcorvars)
-corrplot.mixed(cor(GEwgpawfbcorvars), upper = "ellipse")   #problems with blanks in wgpa
+corrplot.mixed(cor(GEwgpawfbcorvars), upper = "ellipse")   
 ggsave("corrplotalllevels.jpeg",  width = 9, height = 7, units = "in")
 
 GEwgpawfbtopcorrels <- select(GEwgpawfb, wgpa, hsgpa,	rnkneg, mat,	eng,	cmp,	rdg, sci,	tcr, gndr, seg1, race7, seg6, hst1, hst4, nm, ext, stat)
 #str(GEwgpawfbcorvars)
-corrplot.mixed(cor(GEwgpawfbtopcorrels), upper = "ellipse")   #problems with blanks in wgpa
+corrplot.mixed(cor(GEwgpawfbtopcorrels), upper = "ellipse")   
 ggsave("corrplotalllevels.jpeg",  width = 9, height = 7, units = "in")
 
 
@@ -57,7 +77,7 @@ par()
 #Take out the "Didn't Graduate, but had GPA", so now it's: Grads only, and with filled blanks
 Gradswfb <- filter(GEwgpawfb, status != "Didn't Graduate, but had GPA")
 #View(Gradswfb)
-unique(Gradswfb$status)  #confirms that only two options exist: "Didn't Graduate, but had GPA" "Grad with GPA"   
+unique(Gradswfb$status)  #confirms that only one options exist: "Grad with GPA"   
 unique(Gradswfb$wgpa)
 
 par(mfrow = c(0,0))
@@ -84,163 +104,8 @@ scatterplotMatrix(GEwgpawfb_contin_num)  #this shows some, but will rearrange th
 GEwgpawfb_contin_num_select <- select(GEwgpawfb, wgpa, rnkneg, hsgpa, tcr, eng, rdg)
 scatterplotMatrix(GEwgpawfb_contin_num_select) 
 getwd()
-ggsave("E:/000 DTS 400 Internship/GE3 Linear Regression/scatterplotMAtrix1.jpeg",  width = 9, height = 7, units = "in")
+ggsave("E:/000 DTS 350 Data Visualization/DTS350-hollinbergert/DTS350TemplateMaster/DTS400/scatterplotMAtrix1.jpeg",  width = 9, height = 7, units = "in")
 # Are not normal-looking and need to be transformed.  See the YBpg102
-
-
-
-
-
-
-
-
-
-
-#BOX-COX Transformation YBpg102
-#also other options: https://www.statisticssolutions.com/transforming-data-for-normality/
-library(car)
-lambdawgpa <- coef(powerTransform(1/GEwgpawfb_contin_num$wgpa))
-lambdawgpa   #1 means close to normal
-bcPower(GEwgpawfb_contin_num$wgpa, lambdawgpa)
-
-par(mfrow = c(1,2))    #watch out this effects all plotting thereafter, need to toggle off eventually
-hist(GEwgpawfb_contin_num$wgpa,
-     xlab = "wgpa", ylab = "Count of Students",
-     main = "Original Distribution")
-
-hist(bcPower(GEwgpawfb_contin_num$wgpa, lambdawgpa),
-     xlab = "Box-Cox Transform of wgpa", ylab = "Count of Students",
-     main = "Transformed Distribution")
-
-GEwfb
-shapiro.test(GEwgpawfb_contin_num$wgpa)
-#data:  GEwfb$wgpa
-#W = 0.89606, p-value = 1.259e-09  NOT GOOD, wanted p>.05 (counterintuitive)
-
-wgpaboxcox <- (bcPower(GEwgpawfb_contin_num$wgpa, lambdawgpa))
-wgpaboxcox 
-shapiro.test(wgpaboxcox)
-#data:  wgpaboxcox
-#W = 0.29815, p-value < 2.2e-16  WORSE!?!? after boxcox
-
-#MANUAL TRANSFORMATION
-#Other manual attempts at normality of wgpa
-#wgpa , hsgpa + rnk + cmp + mat + sci + eng + rdg + tcr
-
-
-#Assume average & maxdensity at 3.44 for G&E, and 3.53 for grads only
-
-#Transform = wgpa, using grad-only mean of 3.503
-GEwgpawfb
-wgpaxfrm1 <-   (abs(3.503 - GEwgpawfb$wgpa))^.35  #using gradonly mean of 3.53, must be near mean, but not = to any actual gpa
-wgpaxfrm1
-shapiro.test(wgpaxfrm1)
-#data:  wgpaxfrm1   Want a p-value > .05 (counterintuitive)
-#W = 0.9845, p-value = 0.05311    exponent = .45  using (abs(3.5305 - GEwgpawfb$wgpa))
-#W = 0.98986, p-value = 0.2592    exponent = .40  using (abs(3.5305 - GEwgpawfb$wgpa))
-#W = 0.9892, p-value = 0.2148    exponent = .30  using (abs(3.5305 - GEwgpawfb$wgpa))
-#W = 0.99124, p-value = 0.3777    exponent = .375  using (abs(3.5305 - GEwgpawfb$wgpa))
-#W = 0.99161, p-value = 0.4154    exponent = .36   using (abs(3.5305 - GEwgpawfb$wgpa))
-#W = 0.99152, p-value = 0.4062    exponent = .34  using (abs(3.5305 - GEwgpawfb$wgpa))
-#W = 0.99165, p-value = 0.4198    exponent = .35   BEST for (abs(3.5305 - GEwgpawfb$wgpa))
-
-#Transform = wgpa, using grad and exit mean of 3.44
-GEwgpawfb
-wgpaxfrm1 <-   (abs(3.44 - GEwgpawfb$wgpa))^.37  #using gradonly mean of 3.53, must be near mean, but not = to any actual gpa
-wgpaxfrm1
-shapiro.test(wgpaxfrm1)
-#data:  wgpaxfrm1   Want a p-value > .05 (counterintuitive)
-#W = 0.99042, p-value = 0.3028    exponent = .35  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.98558, p-value = 0.07352    exponent = .30  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.99102, p-value = 0.356    exponent = .40  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.98853, p-value = 0.1767    exponent = .45  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.99074, p-value = 0.3306    exponent = .41   using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.99117, p-value = 0.3708    exponent = .39  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.9912, p-value = 0.3733    exponent = .38   BEST for (abs(3.44 - GEwgpawfb$wgpa))
-
-
-#Now do histogram to visually see normality
-par(mfrow = c(1,2))    #watch out this effects all plotting thereafter, need to toggle off eventually
-hist(GEwgpawfb$wgpa,
-     xlab = "wgpa", ylab = "Count of Students",
-     main = "Original Distribution")
-
-hist((abs(3.44 - GEwgpawfb$wgpa))^.37,
-     xlab = "Manual Transform of wgpa", ylab = "Count of Students",
-     main = "Transformed Distribution")
-# LOOKING GOOD!!
-
-
-#Transform = hsgpa, using hsgpa mean of 3.814
-#Original GEwgpawfb$hsgpa
-shapiro.test(GEwgpawfb$hsgpa)
-#W = 0.93335, p-value = 3.795e-07
-
-
-GEwgpawfb
-hsgpaxfrm1 <-   (abs(3.814 - GEwgpawfb$hsgpa))^.29  #using gradonly mean of 3.814, must be near mean, but not = to any actual gpa
-hsgpaxfrm1
-shapiro.test(hsgpaxfrm1)
-#data:  wgpaxfrm1   Want a p-value > .05 (counterintuitive)
-#W = 0.98795, p-value = 0.1492    exponent = .37  using (abs(3.814 - GEwgpawfb$wgpa))
-#W = 0.98497, p-value = 0.06122    exponent = .40  using (abs(3.814 - GEwgpawfb$wgpa))
-#W = 0.99139, p-value = 0.3924    exponent = .30  using (abs(3.814 - GEwgpawfb$wgpa))
-#W = 0.99052, p-value = 0.3107    exponent = .25  using (abs(3.814 - GEwgpawfb$wgpa))
-#W = 0.99139, p-value = 0.3926    exponent = .28  using (abs(3.814 - GEwgpawfb$wgpa))
-#W = 0.99145, p-value = 0.3983    exponent = .29  BEST using (abs(3.814 - GEwgpawfb$wgpa))
-
-
-#Now do histogram to visually see normality
-par(mfrow = c(1,2))    #watch out this effects all plotting thereafter, need to toggle off eventually
-hist(GEwgpawfb$hsgpa,
-     xlab = "wgpa", ylab = "Count of Students",
-     main = "Original Distribution")
-
-hist((abs(3.814 - GEwgpawfb$hsgpa))^.29,
-     xlab = "Manual Transform of wgpa", ylab = "Count of Students",
-     main = "Transformed Distribution")
-# LOOKING GOOD!!
-
-
-#Transform = rnk
-#Original GEwgpawfb$rnk
-shapiro.test(GEwgpawfb$rnk)
-#W = 0.82698, p-value = 5.249e-13
-
-
-GEwgpawfb
-rnkxfrm1 <-   (abs(3.44 - GEwgpawfb$rnk))^.37  #using gradonly mean of 3.53, must be near mean, but not = to any actual gpa
-rnkxfrm1
-shapiro.test(rnkxfrm1)
-#data:  wgpaxfrm1   Want a p-value > .05 (counterintuitive)
-#W = 0.99042, p-value = 0.3028    exponent = .35  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.98558, p-value = 0.07352    exponent = .30  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.99102, p-value = 0.356    exponent = .40  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.98853, p-value = 0.1767    exponent = .45  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.99074, p-value = 0.3306    exponent = .41   using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.99117, p-value = 0.3708    exponent = .39  using (abs(3.44 - GEwgpawfb$wgpa))
-#W = 0.9912, p-value = 0.3733    exponent = .38   BEST for (abs(3.44 - GEwgpawfb$wgpa))
-
-
-#Now do histogram to visually see normality
-par(mfrow = c(1,2))    #watch out this effects all plotting thereafter, need to toggle off eventually
-hist(GEwgpawfb$wgpa,
-     xlab = "wgpa", ylab = "Count of Students",
-     main = "Original Distribution")
-
-hist((abs(3.44 - GEwgpawfb$wgpa))^.37,
-     xlab = "Manual Transform of wgpa", ylab = "Count of Students",
-     main = "Transformed Distribution")
-# LOOKING GOOD!!
-
-
-#Try a shapiro wilks check of the residuals
-res <- residuals(lm(wgpa~hsgpa, data = GEwgpawfb_contin_num))
-res
-shapiro.test(res)
-#data:  res
-#W = 0.93454, p-value = 4.68e-07    # NOT GOOD  want P>.05 (counterintuitive)
-#LITTLE IMPROVEMENT   SCRAP THIS LINE OF APPROACH
 
 
 
@@ -371,7 +236,7 @@ par(mfrow = c(1,1))
 StatSigIVsrev <- lm(wgpa ~ hsgpa + dst + mat + hst3 + gndr + rnk,
                  data = GEwgpawfb)
 plot_summs(StatSigIVsrev, scale = TRUE, plot.distributions = TRUE, inner_ci_level = .9, legend.title = "StatSigIVs") 
-#plotted in the reverse order they were typed into model line
+#plotted in the reverse order they were typed into model line    # scale = true makes the x scale a standard deviation scale
 par(mfrow = c(2,2))
 plot(StatSigIVs)
 ggsave("diagnosticplotStatSigIVs.jpeg",  width = 9, height = 7, units = "in")
@@ -423,92 +288,6 @@ plot(Std.StatSigIVs)
 ggsave("diagnosticplotStd.Stat.sigIVs.jpeg",  width = 9, height = 7, units = "in")
 
 
-##########
-#Try a shapiro wilks check of the residuals
-res <- residuals(lm((wgpa^.75) ~ rnkneg + gndr + hst3 + mat + dst + hsgpa + rdg,
-                    data = GEwgpawfb.std))
-res
-shapiro.test(res)
-#data:  res
-#W = 0.92416, p-value = 7.999e-08    # NOT GOOD  want P>.05 (counterintuitive)
-#LITTLE IMPROVEMENT   SCRAP THIS LINE OF APPROACH
-
-
-#Try a shapiro wilks using shorthand name of the linear model from above
-res
-shapiro.test(res)
-
-res <- residuals(Std.ClassicIVs)
-res
-shapiro.test(res)
-#data:  res
-#W = 0.93565, p-value = 5.712e-07    # NOT GOOD  want P>.05 (counterintuitive)
-
-res <- residuals(ClassicIVs)
-res
-shapiro.test(res)
-#data:  res
-#W = 0.93565, p-value = 5.712e-07    # NOT GOOD  want P>.05 (counterintuitive)
-
-res <- residuals(fullg)
-res
-shapiro.test(res)
-#data:  res
-#W = 0.96957, p-value = 0.001988    # NOT GOOD  want P>.05 (counterintuitive)
-
-res <- residuals(fullge)
-res
-shapiro.test(res)
-#data:  res
-#W = 0.9341, p-value = 4.333e-07    # NOT GOOD  want P>.05 (counterintuitive)
-
-res <- residuals(fullgstd)
-res
-shapiro.test(res)
-#data:  res
-#W = 0.96957, p-value = 0.001988    # NOT GOOD  want P>.05 (counterintuitive)
-
-res <- residuals(fullgestd)
-res
-shapiro.test(res)
-#data:  res
-#W = 0.9341, p-value = 4.333e-07    # NOT GOOD  want P>.05 (counterintuitive)
-
-
-#TRANFORMATIONS to IMPROVE THE SHAPIRO WILKS NORMALITY OF THE residuals
-# Only Statistically Significant IVs  Pr <.05  using standardized continuous variables
-res <- residuals(lm((wgpa^1.15) ~ rnkneg + gndr + hst3 + mat + dst + hsgpa + rdg,   
-                    data = GEwgpawfb.std))
-res
-shapiro.test(res)
-#data:  res
-#W = 0.98103, p-value = 0.1303    #  BEST  want P>.05 (counterintuitive)
-
-#Our Classic Suite of IVs
-res <- residuals(lm((wgpa^7.06) ~ hsgpa + rnkneg + cmp + mat + sci + eng + rdg + tcr,
-                 data = GEwgpawfb))
-res
-shapiro.test(res)
-#data:  res
-#W = 0.9955, p-value = 0.8868    #  BEST  want P>.05 (counterintuitive)
-
-
-#Our Classic Suite of IVs
-res <- residuals(lm((wgpa^7.06) ~ (hsgpa) + 1/sqrt(rnkneg) + cmp + mat + sci + eng + rdg + 1/sqrt(tcr),
-                    data = GEwgpawfb))
-res
-shapiro.test(res)
-#data:  res
-#W = 0.99537, p-value = 0.8735   #  VERY GOOD  want P>.05 (counterintuitive)
-
-
-shapiro.test(GEwgpawfb$wgpa^5.1)
-#W = 0.97554, p-value = 0.003945   as good as it gets
-
-
-#Shapiro Wilks to test normality of variables
-shapiro.test(wgpa)
-
 
 
 
@@ -533,11 +312,6 @@ gvlma::gvlma(mod)
 plot(mod)
 
 
-
-
-
-
-
 #from http://r-statistics.co/Assumptions-of-Linear-Regression.html
 #install gvlma
 library(gvlma)
@@ -548,5 +322,24 @@ gvlma::gvlma(mod)
 plot(mod)
 
 
-# Binary (YBpg176) and Categorical (YBpg177)
+
+#from http://r-statistics.co/Assumptions-of-Linear-Regression.html
+#install gvlma
+library(gvlma)
+par(mfrow=c(2,2))  # draw 4 plots in same window
+mod <- lm(wgpa ~ gndr + hst3 + mat + dst + hsgpa + rdg, data=grads)
+gvlma::gvlma(mod)
+
+plot(mod)
+
+
+#from http://r-statistics.co/Assumptions-of-Linear-Regression.html
+#install gvlma
+library(gvlma)
+par(mfrow=c(2,2))  # draw 4 plots in same window
+mod <- lm(wgpa ~ rnk + hsgpa + mat + tcr, data=grads)
+gvlma::gvlma(mod)
+plot(mod)
+
+
 
